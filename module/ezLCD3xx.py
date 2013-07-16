@@ -289,14 +289,33 @@ class ezLCD(object):
         self.ser.write('dial ' + str(ID) + ' ' + str(x) + ' ' + str(y) + ' ' + str(radius) + ' ' + str(option) + ' ' + str(resolution) + ' ' + str(value) + ' ' + str(maxx) + ' ' + str(theme) + '\r')
         self.WaitForCR()
 
+    ## The theme command sets the colors for widgets 
+    # Theme [ID][EmbossDkColor][EmbossLtColor][TextColor0][TextColor1][TextColorDisabled][Color0][Color1][ColorDisabled][CommonBkColor][Fontw].
+    # @param ID
+    # @param EmbossDkColor
+    # @param EmbossLtColor
+    # @param TextColor0
+    # @param TextColor1
+    # @param TextColorDisabled
+    # @param Color0
+    # @param Color1
+    # @param ColorDisabled
+    # @param CommonBkColor
+    # @param Fontw
+    #
+    #
+    def theme(self, ID, EmbossDkColor, EmbossLtColor, TextColor0, TextColor1, TextColorDisabled, Color0, Color1, ColorDisabled, CommonBkColor, Fontw):
+        self.ser.write('theme %d %d %d %d %d %d %d %d %d %d %d\r' % (ID, EmbossDkColor, EmbossLtColor, TextColor0, TextColor1, TextColorDisabled, Color0, Color1, ColorDisabled, CommonBkColor, Fontw ))
+        self.WaitForCR()
+        
     ## The fontW command will set the font for widget
     # @param fontnumber number of the font
     # @param name filename of font
     # \n '0' and '1' are internal fonts
     # @ingroup Widgets
     def fontW(self, fontnumber, name):
-         self.ser.write('fontw %d %s\r' % (fontnumber, name))
-         self.WaitForCR()
+        self.ser.write('fontw %d %s\r' % (fontnumber, name))
+        self.WaitForCR()
 
     ## The string command will set or return a internal string
     # @param stringNumber number of string to set or return

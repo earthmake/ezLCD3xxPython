@@ -20,7 +20,7 @@ import wmi
 import time
 import psutil
     
-sys.path.append("C:\Users\codeman\Documents\ezLCDPython\module") 
+sys.path.append("C:\Users\codeman\Documents\GitHub\ezLCD3xxPython\module") 
 from ezLCD3xx import *
 def drawGrid():
     LCD.xy(0,30)
