@@ -153,16 +153,20 @@ class ezLCD(object):
 	# @param function
 	#
 	def cfgio(self, pin, function):
-		self.ser.write('cfgio %d \"%s\"\r' % (pin, function))
+		self.ser.write('cfgio %d "%s"\r' % (pin, function))
 		self.WaitForCR()
 
 	## The io command use to set and clear io pins
 	# @param pin
 	# @param level
 	#
-	def io(self, pin, level):	
-		self.ser.write('io %d %d\r' % (pin, level))
-		self.WaitForCR()
+	def io(self, pin, level=None):	
+		if level == None:
+			self.ser.write('io %d\r' % (pin))
+			return self.ser.readline()	
+		else:		
+			self.ser.write('io %d %d\r' % (pin, level))
+			self.WaitForCR()
 			
 	## The play command will play a macro stored on the drive of the ezLCD
 	# @param macro filename
@@ -420,13 +424,13 @@ class ezLCD(object):
 	# @return -1=right button
 	#
 	def choice(self, string, theme, string1=None, string2=None, string3=None):
-		if string0==None and string1==None and string2==None:
-			self.ser.write('choice \"%s\" %d\r' % (string, theme))
+		if string1==None and string2==None and string3==None:
+			self.ser.write('choice "%s" %d\r' % (string, theme))
 		else:
 			self.string(61, string1)
 			self.string(62, string2)
 			self.string(63, string3)	
-			self.ser.write('choice \"%s\" %d\r' % (string, theme))
+			self.ser.write('choice "%s" %d\r' % (string, theme))
 		return self.ser.readline()
 										
 	## The groupBox widget
@@ -571,7 +575,7 @@ class ezLCD(object):
 	# \n String 66 is the firmware string
 	def string(self, stringNumber, string = None):
 		if string !=None:
-			self.ser.write('string %d \"%s\"\r' % (stringNumber, string))
+			self.ser.write('string %d "%s"\r' % (stringNumber, string))
 			self.WaitForCR()
 		else:
 			self.ser.write('string %d\r' % (stringNumber))
@@ -657,7 +661,7 @@ class ezLCD(object):
 	def printString(self, string, x=None, y=None ):
 		if x != None:
 			self.xy(x, y)
-		self.ser.write('print \"%s\"\r' % (string))			
+		self.ser.write('print "%s"\r' % (string))			
 		self.WaitForCR()
 	##
 	# @}

@@ -19,43 +19,45 @@ import platform
 import wmi
 import time
 import psutil
-    
+	
 sys.path.append("C:\Users\segler\Documents\GitHub\ezLCD3xxPython\module") 
 from ezLCD3xx import *
 def drawGrid():
-    LCD.xy(0,30)
-    LCD.color(BLACK)
-    LCD.box(319,110,1)
-    LCD.xy(0,0)
-    LCD.color(GREEN)
-    LCD.printString('Core 1')
-    LCD.color(YELLOW)
-    LCD.printString('Core 2')
-    LCD.color(155)
+	LCD.xy(0,30)
+	LCD.color(BLACK)
+	LCD.box(319,110,1)
+	LCD.xy(0,0)
+	LCD.color(GREEN)
+	LCD.printString('Core 1')
+	LCD.color(YELLOW)
+	LCD.printString('Core 2')
+	LCD.color(155)
 
-    for y in range(6):
-        LCD.xy(0,(y*20)+39)
-        LCD.line(319,(y*20)+39)
-    for x in range(16):
-        LCD.xy(x*20,39)
-        LCD.line(x*20,139)
-    LCD.xy(319,39)
-    LCD.line(319,139)
+	for y in range(6):
+		LCD.xy(0,(y*20)+39)
+		LCD.line(319,(y*20)+39)
+	for x in range(16):
+		LCD.xy(x*20,39)
+		LCD.line(x*20,139)
+	LCD.xy(319,39)
+	LCD.line(319,139)
 
 def drawTime(res):
-    LCD.xy(0,140)
-    LCD.color(BLACK)
-    LCD.box(319,40, FILLED)
-    LCD.color(WHITE)
-    Time=str(res)+' Second(s) Per Div'
-    LCD.printString(Time)
-          
+	LCD.xy(0,140)
+	LCD.color(BLACK)
+	LCD.box(319,40, FILLED)
+	LCD.color(WHITE)
+	Time=str(res)+' Second(s) Per Div'
+	LCD.printString(Time)
+		  
 if platform.system() == 'Windows':
-    LCD = ezLCD('com58') 
+	LCD = ezLCD('com58') 
+elif platform.system() == 'Dawrwin':
+	LCD = ezLCD('/dev/tty.usbsomething')
 if LCD.openSerial()==False:
-    print 'Error Opening Port'
-    raise SystemExit   
-    
+	print 'Error Opening Port'
+	raise SystemExit   
+	
 LCD.verbose('off');
 LCD.fontw(0,'1')
 LCD.fontw(1,'0')
@@ -70,6 +72,10 @@ LCD.string( 1, '%')
 LCD.string(2,'+')
 LCD.string(3,'-')
 LCD.color(WHITE)
+LCD.cfgio(8,'analog')
+
+print LCD.io(8)
+
 #print LCD.choice('test the choice', 1)
 #LCD.printString('Core 1', 16, 85)
 #LCD.printString('Core 2', 16, 125)
@@ -102,49 +108,48 @@ lx=0
 ly1=239
 ly2=239
 res=1
-drawTime(res)          
+drawTime(res)		  
 while True:
 
-    oldinfo = info
-    cores=psutil.cpu_percent(interval=1, percpu=True)
-    y1 = 139 - cores[0]
-    y2 = 139 - cores[1]
-    if x!=0:
-        LCD.color(GREEN)
-        LCD.xy(lx,ly1)
-        LCD.line(x, y1)
-        LCD.color(YELLOW)
-        LCD.xy(lx,ly2)
-        LCD.line(x, y2)
-    ly1 = y1
-    ly2 = y2
-    lx = x   
-#    LCD.plot(x,239-y)
+	oldinfo = info
+	cores=psutil.cpu_percent(interval=1, percpu=True)
+	y1 = 139 - cores[0]
+	y2 = 139 - cores[1]
+	if x!=0:
+		LCD.color(GREEN)
+		LCD.xy(lx,ly1)
+		LCD.line(x, y1)
+		LCD.color(YELLOW)
+		LCD.xy(lx,ly2)
+		LCD.line(x, y2)
+	ly1 = y1
+	ly2 = y2
+	lx = x   
+#	LCD.plot(x,239-y)
 
-    x += 20/res
-    
-    if x >= 320:
-        x=0
-        y1=239
-        y2=239
-        lx =0
-        ly1 =239
-        ly2 =239
-        drawGrid()
-    touch = LCD.wstack(LIFO).split()
-    if touch[0] == '5' and touch[2]=='4':
-        res +=1
-        drawTime(res)  
-    if touch[0] == '6' and touch[2]=='4':
-        if res > 1:
-            res -=1
-            drawTime(res)
-#    LCD.wvalue(1, cores[0])
-#    LCD.wvalue(2, cores[1])
-#    LCD.setWvalue(3, cores[2])
-#    LCD.setWvalue(4, cores[3])
+	x += 20/res
+	
+	if x >= 320:
+		x=0
+		y1=239
+		y2=239
+		lx =0
+		ly1 =239
+		ly2 =239
+		drawGrid()
+	touch = LCD.wstack(LIFO).split()
+	if touch[0] == '5' and touch[2]=='4':
+		res +=1
+		drawTime(res)  
+	if touch[0] == '6' and touch[2]=='4':
+		if res > 1:
+			res -=1
+			drawTime(res)
+#	LCD.wvalue(1, cores[0])
+#	LCD.wvalue(2, cores[1])
+#	LCD.setWvalue(3, cores[2])
+#	LCD.setWvalue(4, cores[3])
 LCD.closeSerial()
 # End Test Program --------------------------------------
-
 
 
