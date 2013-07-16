@@ -1,0 +1,200 @@
+\begin{theindex}
+
+  \item {\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {ameter}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{14}
+  \item {arc}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {backlight}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{15}
+  \item {Bitmap and Fonts}, \hyperpage{10}
+    \subitem {xy}, \hyperpage{10}
+  \item {box}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{15}
+  \item {button}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{15}
+
+  \indexspace
+
+  \item {circle}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{15}
+  \item {close\discretionary {-}{}{}Serial}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{15}
+  \item {cls}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{15}
+  \item {color}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{15}
+  \item {color\discretionary {-}{}{}Id}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {dial}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{13}
+    \subitem {\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}, 
+		\hyperpage{14}
+    \subitem {ameter}, \hyperpage{14}
+    \subitem {arc}, \hyperpage{14}
+    \subitem {backlight}, \hyperpage{15}
+    \subitem {box}, \hyperpage{15}
+    \subitem {button}, \hyperpage{15}
+    \subitem {circle}, \hyperpage{15}
+    \subitem {close\discretionary {-}{}{}Serial}, \hyperpage{15}
+    \subitem {cls}, \hyperpage{15}
+    \subitem {color}, \hyperpage{15}
+    \subitem {color\discretionary {-}{}{}Id}, \hyperpage{16}
+    \subitem {dial}, \hyperpage{16}
+    \subitem {font}, \hyperpage{16}
+    \subitem {fonto}, \hyperpage{16}
+    \subitem {get\discretionary {-}{}{}Xmax}, \hyperpage{16}
+    \subitem {get\discretionary {-}{}{}Ymax}, \hyperpage{16}
+    \subitem {line}, \hyperpage{16}
+    \subitem {line\discretionary {-}{}{}Type}, \hyperpage{16}
+    \subitem {line\discretionary {-}{}{}Width}, \hyperpage{16}
+    \subitem {open\discretionary {-}{}{}Serial}, \hyperpage{17}
+    \subitem {picture}, \hyperpage{17}
+    \subitem {pie}, \hyperpage{17}
+    \subitem {ping}, \hyperpage{17}
+    \subitem {plot}, \hyperpage{17}
+    \subitem {print\discretionary {-}{}{}Char}, \hyperpage{17}
+    \subitem {print\discretionary {-}{}{}String}, \hyperpage{17}
+    \subitem {progress\discretionary {-}{}{}Bar}, \hyperpage{18}
+    \subitem {slider}, \hyperpage{18}
+    \subitem {string}, \hyperpage{18}
+    \subitem {touch\discretionary {-}{}{}Zone}, \hyperpage{18}
+    \subitem {verbose}, \hyperpage{18}
+    \subitem {Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}, 
+		\hyperpage{18}
+    \subitem {wstate}, \hyperpage{18}
+    \subitem {wvalue}, \hyperpage{18}
+  \item {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D}, 
+		\hyperpage{21}
+
+  \indexspace
+
+  \item {font}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+  \item {font\discretionary {-}{}{}W}
+    \subitem {Widgets}, \hyperpage{11}
+  \item {fonto}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Xmax}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+  \item {get\discretionary {-}{}{}Ymax}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {line}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+  \item {line\discretionary {-}{}{}Type}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+  \item {line\discretionary {-}{}{}Width}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {open\discretionary {-}{}{}Serial}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{17}
+
+  \indexspace
+
+  \item {picture}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{17}
+  \item {pie}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{17}
+  \item {ping}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{17}
+  \item {plot}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{17}
+  \item {Primitve Drawing Commands}, \hyperpage{9}
+  \item {print\discretionary {-}{}{}Char}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{17}
+  \item {print\discretionary {-}{}{}String}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{17}
+  \item {progress\discretionary {-}{}{}Bar}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {slider}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+  \item {string}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {touch\discretionary {-}{}{}Zone}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {verbose}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+  \item {Widgets}, \hyperpage{11}
+    \subitem {font\discretionary {-}{}{}W}, \hyperpage{11}
+  \item {wstate}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+  \item {wvalue}
+    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {xy}
+    \subitem {Bitmap and Fonts}, \hyperpage{10}
+
+\end{theindex}

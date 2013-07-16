@@ -1,0 +1,118 @@
+\hypertarget{classwmi__test_1_1_o_s_info}{\section{wmi\-\_\-test.\-O\-S\-Info Class Reference}
+\label{classwmi__test_1_1_o_s_info}\index{wmi\-\_\-test.\-O\-S\-Info@{wmi\-\_\-test.\-O\-S\-Info}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classwmi__test_1_1_o_s_info_a460bdb736471d54f77cc98ad19cbf9a2}{def {\bfseries \-\_\-\-\_\-init\-\_\-\-\_\-}}\label{classwmi__test_1_1_o_s_info_a460bdb736471d54f77cc98ad19cbf9a2}
+
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_a15da393315c28657930b70e2d669a674}{dump\-\_\-cpu}
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_a4bca00d47f6bb0b3257c44e29d30b1c1}{dump\-\_\-memory}
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_aa91cca06ca87a8fe5c3d3a1418592e96}{dump\-\_\-\-Logical\-Disk}
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_a7c3a4cca9dd30547d6fb65105026eddd}{dump\-\_\-hdd}
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_a8f15bf9e5606d5a5616d50a85ab9b933}{dump\-\_\-\-B\-I\-O\-S}
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_ac69670797ca736fa5b8b05a181a1bd9b}{dump\-\_\-\-Network\-Adapter}
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_ade3df3321b93d357b15dc7d14e711f1f}{dump\-\_\-\-Serial\-Port}
+\item 
+\hypertarget{classwmi__test_1_1_o_s_info_aafc1fbceacd53a9d4ea4d833681fea75}{def {\bfseries byte\-\_\-to\-\_\-mb}}\label{classwmi__test_1_1_o_s_info_aafc1fbceacd53a9d4ea4d833681fea75}
+
+\item 
+def \hyperlink{classwmi__test_1_1_o_s_info_acafa1f987f247ff41c5fc8c43f3d90ef}{dump\-\_\-cpu\-\_\-temperature}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classwmi__test_1_1_o_s_info_a8f15bf9e5606d5a5616d50a85ab9b933}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-\-B\-I\-O\-S@{dump\-\_\-\-B\-I\-O\-S}}
+\index{dump\-\_\-\-B\-I\-O\-S@{dump\-\_\-\-B\-I\-O\-S}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-\-B\-I\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-\-B\-I\-O\-S (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_a8f15bf9e5606d5a5616d50a85ab9b933}
+\begin{DoxyVerb}BIOS è³‡è¨Š
+Reference:
+[1] http://msdn.microsoft.com/en-us/library/aa394077%28VS.85%29.aspx
+\end{DoxyVerb}
+ \hypertarget{classwmi__test_1_1_o_s_info_a15da393315c28657930b70e2d669a674}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-cpu@{dump\-\_\-cpu}}
+\index{dump\-\_\-cpu@{dump\-\_\-cpu}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-cpu}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-cpu (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_a15da393315c28657930b70e2d669a674}
+\begin{DoxyVerb}CPU è³‡è¨Š
+ä¹Ÿå¯ä»¥ç”¨ query
+for item in w.query("select * from Win32_Processor"):
+    print item.DeviceID
+\end{DoxyVerb}
+ \hypertarget{classwmi__test_1_1_o_s_info_acafa1f987f247ff41c5fc8c43f3d90ef}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-cpu\-\_\-temperature@{dump\-\_\-cpu\-\_\-temperature}}
+\index{dump\-\_\-cpu\-\_\-temperature@{dump\-\_\-cpu\-\_\-temperature}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-cpu\-\_\-temperature}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-cpu\-\_\-temperature (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_acafa1f987f247ff41c5fc8c43f3d90ef}
+\begin{DoxyVerb}CPU æº«åº¦
+\end{DoxyVerb}
+ \hypertarget{classwmi__test_1_1_o_s_info_a7c3a4cca9dd30547d6fb65105026eddd}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-hdd@{dump\-\_\-hdd}}
+\index{dump\-\_\-hdd@{dump\-\_\-hdd}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-hdd}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-hdd (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_a7c3a4cca9dd30547d6fb65105026eddd}
+\begin{DoxyVerb}å¯¦é«”ç¡¬ç¢Ÿè³‡è¨Š
+\end{DoxyVerb}
+ \hypertarget{classwmi__test_1_1_o_s_info_aa91cca06ca87a8fe5c3d3a1418592e96}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-\-Logical\-Disk@{dump\-\_\-\-Logical\-Disk}}
+\index{dump\-\_\-\-Logical\-Disk@{dump\-\_\-\-Logical\-Disk}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-\-Logical\-Disk}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-\-Logical\-Disk (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_aa91cca06ca87a8fe5c3d3a1418592e96}
+\begin{DoxyVerb}é‚è¼¯ç£ç¢Ÿè³‡è¨Š
+\end{DoxyVerb}
+ \hypertarget{classwmi__test_1_1_o_s_info_a4bca00d47f6bb0b3257c44e29d30b1c1}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-memory@{dump\-\_\-memory}}
+\index{dump\-\_\-memory@{dump\-\_\-memory}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-memory}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-memory (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_a4bca00d47f6bb0b3257c44e29d30b1c1}
+\begin{DoxyVerb}è¨˜æ†¶é«”è³‡è¨Š
+ç­‰åŒæ–¼
+ELECT Capacity FROM Win32_PhysicalMemory
+\end{DoxyVerb}
+ \hypertarget{classwmi__test_1_1_o_s_info_ac69670797ca736fa5b8b05a181a1bd9b}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-\-Network\-Adapter@{dump\-\_\-\-Network\-Adapter}}
+\index{dump\-\_\-\-Network\-Adapter@{dump\-\_\-\-Network\-Adapter}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-\-Network\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-\-Network\-Adapter (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_ac69670797ca736fa5b8b05a181a1bd9b}
+\begin{DoxyVerb}Reference:
+[1] http://msdn.microsoft.com/en-us/library/aa394217%28VS.85%29.aspx
+\end{DoxyVerb}
+ \hypertarget{classwmi__test_1_1_o_s_info_ade3df3321b93d357b15dc7d14e711f1f}{\index{wmi\-\_\-test\-::\-O\-S\-Info@{wmi\-\_\-test\-::\-O\-S\-Info}!dump\-\_\-\-Serial\-Port@{dump\-\_\-\-Serial\-Port}}
+\index{dump\-\_\-\-Serial\-Port@{dump\-\_\-\-Serial\-Port}!wmi_test::OSInfo@{wmi\-\_\-test\-::\-O\-S\-Info}}
+\subsubsection[{dump\-\_\-\-Serial\-Port}]{\setlength{\rightskip}{0pt plus 5cm}def wmi\-\_\-test.\-O\-S\-Info.\-dump\-\_\-\-Serial\-Port (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classwmi__test_1_1_o_s_info_ade3df3321b93d357b15dc7d14e711f1f}
+\begin{DoxyVerb}Serial Port è³‡è¨Š
+Reference:
+[1] http://msdn.microsoft.com/en-us/library/aa394414%28VS.85%29.aspx
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/codeman/\-Documents/ez\-L\-C\-D\-Python/wmi\-\_\-test.\-py\end{DoxyCompactItemize}

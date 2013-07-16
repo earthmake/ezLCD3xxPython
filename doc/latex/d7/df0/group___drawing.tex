@@ -1,0 +1,206 @@
+\hypertarget{group___drawing}{\section{Primitve Drawing Commands}
+\label{group___drawing}\index{Primitve Drawing Commands@{Primitve Drawing Commands}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{group___drawing_gacdfb97b09494d0e3cec787014c4863f9}{ez\-L\-C\-D3xx.\-cls}
+\begin{DoxyCompactList}\small\item\em The cls command will clear the screen to black it no color is given. \end{DoxyCompactList}\item 
+def \hyperlink{group___drawing_ga306a0e99b15bc1122683a1c6e18e7ef0}{ez\-L\-C\-D3xx.\-color}
+\begin{DoxyCompactList}\small\item\em The color command see \hyperlink{namespaceez_l_c_d3xx}{ez\-L\-C\-D3xx} manual for colors. \end{DoxyCompactList}\item 
+def \hyperlink{group___drawing_ga94dd8d046a01670fc2212b548e29e8d0}{ez\-L\-C\-D3xx.\-color\-Id}
+\item 
+def \hyperlink{group___drawing_gaf249f02b6ad4e734ffa9d8371f6cab8a}{ez\-L\-C\-D3xx.\-xy}
+\begin{DoxyCompactList}\small\item\em The xy command will set or return the x y coordinates. \end{DoxyCompactList}\item 
+def \hyperlink{group___drawing_gad3c0ce418a0feea4a0fa40f803c90196}{ez\-L\-C\-D3xx.\-plot}
+\begin{DoxyCompactList}\small\item\em The plot command will set a pixel to current color and if used x y. \end{DoxyCompactList}\item 
+def \hyperlink{group___drawing_ga9dc821ce2652535899c584d4ff1c1bf7}{ez\-L\-C\-D3xx.\-line\-Type}
+\item 
+def \hyperlink{group___drawing_ga87b2625e7e4ffa927b4471003f8c6e70}{ez\-L\-C\-D3xx.\-line\-Width}
+\item 
+def \hyperlink{group___drawing_gae70c22a0a810a70a0dd6d32c9fd7c066}{ez\-L\-C\-D3xx.\-line}
+\item 
+def \hyperlink{group___drawing_ga63bb01e1f5ef0fe2ae2acec0ed90e5bd}{ez\-L\-C\-D3xx.\-box}
+\item 
+def \hyperlink{group___drawing_gabfcfb31f2d88c7397332abcc6b324c7c}{ez\-L\-C\-D3xx.\-circle}
+\item 
+def \hyperlink{group___drawing_ga12fb93d2d6f7ce3f08ad988c09624d57}{ez\-L\-C\-D3xx.\-pie}
+\item 
+def \hyperlink{group___drawing_ga13a0a8fb9c906a687f2a42864d973cc1}{ez\-L\-C\-D3xx.\-arc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___drawing_ga13a0a8fb9c906a687f2a42864d973cc1}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!arc@{arc}}
+\index{arc@{arc}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{arc}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-arc (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{radius, }
+\item[{}]{start, }
+\item[{}]{end, }
+\item[{}]{fill = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_ga13a0a8fb9c906a687f2a42864d973cc1}
+\begin{DoxyVerb}The ARC command draws an arc at current XY position. Replace {R} with the desired radius of the arc, in pixels.
+fill =1 will draw a filled circle
+\end{DoxyVerb}
+ \hypertarget{group___drawing_ga63bb01e1f5ef0fe2ae2acec0ed90e5bd}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!box@{box}}
+\index{box@{box}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{box}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-box (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{width, }
+\item[{}]{height, }
+\item[{}]{fill = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_ga63bb01e1f5ef0fe2ae2acec0ed90e5bd}
+\begin{DoxyVerb}draw a box of 'width' and 'height' from current coordinates 
+fill =1 will draw a filled box
+\end{DoxyVerb}
+ \hypertarget{group___drawing_gabfcfb31f2d88c7397332abcc6b324c7c}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!circle@{circle}}
+\index{circle@{circle}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{circle}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-circle (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{width, }
+\item[{}]{radius, }
+\item[{}]{fill = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_gabfcfb31f2d88c7397332abcc6b324c7c}
+\begin{DoxyVerb}draw a circle with radius in pixels
+fill =1 will draw a filled circle
+\end{DoxyVerb}
+ \hypertarget{group___drawing_gacdfb97b09494d0e3cec787014c4863f9}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!cls@{cls}}
+\index{cls@{cls}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{cls}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-cls (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Color = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_gacdfb97b09494d0e3cec787014c4863f9}
+
+
+The cls command will clear the screen to black it no color is given. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Color} & color to clear screen to \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___drawing_ga306a0e99b15bc1122683a1c6e18e7ef0}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!color@{color}}
+\index{color@{color}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-color (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{color}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_ga306a0e99b15bc1122683a1c6e18e7ef0}
+
+
+The color command see \hyperlink{namespaceez_l_c_d3xx}{ez\-L\-C\-D3xx} manual for colors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & number \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___drawing_ga94dd8d046a01670fc2212b548e29e8d0}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!color\-Id@{color\-Id}}
+\index{color\-Id@{color\-Id}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{color\-Id}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-color\-Id (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{I\-D, }
+\item[{}]{R, }
+\item[{}]{G, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_ga94dd8d046a01670fc2212b548e29e8d0}
+\begin{DoxyVerb}set colorid to rgb vaules
+\end{DoxyVerb}
+ \hypertarget{group___drawing_gae70c22a0a810a70a0dd6d32c9fd7c066}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!line@{line}}
+\index{line@{line}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-line (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_gae70c22a0a810a70a0dd6d32c9fd7c066}
+\begin{DoxyVerb}draw a horizontal line from current position to x, y
+\end{DoxyVerb}
+ \hypertarget{group___drawing_ga9dc821ce2652535899c584d4ff1c1bf7}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!line\-Type@{line\-Type}}
+\index{line\-Type@{line\-Type}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{line\-Type}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-line\-Type (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{option}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_ga9dc821ce2652535899c584d4ff1c1bf7}
+\begin{DoxyVerb}Options: 0 = solid, 1= dotted (1 pixel spacing between dots), 2 = dashed (2 pixel spacing between dashes)
+\end{DoxyVerb}
+ \hypertarget{group___drawing_ga87b2625e7e4ffa927b4471003f8c6e70}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!line\-Width@{line\-Width}}
+\index{line\-Width@{line\-Width}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{line\-Width}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-line\-Width (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{width}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_ga87b2625e7e4ffa927b4471003f8c6e70}
+\begin{DoxyVerb}The LINEWIDTH command allows you to draw either a thin line (width = 1) or a thick line (width =3). Only [width] = 1 or 3 are available.
+\end{DoxyVerb}
+ \hypertarget{group___drawing_ga12fb93d2d6f7ce3f08ad988c09624d57}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!pie@{pie}}
+\index{pie@{pie}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{pie}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-pie (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{radius, }
+\item[{}]{start, }
+\item[{}]{end}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_ga12fb93d2d6f7ce3f08ad988c09624d57}
+\begin{DoxyVerb}The PIE command draws a section of a circle (pie slice) at current xy position.
+\end{DoxyVerb}
+ \hypertarget{group___drawing_gad3c0ce418a0feea4a0fa40f803c90196}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!plot@{plot}}
+\index{plot@{plot}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-plot (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x = {\ttfamily None}, }
+\item[{}]{y = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_gad3c0ce418a0feea4a0fa40f803c90196}
+
+
+The plot command will set a pixel to current color and if used x y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & optional \\
+\hline
+{\em y} & optional \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___drawing_gaf249f02b6ad4e734ffa9d8371f6cab8a}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!xy@{xy}}
+\index{xy@{xy}!Primitve Drawing Commands@{Primitve Drawing Commands}}
+\subsubsection[{xy}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-xy (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x = {\ttfamily None}, }
+\item[{}]{y = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{group___drawing_gaf249f02b6ad4e734ffa9d8371f6cab8a}
+
+
+The xy command will set or return the x y coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & optional \\
+\hline
+{\em y} & optional \\
+\hline
+\end{DoxyParams}
