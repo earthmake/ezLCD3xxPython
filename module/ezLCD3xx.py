@@ -190,10 +190,10 @@ class ezLCD(object):
 		self.WaitForCR()
 
 	## The snapshot command will write a copy of the current display to the flash drive as a bmp
-	# @param x
-	# @param y
-	# @param w
-	# @param h
+	# @param x	starting x position
+	# @param y	starting y position 
+	# @param w	width 
+	# @param h  height
 	# @param filename.bmp
 	#		
 	def snapshot(self, x, y, w, h, filename):
@@ -232,10 +232,10 @@ class ezLCD(object):
 			self.WaitForCR()
 
 	## The colorId command
-	# @param R
-	# @param G
-	# @param B
-	# @return color as a tuple 
+	# @param R	Red Value
+	# @param G	Green Value
+	# @param B	Blue Value
+	# @return color as a tuple if r g b is None 
 	def colorId(self,ID ,R=None, G=None, B=None):
 		if R == None and G == None and B == None:
 			self.ser.write('colorid %d\r' % (ID))
@@ -245,9 +245,9 @@ class ezLCD(object):
 			self.WaitForCR()
 
 	## The xy command will set or return the x y coordinates
-	# @param x optional
-	# @param y optional
-	#
+	# @param x x position
+	# @param y y position
+	# @return x y if x and y are used
 	def xy(self, x = None , y = None):
 		if x == None:
 			self.ser.write('xy\r')
@@ -298,30 +298,34 @@ class ezLCD(object):
 		self.ser.write('box %d %d %d\r' % (width, height, fill))
 		self.WaitForCR()
 
-	def circle(self, width, radius, fill = 0):
-		"""
-		draw a circle with radius in pixels
-		fill =1 will draw a filled circle
-		"""
-		self.ser.write('circle %d %d %d\r' % (width, radius, fill))
+	## The circle command will draw a circle in the current xy with radius and optional filled
+	# @param radius radius of circle 
+	# @param fill 1=filled circle 0=outline only *optional defaults to outline
+	def circle(self, radius, fill = 0):
+		self.ser.write('circle %d %d\r' % (radius, fill))
 		self.WaitForCR()
 
+	## The pie command will draw a pie slice at current xy 
+	# @param radius radius of pie
+	# @param start	start angle
+	# @param end	end angle
+	#
 	def pie(self, radius, start, end ):
-		"""
-		The PIE command draws a section of a circle (pie slice) at current xy position.
-		"""
 		self.ser.write('pie %d %d %d\r' % (radius, start, end))
 		self.WaitForCR()
 		
+	## The arc command will draw a arc i the current xy optional filled
+	# @param radius radius of arc 
+	# @param start	start angle
+	# @param end	end angle
+	# @param fill 1=filled arc 0=outline only *optional defaults to outline
+	#
 	def arc(self, radius, start, end, fill = 0):
-		"""
-		The ARC command draws an arc at current XY position. Replace {R} with the desired radius of the arc, in pixels.
-		fill =1 will draw a filled circle
-		"""
 		self.ser.write('box %d %d %d\r' % ( radius, start, end, fill))
 		self.WaitForCR()
 		
-	##
+	## The cliparea command allows you to designate a rectangular/box area that you can draw in.\n
+	#  Any surrounding area will be protected and no changes can be made to it
 	# @param left
 	# @param top
 	# @param right
@@ -331,7 +335,7 @@ class ezLCD(object):
 		self.ser.write('cliparea %d %d %d %d\r' % (left, top, right, bottom))
 		self.WaitForCR()
 	
-	##
+	## The clipenable command enables or disables cliparea
 	# @param enable 0=off 1=on
 	#	
 	def clipEnable(self, enable):
@@ -408,9 +412,11 @@ class ezLCD(object):
 	# @param radius
 	# @param theme
 	# @param stringID
-	#												
-	def button(self, ID, x, y, width, height, options, align, radius, theme, stringID):
-		self.ser.write('button %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, align, radius, theme, stringID))
+	# @param text optional text for button												
+	def button(self, ID, x, y, width, height, options, align, radius, theme, stringID, text = None):
+		if text!=None:
+			self.string(stringID,text)
+		self.ser.write('button %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, align, radius, theme, stringID))			
 		self.WaitForCR()
 		
 	## The choice widget allows you to print a string and display buttons for the user to choose a response.
@@ -594,7 +600,6 @@ class ezLCD(object):
 	# @param value
 	#
 	def wvalue(self, ID, value = None):
-
 		if value == None:
 			self.ser.flushInput()
 			self.ser.write('wvalue %d\r' % (ID))
@@ -633,6 +638,7 @@ class ezLCD(object):
 		self.WaitForCR()
 
 # Text --------------------------------------------------------------------
+
 	## The font command will set current font to use 
 	# @param font font name
 	#\n '0' and '1' are internal fonts
@@ -647,9 +653,6 @@ class ezLCD(object):
 		self.WaitForCR()
 		
 	def printChar(self, character):
-		'''
-		add here
-		'''
 		self.ser.write('print %c\r' % (character))
 		self.WaitForCR()
 
