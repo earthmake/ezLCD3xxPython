@@ -1,0 +1,249 @@
+\hypertarget{group___general}{\section{Commands}
+\label{dd/d0a/group___general}\index{Commands@{Commands}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{group___general_gaa497e8573c045944d589b17fd7dd36ac}{ez\-L\-C\-D3xx.\-verbose}
+\begin{DoxyCompactList}\small\item\em The Verbose command will turn on or off more verbose errors. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_gabe06f9371514b4556accd06145b9c104}{ez\-L\-C\-D3xx.\-xmax}
+\begin{DoxyCompactList}\small\item\em The xmax command will return the max x of current display. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_gabcb8010d7c29b1c514e70cefe3bb856c}{ez\-L\-C\-D3xx.\-ymax}
+\begin{DoxyCompactList}\small\item\em The ymax command will return the max y of current display. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_ga92454899475445ff2d48eb7072f3c94e}{ez\-L\-C\-D3xx.\-ping}
+\begin{DoxyCompactList}\small\item\em the ping command \end{DoxyCompactList}\item 
+def \hyperlink{group___general_gacecf5c1b5956caef4a4030f51bc4a809}{ez\-L\-C\-D3xx.\-backlight}
+\begin{DoxyCompactList}\small\item\em The backlight command will set backlight brightness and timeout. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_ga78b38855b8bcb0609d340a80210a0d0f}{ez\-L\-C\-D3xx.\-wquiet}
+\begin{DoxyCompactList}\small\item\em The wquiet command disables the touch event data being sent to the console port. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_ga38687b7d07bf93afe6891d3dca6205f4}{ez\-L\-C\-D3xx.\-cfgio}
+\begin{DoxyCompactList}\small\item\em The cfgio command will configure io pins. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_gaf87ad0b88f8a279c20666363bc7460b6}{ez\-L\-C\-D3xx.\-io}
+\begin{DoxyCompactList}\small\item\em The io command use to set and clear io pins. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_ga15f87f284189816d98ab5bf0b5a94a99}{ez\-L\-C\-D3xx.\-play}
+\begin{DoxyCompactList}\small\item\em The play command will play a macro stored on the drive of the \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D}. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_ga7faa11f7fbe4da6ba981a5b8c4cb37aa}{ez\-L\-C\-D3xx.\-run}
+\begin{DoxyCompactList}\small\item\em The run command will run a macro stored on the drive of the \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D}. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_gabc1cd3bb62dfa8a8f37f5da5cbb3e85c}{ez\-L\-C\-D3xx.\-reset}
+\begin{DoxyCompactList}\small\item\em The reset command will reset the \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D} and run startup.\-ezm same as power up. \end{DoxyCompactList}\item 
+def \hyperlink{group___general_ga8a1ef000b3c71704260c9e5f949e80de}{ez\-L\-C\-D3xx.\-snapshot}
+\begin{DoxyCompactList}\small\item\em The snapshot command will write a copy of the current display to the flash drive as a bmp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___general_gacecf5c1b5956caef4a4030f51bc4a809}{\index{Commands@{Commands}!backlight@{backlight}}
+\index{backlight@{backlight}!Commands@{Commands}}
+\subsubsection[{backlight}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-backlight (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{brightness, }
+\item[{}]{timeout = {\ttfamily None}, }
+\item[{}]{level = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_gacecf5c1b5956caef4a4030f51bc4a809}
+
+
+The backlight command will set backlight brightness and timeout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brightness} & 1 \\
+\hline
+{\em timeout} & 2 \\
+\hline
+{\em level} & 3 \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_ga38687b7d07bf93afe6891d3dca6205f4}{\index{Commands@{Commands}!cfgio@{cfgio}}
+\index{cfgio@{cfgio}!Commands@{Commands}}
+\subsubsection[{cfgio}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-cfgio (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{pin, }
+\item[{}]{function}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_ga38687b7d07bf93afe6891d3dca6205f4}
+
+
+The cfgio command will configure io pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \\
+\hline
+{\em function} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_gaf87ad0b88f8a279c20666363bc7460b6}{\index{Commands@{Commands}!io@{io}}
+\index{io@{io}!Commands@{Commands}}
+\subsubsection[{io}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-io (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{pin, }
+\item[{}]{level}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_gaf87ad0b88f8a279c20666363bc7460b6}
+
+
+The io command use to set and clear io pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \\
+\hline
+{\em level} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_ga92454899475445ff2d48eb7072f3c94e}{\index{Commands@{Commands}!ping@{ping}}
+\index{ping@{ping}!Commands@{Commands}}
+\subsubsection[{ping}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-ping (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_ga92454899475445ff2d48eb7072f3c94e}
+
+
+the ping command 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+\hypertarget{group___general_ga15f87f284189816d98ab5bf0b5a94a99}{\index{Commands@{Commands}!play@{play}}
+\index{play@{play}!Commands@{Commands}}
+\subsubsection[{play}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-play (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_ga15f87f284189816d98ab5bf0b5a94a99}
+
+
+The play command will play a macro stored on the drive of the \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em macro} & filename \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_gabc1cd3bb62dfa8a8f37f5da5cbb3e85c}{\index{Commands@{Commands}!reset@{reset}}
+\index{reset@{reset}!Commands@{Commands}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-reset (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_gabc1cd3bb62dfa8a8f37f5da5cbb3e85c}
+
+
+The reset command will reset the \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D} and run startup.\-ezm same as power up. 
+
+\hypertarget{group___general_ga7faa11f7fbe4da6ba981a5b8c4cb37aa}{\index{Commands@{Commands}!run@{run}}
+\index{run@{run}!Commands@{Commands}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-run (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_ga7faa11f7fbe4da6ba981a5b8c4cb37aa}
+
+
+The run command will run a macro stored on the drive of the \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em macro} & filename \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_ga8a1ef000b3c71704260c9e5f949e80de}{\index{Commands@{Commands}!snapshot@{snapshot}}
+\index{snapshot@{snapshot}!Commands@{Commands}}
+\subsubsection[{snapshot}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-snapshot (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{w, }
+\item[{}]{h, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_ga8a1ef000b3c71704260c9e5f949e80de}
+
+
+The snapshot command will write a copy of the current display to the flash drive as a bmp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em w} & \\
+\hline
+{\em h} & \\
+\hline
+{\em filename.\-bmp} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_gaa497e8573c045944d589b17fd7dd36ac}{\index{Commands@{Commands}!verbose@{verbose}}
+\index{verbose@{verbose}!Commands@{Commands}}
+\subsubsection[{verbose}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-verbose (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{state}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_gaa497e8573c045944d589b17fd7dd36ac}
+
+
+The Verbose command will turn on or off more verbose errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & 0=off 1=on \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_ga78b38855b8bcb0609d340a80210a0d0f}{\index{Commands@{Commands}!wquiet@{wquiet}}
+\index{wquiet@{wquiet}!Commands@{Commands}}
+\subsubsection[{wquiet}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-wquiet (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{state}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_ga78b38855b8bcb0609d340a80210a0d0f}
+
+
+The wquiet command disables the touch event data being sent to the console port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & 0=off 1=on \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___general_gabe06f9371514b4556accd06145b9c104}{\index{Commands@{Commands}!xmax@{xmax}}
+\index{xmax@{xmax}!Commands@{Commands}}
+\subsubsection[{xmax}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-xmax (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_gabe06f9371514b4556accd06145b9c104}
+
+
+The xmax command will return the max x of current display. 
+
+\begin{DoxyReturn}{Returns}
+x-\/horizontal resolution in pixels starting from 0 
+\end{DoxyReturn}
+\hypertarget{group___general_gabcb8010d7c29b1c514e70cefe3bb856c}{\index{Commands@{Commands}!ymax@{ymax}}
+\index{ymax@{ymax}!Commands@{Commands}}
+\subsubsection[{ymax}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-ymax (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/d0a/group___general_gabcb8010d7c29b1c514e70cefe3bb856c}
+
+
+The ymax command will return the max y of current display. 
+
+\begin{DoxyReturn}{Returns}
+y-\/vertical resolution in pixels starting from 0 
+\end{DoxyReturn}

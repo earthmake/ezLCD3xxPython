@@ -1,0 +1,165 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   doc/html/annotated.html
+#	new file:   doc/html/annotated.js
+#	modified:   doc/html/classes.html
+#	modified:   doc/html/d0/dc0/classez_l_c_d3xx_1_1ez_l_c_d.html
+#	modified:   doc/html/d2/d7e/group___bitmap_font.html
+#	new file:   doc/html/d2/d7e/group___bitmap_font.js
+#	modified:   doc/html/d7/df0/group___drawing.html
+#	new file:   doc/html/d7/df0/group___drawing.js
+#	new file:   doc/html/dd/d0a/group___general.html
+#	new file:   doc/html/dd/d0a/group___general.js
+#	modified:   doc/html/df/d3e/group___widgets.html
+#	new file:   doc/html/df/d3e/group___widgets.js
+#	modified:   doc/html/df/d76/namespaceez_l_c_d3xx.html
+#	new file:   doc/html/df/d76/namespaceez_l_c_d3xx.js
+#	modified:   doc/html/dir_a7b0466279106ea0b8f86f609f621680.html
+#	modified:   doc/html/doxygen.css
+#	modified:   doc/html/hierarchy.html
+#	new file:   doc/html/hierarchy.js
+#	modified:   doc/html/index.html
+#	modified:   doc/html/jquery.js
+#	modified:   doc/html/modules.html
+#	new file:   doc/html/modules.js
+#	modified:   doc/html/namespacemembers.html
+#	modified:   doc/html/namespacemembers_func.html
+#	modified:   doc/html/namespacemembers_vars.html
+#	modified:   doc/html/namespaces.html
+#	new file:   doc/html/namespaces.js
+#	new file:   doc/html/navtree.css
+#	new file:   doc/html/navtree.js
+#	new file:   doc/html/navtreeindex0.js
+#	new file:   doc/html/resize.js
+#	modified:   doc/html/search/all_5f.html
+#	modified:   doc/html/search/all_61.html
+#	modified:   doc/html/search/all_61.js
+#	modified:   doc/html/search/all_62.html
+#	modified:   doc/html/search/all_62.js
+#	modified:   doc/html/search/all_63.html
+#	modified:   doc/html/search/all_63.js
+#	modified:   doc/html/search/all_64.html
+#	modified:   doc/html/search/all_64.js
+#	modified:   doc/html/search/all_65.html
+#	modified:   doc/html/search/all_66.html
+#	modified:   doc/html/search/all_66.js
+#	modified:   doc/html/search/all_67.html
+#	modified:   doc/html/search/all_67.js
+#	modified:   doc/html/search/all_69.html
+#	modified:   doc/html/search/all_69.js
+#	modified:   doc/html/search/all_6c.html
+#	modified:   doc/html/search/all_70.html
+#	modified:   doc/html/search/all_70.js
+#	new file:   doc/html/search/all_72.html
+#	new file:   doc/html/search/all_72.js
+#	modified:   doc/html/search/all_73.html
+#	modified:   doc/html/search/all_73.js
+#	modified:   doc/html/search/all_74.html
+#	modified:   doc/html/search/all_74.js
+#	modified:   doc/html/search/all_76.html
+#	modified:   doc/html/search/all_76.js
+#	modified:   doc/html/search/all_77.html
+#	modified:   doc/html/search/all_77.js
+#	modified:   doc/html/search/all_78.html
+#	modified:   doc/html/search/all_78.js
+#	new file:   doc/html/search/all_79.html
+#	new file:   doc/html/search/all_79.js
+#	modified:   doc/html/search/classes_65.html
+#	modified:   doc/html/search/functions_5f.html
+#	modified:   doc/html/search/functions_61.html
+#	modified:   doc/html/search/functions_61.js
+#	modified:   doc/html/search/functions_62.html
+#	modified:   doc/html/search/functions_62.js
+#	modified:   doc/html/search/functions_63.html
+#	modified:   doc/html/search/functions_63.js
+#	modified:   doc/html/search/functions_64.html
+#	modified:   doc/html/search/functions_64.js
+#	modified:   doc/html/search/functions_66.html
+#	modified:   doc/html/search/functions_66.js
+#	modified:   doc/html/search/functions_67.html
+#	modified:   doc/html/search/functions_67.js
+#	new file:   doc/html/search/functions_69.html
+#	new file:   doc/html/search/functions_69.js
+#	modified:   doc/html/search/functions_6c.html
+#	modified:   doc/html/search/functions_70.html
+#	modified:   doc/html/search/functions_70.js
+#	new file:   doc/html/search/functions_72.html
+#	new file:   doc/html/search/functions_72.js
+#	modified:   doc/html/search/functions_73.html
+#	modified:   doc/html/search/functions_73.js
+#	modified:   doc/html/search/functions_74.html
+#	modified:   doc/html/search/functions_74.js
+#	modified:   doc/html/search/functions_76.html
+#	modified:   doc/html/search/functions_76.js
+#	modified:   doc/html/search/functions_77.html
+#	modified:   doc/html/search/functions_77.js
+#	modified:   doc/html/search/functions_78.html
+#	modified:   doc/html/search/functions_78.js
+#	new file:   doc/html/search/functions_79.html
+#	new file:   doc/html/search/functions_79.js
+#	modified:   doc/html/search/groups_62.html
+#	new file:   doc/html/search/groups_63.html
+#	new file:   doc/html/search/groups_63.js
+#	modified:   doc/html/search/groups_70.html
+#	modified:   doc/html/search/groups_77.html
+#	modified:   doc/html/search/namespaces_65.html
+#	modified:   doc/html/search/search.css
+#	modified:   doc/html/search/search.js
+#	modified:   doc/html/search/variables_69.html
+#	modified:   doc/latex/Makefile
+#	modified:   doc/latex/d0/dc0/classez_l_c_d3xx_1_1ez_l_c_d.tex
+#	modified:   doc/latex/d2/d7e/group___bitmap_font.aux
+#	modified:   doc/latex/d2/d7e/group___bitmap_font.tex
+#	new file:   doc/latex/d7/df0/group___drawing.aux
+#	modified:   doc/latex/d7/df0/group___drawing.tex
+#	new file:   doc/latex/dd/d0a/group___general.tex
+#	modified:   doc/latex/df/d3e/group___widgets.aux
+#	modified:   doc/latex/df/d3e/group___widgets.tex
+#	modified:   doc/latex/df/d76/namespaceez_l_c_d3xx.tex
+#	modified:   doc/latex/dir_a7b0466279106ea0b8f86f609f621680.tex
+#	modified:   doc/latex/doxygen.sty
+#	modified:   doc/latex/make.bat
+#	modified:   doc/latex/modules.tex
+#	modified:   doc/latex/refman.aux
+#	modified:   doc/latex/refman.idx
+#	modified:   doc/latex/refman.ilg
+#	modified:   doc/latex/refman.ind
+#	modified:   doc/latex/refman.log
+#	modified:   doc/latex/refman.out
+#	modified:   doc/latex/refman.pdf
+#	modified:   doc/latex/refman.synctex.gz
+#	modified:   doc/latex/refman.tex
+#	modified:   doc/latex/refman.toc
+#	modified:   doxygen/Doxyfile
+#	modified:   ezLCD.py
+#	modified:   module/ezLCD3xx.py
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   doc/html/dynsections.js
+#	modified:   doc/html/search/all_5f.js
+#	modified:   doc/html/search/all_65.js
+#	modified:   doc/html/search/all_6c.js
+#	modified:   doc/html/search/classes_65.js
+#	modified:   doc/html/search/functions_5f.js
+#	modified:   doc/html/search/functions_6c.js
+#	modified:   doc/html/search/groups_62.js
+#	modified:   doc/html/search/groups_70.js
+#	modified:   doc/html/search/groups_77.js
+#	modified:   doc/html/search/namespaces_65.js
+#	modified:   doc/html/search/nomatches.html
+#	modified:   doc/html/search/variables_69.js
+#	modified:   doc/html/tabs.css
+#	modified:   doc/latex/annotated.tex
+#	modified:   doc/latex/d0/dc0/classez_l_c_d3xx_1_1ez_l_c_d.eps
+#	modified:   doc/latex/hierarchy.tex
+#	modified:   doc/latex/namespaces.tex
+#
+

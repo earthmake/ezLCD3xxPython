@@ -20,7 +20,7 @@ import wmi
 import time
 import psutil
     
-sys.path.append("C:\Users\codeman\Documents\GitHub\ezLCD3xxPython\module") 
+sys.path.append("C:\Users\segler\Documents\GitHub\ezLCD3xxPython\module") 
 from ezLCD3xx import *
 def drawGrid():
     LCD.xy(0,30)
@@ -51,14 +51,18 @@ def drawTime(res):
     LCD.printString(Time)
           
 if platform.system() == 'Windows':
-    LCD = ezLCD('com6') 
+    LCD = ezLCD('com58') 
 if LCD.openSerial()==False:
     print 'Error Opening Port'
-    raise SystemExit    
+    raise SystemExit   
+    
 LCD.verbose('off');
+LCD.fontw(0,'1')
+LCD.fontw(1,'0')
+LCD.fontw(2,'serif24')
+LCD.theme(1, 155, 152, 3, 3, 3, 24, 4, 5, 0, 2)
 LCD.backlight(100, 5, 10)
 LCD.cls()
-LCD.cls(  )
 LCD.font('0')
 LCD.fonto(0)
 info = ' '
@@ -66,6 +70,7 @@ LCD.string( 1, '%')
 LCD.string(2,'+')
 LCD.string(3,'-')
 LCD.color(WHITE)
+#print LCD.choice('test the choice', 1)
 #LCD.printString('Core 1', 16, 85)
 #LCD.printString('Core 2', 16, 125)
 #LCD.printString('Core 3', 16, 165)
@@ -80,15 +85,15 @@ LCD.button( 6, 120, 200, 80, 30 , 1, 0, 10, 1, 3)
 #   ameter 1  50  30  200  200  1 10  0   120  0  1
 #LCD.printString('Total Physical Memory ' +  str(psutil.TOTAL_PHYMEM), 0, 0)
 #LCD.printString('Number Of CPU Cores ' + str(psutil.NUM_CPUS),0 ,20)
-
+print LCD.xmax()
+print LCD.ymax()
+LCD.xy(100,100)
 print LCD.xy()
+(r,g,b)=LCD.colorId(3)
+print r,g,b
+print LCD.string(65)
 print LCD.string(66)
-#print psutil.virtual_memory()
-#print psutil.get_users()
-#print psutil.network_io_counters(pernic=False)
-w = wmi.WMI(namespace="root\wmi")
-SMBios = w.MSSmBios_RawSMBiosTables()[0]
-#print  SMBios.SMBiosData
+print LCD.color()
 drawGrid()
 x=0
 y1=239
