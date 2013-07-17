@@ -159,7 +159,8 @@ class ezLCD(object):
 	## The io command use to set and clear io pins
 	# @param pin
 	# @param level
-	#
+	# @return io level
+    #
 	def io(self, pin, level=None):	
 		if level == None:
 			self.ser.write('io %d\r' % (pin))
@@ -195,7 +196,7 @@ class ezLCD(object):
 	# @param w	width 
 	# @param h  height
 	# @param filename.bmp
-	#		
+	# Make sure you have space on the internal flash drive !		
 	def snapshot(self, x, y, w, h, filename):
 		self.ser.write('snapshot %d %d %d %d %s\r' % (x, y, w, h, filename))
 		self.WaitForCR()
