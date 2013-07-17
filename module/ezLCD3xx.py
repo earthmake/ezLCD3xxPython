@@ -10,15 +10,14 @@ import serial
 import io
 import inspect
 import traceback
-'''
-## Here is a snapshot of my new application:
-#  \image html C:\Users\codeman\Documents\ezLCDPython\doxygen\python.png
-#  \image latex application.eps "My application" width=10cm
+
+## @mainpage 
+# @image html ezLCD-303Front.png
+# @image html python.png
+# @image latex ezLCD-303Front.png 
+# @image latex python.png 
 #   
-## ezLCD
-#
-#
-'''
+
 BLACK = 0
 GRAY  = 1
 SILVER= 2
@@ -44,6 +43,11 @@ OFF = 0
 FIFO = 0
 LIFO = 1
 CLEAR = 2
+
+DELETE = 0
+ENABLE = 1
+DISABLE = 2
+REDRAW = 3 
 
 
 class ezLCD(object):
@@ -93,7 +97,7 @@ class ezLCD(object):
 			frame = inspect.currentframe()
 			stack_trace = traceback.format_stack(frame)
 			print ''.join(stack_trace[:-2])
-			
+		
 # General --------------------------------------------------------------------
 
 	##
@@ -160,7 +164,7 @@ class ezLCD(object):
 	# @param pin
 	# @param level
 	# @return io level
-    #
+	#
 	def io(self, pin, level=None):	
 		if level == None:
 			self.ser.write('io %d\r' % (pin))
@@ -248,11 +252,18 @@ class ezLCD(object):
 	## The xy command will set or return the x y coordinates
 	# @param x x position
 	# @param y y position
-	# @return x y if x and y are used
+	# @return x y if x and y not supplied
+	# @code
+	# # Set x y to 100 100
+	# LCD.xy(100,100)
+	# # Get Current x y
+	# (x,y)=LCD.xy()
+	# @endcode
 	def xy(self, x = None , y = None):
-		if x == None:
+		if x == None and y== None:
 			self.ser.write('xy\r')
-			return self.ser.readline()
+			(x,y) = self.ser.readline().split()
+			return (int(x),int(y))
 		else:
 			self.ser.write('xy %d %d \r' % (x, y))			
 			self.WaitForCR()
@@ -475,10 +486,13 @@ class ezLCD(object):
 	# @param width
 	# @param height
 	# @param options Options: 1=left, 2=disabled , 3=right , 4=center, 5=left framed, 6=disabled framed, 7=right framed, 8=center framed , 9=redraw text.
-	# @param theme
-	# @param stringID
+	# @param theme	theme
+	# @param stringID stringID number
+	# @param text text to display *optional
 	#												
-	def staticText(self, ID, x, y, width, height, options, theme, stringID ):
+	def staticText(self, ID, x, y, width, height, options, theme, stringID, text = None ):
+		if text != None:
+			self.string(stringID, text)
 		self.ser.write('static %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, theme, stringID))
 		self.WaitForCR()				
 
@@ -588,14 +602,44 @@ class ezLCD(object):
 			self.ser.write('string %d\r' % (stringNumber))
 			return self.ser.readline()
 
-	## The wstack command will return the stack of widgets pressed
-	# @param option 0=FIFO 1=LIFO 2=CLEAR
-	#
+	## The wstack command will return the stack of widgets pressed 32 levels
+	# @param option 0=FIFO 1=LIFO 2=CLEAR 
+	# \n FIFO Fist in Fist out
+	# \n LIFO Last in First out
+	# \n CLEAR Clear the stack
+	# @return truple of ID, Info, Data
+	# \n\n<b> Button Widget Values </b>  
+	# \n   - ID = widgetID of widget pressed
+	# \n   - Info 1=Pressed and released 2=Cancel 4=Pressed 
+	# \n   - Data button state 
+	# \n\n<b> TouchZone Widget Vaules </b>
+	# \n   - ID = widgetID of widget pressed
+	# \n   - Info 1=Pressed and released 2=Cancel 4=Pressed 
+	# \n   - Data button state 
+	# \n\n<b> Slider Widget Values </b>
+	# \n   - ID = widgetID of widget pressed
+	# \n   - Info 1 = value incremented 2 = value decremented 
+	# \n   - Data	slider value  
+	# \n\n<b> CheckBox Widget Vaules </b>
+	# \n   - ID = widgetID of widget pressed
+	# \n   - Info 4 = checked 1 = unchecked
+	# \n   - Data state
+	# \n\n<b> Dial Widget Vaules </b>
+	# \n   - ID = widgetID of widget pressed
+	# \n   - Info 1 = turned clockwise 2 = turned counter-clockwise 
+	# \n   - Data dial value	
+	# @code
+	# # check wstack for button presses
+	# (ID, Info, Data) = LCD.wstack(LIFO)
+	# @endcode
 	def wstack(self, option):
-			self.ser.flushInput()
 			self.ser.write('wstack %d\r' % (option))		
-			return self.ser.readline()
-		
+			test = self.ser.readline()
+			if len(test) != 1:
+				(ID, info, data) = test.split()
+				return (int(ID), int(info), int(data))
+			else:
+				return 0,0,0
 	## The wvalue command will set or return a value to or from a widget
 	# @param ID
 	# @param value
@@ -610,13 +654,13 @@ class ezLCD(object):
 			self.WaitForCR()
 
 	## The wstate command
-	# @param ID
+	# @param ID widget ID
+	# @param option 0 = delete, 1 = enable, 2 = disable, 3 = redraw
 	#
-	def wstate(self, ID):
-		self.ser.flushInput()
-		self.ser.write('wstate %d\r' % (ID))
-		return self.ser.read(5)
-
+	def wstate(self, ID, option):
+		self.ser.write('wstate %d %d\r' % (ID, option))
+		self.WaitForCR()
+		
 	##
 	# @}
 
@@ -630,7 +674,13 @@ class ezLCD(object):
 	# @param image filename of image 'logo.gif'
 	# @param x x coordinates 
 	# @param y y coordinates 
-	# \n x y  are optional and if not supplied will display image at current xy 
+	# \n x y  are optional and if not supplied will display image at current xy
+	# @code 
+	# # display python.gif at 10 10
+	# LCD.picture('python.gif',10,10)	
+	# # display python.gif at current x y
+	# LCD.picture('python.gif')
+	#	 
 	def picture(self, image, x=None, y=None):
 		if x!=None:
 			self.ser.write('image %x %y %s\r' % (x, y, image))
@@ -640,32 +690,81 @@ class ezLCD(object):
 
 # Text --------------------------------------------------------------------
 
-	## The font command will set current font to use 
+	## The font command will set current font to use for printString
+	# fonts are located in the /EZSYS/FONTS and /EZUSER/FONTS \n
+	# use the ezLCD-3xx Font Converter from earthlcd.com \n
+	# to convert truetype fonts to ezLCD format \n
+	# internal fonts will display faster than external fonts
 	# @param font font name
-	#\n '0' and '1' are internal fonts
+	# \n '0' and '1' are internal fonts '0' is medium and '1' is small
+	# @code
+	# # Set font to internal medium font
+	# LCD.font('0')
+	# # Set font to LCD24
+	# LCD.font('LCD24')
 	def font(self, font):
 		self.ser.write('font %s\r' % (font))
 		self.WaitForCR()
 
 	## The FONTO command will change the orientation or direction the text prints.  
-	# @param orientation 0=0 1=90 2=180 3=270 
-	def fonto(self, orientation):
+	# @param orientation 0 90 180 270 
+	# @return orientation current orientation if orientation is not suppled
+	# @image html fonto.png
+	# @code
+	# LCD.fonto(0)
+	# LCD.color(YELLOW)
+	# LCD.printString('Hello',100,100)
+	# LCD.fonto(90)
+	# LCD.color(RED)
+	# LCD.printString('Hello',100,100)
+	# LCD.fonto(180)
+	# LCD.color(BLUE)
+	# LCD.printString('Hello',100,100)
+	# LCD.fonto(270)
+	# LCD.color(GREEN)
+	# LCD.printString('Hello',100,100)
+	# @endcode
+	def fonto(self, orientation = None):
+		if orientation == None:
+			self.ser.write('fonto\r')
+			return self.ser.readline()					
+		if orientation == 90:
+			orientation = 1
+		elif orientation == 180:
+			orientation = 2
+		elif orientation == 270:
+			orientation = 3
+		else:
+			orientation = 0
 		self.ser.write('fonto %d\r' % (orientation))
 		self.WaitForCR()
 		
-	def printChar(self, character):
-		self.ser.write('print %c\r' % (character))
-		self.WaitForCR()
-
 	## print string in current color and font and optional coordinates
 	# @param string string to print
 	# @param x x coordinates 
 	# @param y y coordinates 
+	# @param orientation rotate text direction 
 	# \n x y  are optional and if not supplied will print string at current xy 
-	def printString(self, string, x=None, y=None ):
+	# \n orientation is optional but if used x y must be supplied
+	# \n ** orientation will be restored to previous orientation after printing string **
+	# @code 
+	# # display string 'Hello World' at 10 10
+	# LCD.printString('Hello World',10,10)	
+	# # display string 'Hello World' at current x y
+	# LCD.printString('Hello World')
+	# # diplay string 'Hello World' at 10 10 rotated 90
+	# LCD.printString('Hello World',10,10,90)
+	def printString(self, string, x=None, y=None, orientation=None ):
 		if x != None:
 			self.xy(x, y)
+		if orientation !=None:
+			temp = int(self.fonto())
+			self.fonto(orientation)
 		self.ser.write('print "%s"\r' % (string))			
 		self.WaitForCR()
+		if orientation !=None:
+			self.fonto(temp)
+			temp = self.fonto()
+			
 	##
 	# @}

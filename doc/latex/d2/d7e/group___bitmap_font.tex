@@ -7,11 +7,12 @@
 def \hyperlink{group___bitmap_font_ga3bdde0a3f8505adbfb3c4b7107da7650}{ez\-L\-C\-D3xx.\-picture}
 \begin{DoxyCompactList}\small\item\em The picture command will display a bitmap in bmp, jpg, gif formats with optional coordinates. \end{DoxyCompactList}\item 
 def \hyperlink{group___bitmap_font_ga7099c8ffc9b76ad3213d241bb8b8070f}{ez\-L\-C\-D3xx.\-font}
-\begin{DoxyCompactList}\small\item\em The font command will set current font to use. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The font command will set current font to use for print\-String fonts are located in the /\-E\-Z\-S\-Y\-S/\-F\-O\-N\-T\-S and /\-E\-Z\-U\-S\-E\-R/\-F\-O\-N\-T\-S \par
+ use the ez\-L\-C\-D-\/3xx Font Converter from earthlcd.\-com \par
+ to convert truetype fonts to \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D} format \par
+ internal fonts will display faster than external fonts. \end{DoxyCompactList}\item 
 def \hyperlink{group___bitmap_font_ga445e7a916dbdae456f88bea5fcd88745}{ez\-L\-C\-D3xx.\-fonto}
 \begin{DoxyCompactList}\small\item\em The F\-O\-N\-T\-O command will change the orientation or direction the text prints. \end{DoxyCompactList}\item 
-def \hyperlink{group___bitmap_font_gafe8f092541df1ab4d72798e5f3b4e66d}{ez\-L\-C\-D3xx.\-print\-Char}
-\item 
 def \hyperlink{group___bitmap_font_gac3a90d479a0423de66988b9850f4852c}{ez\-L\-C\-D3xx.\-print\-String}
 \begin{DoxyCompactList}\small\item\em print string in current color and font and optional coordinates \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -30,12 +31,22 @@ def \hyperlink{group___bitmap_font_gac3a90d479a0423de66988b9850f4852c}{ez\-L\-C\
 )}}\label{d2/d7e/group___bitmap_font_ga7099c8ffc9b76ad3213d241bb8b8070f}
 
 
-The font command will set current font to use. 
+The font command will set current font to use for print\-String fonts are located in the /\-E\-Z\-S\-Y\-S/\-F\-O\-N\-T\-S and /\-E\-Z\-U\-S\-E\-R/\-F\-O\-N\-T\-S \par
+ use the ez\-L\-C\-D-\/3xx Font Converter from earthlcd.\-com \par
+ to convert truetype fonts to \hyperlink{classez_l_c_d3xx_1_1ez_l_c_d}{ez\-L\-C\-D} format \par
+ internal fonts will display faster than external fonts. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em font} & font name \par
- '0' and '1' are internal fonts \\
+ '0' and '1' are internal fonts '0' is medium and '1' is small 
+\begin{DoxyCode}
+1 \textcolor{comment}{# Set font to internal medium font}
+2 LCD.font(\textcolor{stringliteral}{'0'})
+3 \textcolor{comment}{# Set font to LCD24}
+4 LCD.font(\textcolor{stringliteral}{'LCD24'}) 
+\end{DoxyCode}
+\\
 \hline
 \end{DoxyParams}
 \hypertarget{group___bitmap_font_ga445e7a916dbdae456f88bea5fcd88745}{\index{Bitmaps and Fonts@{Bitmaps and Fonts}!fonto@{fonto}}
@@ -43,7 +54,7 @@ The font command will set current font to use.
 \subsubsection[{fonto}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-fonto (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
-\item[{}]{orientation}
+\item[{}]{orientation = {\ttfamily None}}
 \end{DoxyParamCaption}
 )}}\label{d2/d7e/group___bitmap_font_ga445e7a916dbdae456f88bea5fcd88745}
 
@@ -52,9 +63,27 @@ The F\-O\-N\-T\-O command will change the orientation or direction the text prin
 
 
 \begin{DoxyParams}{Parameters}
-{\em orientation} & 0=0 1=90 2=180 3=270 \\
+{\em orientation} & 0 90 180 270 \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+orientation current orientation if orientation is not suppled  
+\begin{DoxyCode}
+1 LCD.fonto(0)
+2 LCD.color(YELLOW)
+3 LCD.printString(\textcolor{stringliteral}{'Hello'},100,100)
+4 LCD.fonto(90)
+5 LCD.color(RED)
+6 LCD.printString(\textcolor{stringliteral}{'Hello'},100,100)
+7 LCD.fonto(180)
+8 LCD.color(BLUE)
+9 LCD.printString(\textcolor{stringliteral}{'Hello'},100,100)
+10 LCD.fonto(270)
+11 LCD.color(GREEN)
+12 LCD.printString(\textcolor{stringliteral}{'Hello'},100,100)
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
 \hypertarget{group___bitmap_font_ga3bdde0a3f8505adbfb3c4b7107da7650}{\index{Bitmaps and Fonts@{Bitmaps and Fonts}!picture@{picture}}
 \index{picture@{picture}!Bitmaps and Fonts@{Bitmaps and Fonts}}
 \subsubsection[{picture}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-picture (
@@ -76,27 +105,25 @@ The picture command will display a bitmap in bmp, jpg, gif formats with optional
 {\em x} & x coordinates \\
 \hline
 {\em y} & y coordinates \par
- x y are optional and if not supplied will display image at current xy \\
+ x y are optional and if not supplied will display image at current xy 
+\begin{DoxyCode}
+1 \textcolor{comment}{# display python.gif at 10 10}
+2 LCD.picture(\textcolor{stringliteral}{'python.gif'},10,10)    
+3 \textcolor{comment}{# display python.gif at current x y}
+4 LCD.picture(\textcolor{stringliteral}{'python.gif'})
+\end{DoxyCode}
+\\
 \hline
 \end{DoxyParams}
-\hypertarget{group___bitmap_font_gafe8f092541df1ab4d72798e5f3b4e66d}{\index{Bitmaps and Fonts@{Bitmaps and Fonts}!print\-Char@{print\-Char}}
-\index{print\-Char@{print\-Char}!Bitmaps and Fonts@{Bitmaps and Fonts}}
-\subsubsection[{print\-Char}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-print\-Char (
-\begin{DoxyParamCaption}
-\item[{}]{self, }
-\item[{}]{character}
-\end{DoxyParamCaption}
-)}}\label{d2/d7e/group___bitmap_font_gafe8f092541df1ab4d72798e5f3b4e66d}
-\begin{DoxyVerb}add here
-\end{DoxyVerb}
- \hypertarget{group___bitmap_font_gac3a90d479a0423de66988b9850f4852c}{\index{Bitmaps and Fonts@{Bitmaps and Fonts}!print\-String@{print\-String}}
+\hypertarget{group___bitmap_font_gac3a90d479a0423de66988b9850f4852c}{\index{Bitmaps and Fonts@{Bitmaps and Fonts}!print\-String@{print\-String}}
 \index{print\-String@{print\-String}!Bitmaps and Fonts@{Bitmaps and Fonts}}
 \subsubsection[{print\-String}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-print\-String (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
 \item[{}]{string, }
 \item[{}]{x = {\ttfamily None}, }
-\item[{}]{y = {\ttfamily None}}
+\item[{}]{y = {\ttfamily None}, }
+\item[{}]{orientation = {\ttfamily None}}
 \end{DoxyParamCaption}
 )}}\label{d2/d7e/group___bitmap_font_gac3a90d479a0423de66988b9850f4852c}
 
@@ -109,7 +136,20 @@ print string in current color and font and optional coordinates
 \hline
 {\em x} & x coordinates \\
 \hline
-{\em y} & y coordinates \par
- x y are optional and if not supplied will print string at current xy \\
+{\em y} & y coordinates \\
+\hline
+{\em orientation} & rotate text direction \par
+ x y are optional and if not supplied will print string at current xy \par
+ orientation is optional but if used x y must be supplied \par
+ $\ast$$\ast$ orientation will be restored to previous orientation after printing string $\ast$$\ast$ 
+\begin{DoxyCode}
+1 \textcolor{comment}{# display string 'Hello World' at 10 10}
+2 LCD.printString(\textcolor{stringliteral}{'Hello World'},10,10)   
+3 \textcolor{comment}{# display string 'Hello World' at current x y}
+4 LCD.printString(\textcolor{stringliteral}{'Hello World'})
+5 \textcolor{comment}{# diplay string 'Hello World' at 10 10 rotated 90}
+6 LCD.printString(\textcolor{stringliteral}{'Hello World'},10,10,90) 
+\end{DoxyCode}
+\\
 \hline
 \end{DoxyParams}

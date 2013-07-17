@@ -83,7 +83,7 @@ The cfgio command will configure io pins.
 \begin{DoxyParamCaption}
 \item[{}]{self, }
 \item[{}]{pin, }
-\item[{}]{level}
+\item[{}]{level = {\ttfamily None}}
 \end{DoxyParamCaption}
 )}}\label{dd/d0a/group___general_gaf87ad0b88f8a279c20666363bc7460b6}
 
@@ -97,6 +97,9 @@ The io command use to set and clear io pins.
 {\em level} & \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+io level 
+\end{DoxyReturn}
 \hypertarget{group___general_ga92454899475445ff2d48eb7072f3c94e}{\index{Commands@{Commands}!ping@{ping}}
 \index{ping@{ping}!Commands@{Commands}}
 \subsubsection[{ping}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-ping (
@@ -174,15 +177,15 @@ The snapshot command will write a copy of the current display to the flash drive
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & \\
+{\em x} & starting x position \\
 \hline
-{\em y} & \\
+{\em y} & starting y position \\
 \hline
-{\em w} & \\
+{\em w} & width \\
 \hline
-{\em h} & \\
+{\em h} & height \\
 \hline
-{\em filename.\-bmp} & \\
+{\em filename.\-bmp} & Make sure you have space on the internal flash drive ! \\
 \hline
 \end{DoxyParams}
 \hypertarget{group___general_gaa497e8573c045944d589b17fd7dd36ac}{\index{Commands@{Commands}!verbose@{verbose}}

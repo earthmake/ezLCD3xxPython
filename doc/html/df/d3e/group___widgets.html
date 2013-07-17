@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../BannerV14.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ezLCD Python Module
    &#160;<span id="projectnumber">1.02</span>
@@ -151,7 +152,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga606e61e5ba0ea6ae6ada021e7c021b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string command will set or return a internal string.  <a href="#ga606e61e5ba0ea6ae6ada021e7c021b39">More...</a><br/></td></tr>
 <tr class="separator:ga606e61e5ba0ea6ae6ada021e7c021b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga70b40969e280a9c315b84c18848309ca"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3e/group___widgets.html#ga70b40969e280a9c315b84c18848309ca">ezLCD3xx.wstack</a></td></tr>
-<tr class="memdesc:ga70b40969e280a9c315b84c18848309ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wstack command will return the stack of widgets pressed.  <a href="#ga70b40969e280a9c315b84c18848309ca">More...</a><br/></td></tr>
+<tr class="memdesc:ga70b40969e280a9c315b84c18848309ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wstack command will return the stack of widgets pressed 32 levels.  <a href="#ga70b40969e280a9c315b84c18848309ca">More...</a><br/></td></tr>
 <tr class="separator:ga70b40969e280a9c315b84c18848309ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7eaa2fac8abbadf04fa9afb49702906a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3e/group___widgets.html#ga7eaa2fac8abbadf04fa9afb49702906a">ezLCD3xx.wvalue</a></td></tr>
 <tr class="memdesc:ga7eaa2fac8abbadf04fa9afb49702906a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wvalue command will set or return a value to or from a widget.  <a href="#ga7eaa2fac8abbadf04fa9afb49702906a">More...</a><br/></td></tr>
@@ -417,7 +418,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>stringID</em>&#160;</td>
+          <td class="paramname"><em>stringID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>text</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -440,6 +447,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">radius</td><td></td></tr>
     <tr><td class="paramname">theme</td><td></td></tr>
     <tr><td class="paramname">stringID</td><td></td></tr>
+    <tr><td class="paramname">text</td><td>optional text for button </td></tr>
   </table>
   </dd>
 </dl>
@@ -1158,7 +1166,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>stringID</em>&#160;</td>
+          <td class="paramname"><em>stringID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>text</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1177,8 +1191,9 @@ Functions</h2></td></tr>
     <tr><td class="paramname">width</td><td></td></tr>
     <tr><td class="paramname">height</td><td></td></tr>
     <tr><td class="paramname">options</td><td>Options: 1=left, 2=disabled , 3=right , 4=center, 5=left framed, 6=disabled framed, 7=right framed, 8=center framed , 9=redraw text. </td></tr>
-    <tr><td class="paramname">theme</td><td></td></tr>
-    <tr><td class="paramname">stringID</td><td></td></tr>
+    <tr><td class="paramname">theme</td><td>theme </td></tr>
+    <tr><td class="paramname">stringID</td><td>stringID number </td></tr>
+    <tr><td class="paramname">text</td><td>text to display *optional </td></tr>
   </table>
   </dd>
 </dl>
@@ -1429,13 +1444,44 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The wstack command will return the stack of widgets pressed. </p>
+<p>The wstack command will return the stack of widgets pressed 32 levels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">option</td><td>0=FIFO 1=LIFO 2=CLEAR </td></tr>
+    <tr><td class="paramname">option</td><td>0=FIFO 1=LIFO 2=CLEAR <br/>
+ FIFO Fist in Fist out <br/>
+ LIFO Last in First out <br/>
+ CLEAR Clear the stack </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>truple of ID, Info, Data <br/>
+<br/>
+<b> Button Widget Values </b> <br/>
+ - ID = widgetID of widget pressed <br/>
+ - Info 1=Pressed and released 2=Cancel 4=Pressed <br/>
+ - Data button state <br/>
+<br/>
+<b> TouchZone Widget Vaules </b> <br/>
+ - ID = widgetID of widget pressed <br/>
+ - Info 1=Pressed and released 2=Cancel 4=Pressed <br/>
+ - Data button state <br/>
+<br/>
+<b> Slider Widget Values </b> <br/>
+ - ID = widgetID of widget pressed <br/>
+ - Info 1 = value incremented 2 = value decremented <br/>
+ - Data slider value <br/>
+<br/>
+<b> CheckBox Widget Vaules </b> <br/>
+ - ID = widgetID of widget pressed <br/>
+ - Info 4 = checked 1 = unchecked <br/>
+ - Data state <br/>
+<br/>
+<b> Dial Widget Vaules </b> <br/>
+ - ID = widgetID of widget pressed <br/>
+ - Info 1 = turned clockwise 2 = turned counter-clockwise <br/>
+ - Data dial value <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># check wstack for button presses</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;(ID, Info, Data) = LCD.wstack(LIFO)</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -1453,7 +1499,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ID</em>&#160;</td>
+          <td class="paramname"><em>ID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>option</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1466,7 +1518,8 @@ Functions</h2></td></tr>
 <p>The wstate command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ID</td><td></td></tr>
+    <tr><td class="paramname">ID</td><td>widget ID </td></tr>
+    <tr><td class="paramname">option</td><td>0 = delete, 1 = enable, 2 = disable, 3 = redraw </td></tr>
   </table>
   </dd>
 </dl>
@@ -1519,7 +1572,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 12:04:23 for ezLCD Python Module by
+    <li class="footer">Generated on Wed Jul 17 2013 16:10:16 for ezLCD Python Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

@@ -23,15 +23,15 @@ def \hyperlink{group___drawing_gae70c22a0a810a70a0dd6d32c9fd7c066}{ez\-L\-C\-D3x
 def \hyperlink{group___drawing_ga63bb01e1f5ef0fe2ae2acec0ed90e5bd}{ez\-L\-C\-D3xx.\-box}
 \begin{DoxyCompactList}\small\item\em The box command will draw a box starting from the current xy in width and height with option for filled. \end{DoxyCompactList}\item 
 def \hyperlink{group___drawing_gabfcfb31f2d88c7397332abcc6b324c7c}{ez\-L\-C\-D3xx.\-circle}
-\item 
+\begin{DoxyCompactList}\small\item\em The circle command will draw a circle in the current xy with radius and optional filled. \end{DoxyCompactList}\item 
 def \hyperlink{group___drawing_ga12fb93d2d6f7ce3f08ad988c09624d57}{ez\-L\-C\-D3xx.\-pie}
-\item 
+\begin{DoxyCompactList}\small\item\em The pie command will draw a pie slice at current xy. \end{DoxyCompactList}\item 
 def \hyperlink{group___drawing_ga13a0a8fb9c906a687f2a42864d973cc1}{ez\-L\-C\-D3xx.\-arc}
-\item 
+\begin{DoxyCompactList}\small\item\em The arc command will draw a arc i the current xy optional filled. \end{DoxyCompactList}\item 
 def \hyperlink{group___drawing_ga2f55674143f1e4b06e42f09aaf0da71c}{ez\-L\-C\-D3xx.\-clip\-Area}
-\item 
+\begin{DoxyCompactList}\small\item\em The cliparea command allows you to designate a rectangular/box area that you can draw in. \end{DoxyCompactList}\item 
 def \hyperlink{group___drawing_gabd1433160288289495e6c006e77951e6}{ez\-L\-C\-D3xx.\-clip\-Enable}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The clipenable command enables or disables cliparea. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -49,10 +49,22 @@ def \hyperlink{group___drawing_gabd1433160288289495e6c006e77951e6}{ez\-L\-C\-D3x
 \item[{}]{fill = {\ttfamily 0}}
 \end{DoxyParamCaption}
 )}}\label{d7/df0/group___drawing_ga13a0a8fb9c906a687f2a42864d973cc1}
-\begin{DoxyVerb}The ARC command draws an arc at current XY position. Replace {R} with the desired radius of the arc, in pixels.
-fill =1 will draw a filled circle
-\end{DoxyVerb}
- \hypertarget{group___drawing_ga63bb01e1f5ef0fe2ae2acec0ed90e5bd}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!box@{box}}
+
+
+The arc command will draw a arc i the current xy optional filled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & radius of arc \\
+\hline
+{\em start} & start angle \\
+\hline
+{\em end} & end angle \\
+\hline
+{\em fill} & 1=filled arc 0=outline only $\ast$optional defaults to outline \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___drawing_ga63bb01e1f5ef0fe2ae2acec0ed90e5bd}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!box@{box}}
 \index{box@{box}!Primitve Drawing Commands@{Primitve Drawing Commands}}
 \subsubsection[{box}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-box (
 \begin{DoxyParamCaption}
@@ -80,15 +92,22 @@ The box command will draw a box starting from the current xy in width and height
 \subsubsection[{circle}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-circle (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
-\item[{}]{width, }
 \item[{}]{radius, }
 \item[{}]{fill = {\ttfamily 0}}
 \end{DoxyParamCaption}
 )}}\label{d7/df0/group___drawing_gabfcfb31f2d88c7397332abcc6b324c7c}
-\begin{DoxyVerb}draw a circle with radius in pixels
-fill =1 will draw a filled circle
-\end{DoxyVerb}
- \hypertarget{group___drawing_ga2f55674143f1e4b06e42f09aaf0da71c}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!clip\-Area@{clip\-Area}}
+
+
+The circle command will draw a circle in the current xy with radius and optional filled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & radius of circle \\
+\hline
+{\em fill} & 1=filled circle 0=outline only $\ast$optional defaults to outline \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___drawing_ga2f55674143f1e4b06e42f09aaf0da71c}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!clip\-Area@{clip\-Area}}
 \index{clip\-Area@{clip\-Area}!Primitve Drawing Commands@{Primitve Drawing Commands}}
 \subsubsection[{clip\-Area}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-clip\-Area (
 \begin{DoxyParamCaption}
@@ -100,6 +119,11 @@ fill =1 will draw a filled circle
 \end{DoxyParamCaption}
 )}}\label{d7/df0/group___drawing_ga2f55674143f1e4b06e42f09aaf0da71c}
 
+
+The cliparea command allows you to designate a rectangular/box area that you can draw in. 
+
+\par
+ Any surrounding area will be protected and no changes can be made to it 
 \begin{DoxyParams}{Parameters}
 {\em left} & \\
 \hline
@@ -118,6 +142,10 @@ fill =1 will draw a filled circle
 \item[{}]{enable}
 \end{DoxyParamCaption}
 )}}\label{d7/df0/group___drawing_gabd1433160288289495e6c006e77951e6}
+
+
+The clipenable command enables or disables cliparea. 
+
 
 \begin{DoxyParams}{Parameters}
 {\em enable} & 0=off 1=on \\
@@ -177,15 +205,15 @@ The color\-Id command.
 
 
 \begin{DoxyParams}{Parameters}
-{\em R} & \\
+{\em R} & Red Value \\
 \hline
-{\em G} & \\
+{\em G} & Green Value \\
 \hline
-{\em B} & \\
+{\em B} & Blue Value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-color as a tuple 
+color as a tuple if r g b is None 
 \end{DoxyReturn}
 \hypertarget{group___drawing_gae70c22a0a810a70a0dd6d32c9fd7c066}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!line@{line}}
 \index{line@{line}!Primitve Drawing Commands@{Primitve Drawing Commands}}
@@ -251,9 +279,20 @@ The line\-Width Command will set the line width for the line command.
 \item[{}]{end}
 \end{DoxyParamCaption}
 )}}\label{d7/df0/group___drawing_ga12fb93d2d6f7ce3f08ad988c09624d57}
-\begin{DoxyVerb}The PIE command draws a section of a circle (pie slice) at current xy position.
-\end{DoxyVerb}
- \hypertarget{group___drawing_gad3c0ce418a0feea4a0fa40f803c90196}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!plot@{plot}}
+
+
+The pie command will draw a pie slice at current xy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & radius of pie \\
+\hline
+{\em start} & start angle \\
+\hline
+{\em end} & end angle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___drawing_gad3c0ce418a0feea4a0fa40f803c90196}{\index{Primitve Drawing Commands@{Primitve Drawing Commands}!plot@{plot}}
 \index{plot@{plot}!Primitve Drawing Commands@{Primitve Drawing Commands}}
 \subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-plot (
 \begin{DoxyParamCaption}
@@ -288,8 +327,18 @@ The xy command will set or return the x y coordinates.
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & optional \\
+{\em x} & x position \\
 \hline
-{\em y} & optional \\
+{\em y} & y position \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+x y if x and y not supplied 
+\begin{DoxyCode}
+1 \textcolor{comment}{# Set x y to 100 100}
+2 LCD.xy(100,100)
+3 \textcolor{comment}{# Get Current x y}
+4 (x,y)=LCD.xy()
+\end{DoxyCode}
+ 
+\end{DoxyReturn}

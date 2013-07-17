@@ -35,7 +35,7 @@ def \hyperlink{group___widgets_gad527fa9cb9cda35802e26af7e1870f96}{ez\-L\-C\-D3x
 def \hyperlink{group___widgets_ga606e61e5ba0ea6ae6ada021e7c021b39}{ez\-L\-C\-D3xx.\-string}
 \begin{DoxyCompactList}\small\item\em The string command will set or return a internal string. \end{DoxyCompactList}\item 
 def \hyperlink{group___widgets_ga70b40969e280a9c315b84c18848309ca}{ez\-L\-C\-D3xx.\-wstack}
-\begin{DoxyCompactList}\small\item\em The wstack command will return the stack of widgets pressed. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The wstack command will return the stack of widgets pressed 32 levels. \end{DoxyCompactList}\item 
 def \hyperlink{group___widgets_ga7eaa2fac8abbadf04fa9afb49702906a}{ez\-L\-C\-D3xx.\-wvalue}
 \begin{DoxyCompactList}\small\item\em The wvalue command will set or return a value to or from a widget. \end{DoxyCompactList}\item 
 def \hyperlink{group___widgets_gaada0b335d54904b4f4517755ace97e47}{ez\-L\-C\-D3xx.\-wstate}
@@ -145,7 +145,8 @@ The ameter\-\_\-color command.
 \item[{}]{align, }
 \item[{}]{radius, }
 \item[{}]{theme, }
-\item[{}]{string\-I\-D}
+\item[{}]{string\-I\-D, }
+\item[{}]{text = {\ttfamily None}}
 \end{DoxyParamCaption}
 )}}\label{df/d3e/group___widgets_ga7eeeb3ce522c7891c3f76cdc79f11192}
 
@@ -173,6 +174,8 @@ The button command.
 {\em theme} & \\
 \hline
 {\em string\-I\-D} & \\
+\hline
+{\em text} & optional text for button \\
 \hline
 \end{DoxyParams}
 \hypertarget{group___widgets_gad1b05a5ee17690c241c30b6a15437c8b}{\index{Widgets@{Widgets}!choice@{choice}}
@@ -493,7 +496,8 @@ The slider command.
 \item[{}]{height, }
 \item[{}]{options, }
 \item[{}]{theme, }
-\item[{}]{string\-I\-D}
+\item[{}]{string\-I\-D, }
+\item[{}]{text = {\ttfamily None}}
 \end{DoxyParamCaption}
 )}}\label{df/d3e/group___widgets_ga1f298ec66c48404b6c9deb6bebb0815c}
 
@@ -514,9 +518,11 @@ The static\-Text widget.
 \hline
 {\em options} & Options\-: 1=left, 2=disabled , 3=right , 4=center, 5=left framed, 6=disabled framed, 7=right framed, 8=center framed , 9=redraw text. \\
 \hline
-{\em theme} & \\
+{\em theme} & theme \\
 \hline
-{\em string\-I\-D} & \\
+{\em string\-I\-D} & string\-I\-D number \\
+\hline
+{\em text} & text to display $\ast$optional \\
 \hline
 \end{DoxyParams}
 \hypertarget{group___widgets_ga606e61e5ba0ea6ae6ada021e7c021b39}{\index{Widgets@{Widgets}!string@{string}}
@@ -634,19 +640,56 @@ The touch\-Zone command.
 )}}\label{df/d3e/group___widgets_ga70b40969e280a9c315b84c18848309ca}
 
 
-The wstack command will return the stack of widgets pressed. 
+The wstack command will return the stack of widgets pressed 32 levels. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em option} & 0=F\-I\-F\-O 1=L\-I\-F\-O 2=C\-L\-E\-A\-R \\
+{\em option} & 0=F\-I\-F\-O 1=L\-I\-F\-O 2=C\-L\-E\-A\-R \par
+ F\-I\-F\-O Fist in Fist out \par
+ L\-I\-F\-O Last in First out \par
+ C\-L\-E\-A\-R Clear the stack \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+truple of I\-D, Info, Data \par
+\par
+{\bfseries  Button Widget Values } \par
+ -\/ I\-D = widget\-I\-D of widget pressed \par
+ -\/ Info 1=Pressed and released 2=Cancel 4=Pressed \par
+ -\/ Data button state \par
+\par
+{\bfseries  Touch\-Zone Widget Vaules } \par
+ -\/ I\-D = widget\-I\-D of widget pressed \par
+ -\/ Info 1=Pressed and released 2=Cancel 4=Pressed \par
+ -\/ Data button state \par
+\par
+{\bfseries  Slider Widget Values } \par
+ -\/ I\-D = widget\-I\-D of widget pressed \par
+ -\/ Info 1 = value incremented 2 = value decremented \par
+ -\/ Data slider value \par
+\par
+{\bfseries  Check\-Box Widget Vaules } \par
+ -\/ I\-D = widget\-I\-D of widget pressed \par
+ -\/ Info 4 = checked 1 = unchecked \par
+ -\/ Data state \par
+\par
+{\bfseries  Dial Widget Vaules } \par
+ -\/ I\-D = widget\-I\-D of widget pressed \par
+ -\/ Info 1 = turned clockwise 2 = turned counter-\/clockwise \par
+ -\/ Data dial value 
+\begin{DoxyCode}
+1 \textcolor{comment}{# check wstack for button presses}
+2 (ID, Info, Data) = LCD.wstack(LIFO)
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
 \hypertarget{group___widgets_gaada0b335d54904b4f4517755ace97e47}{\index{Widgets@{Widgets}!wstate@{wstate}}
 \index{wstate@{wstate}!Widgets@{Widgets}}
 \subsubsection[{wstate}]{\setlength{\rightskip}{0pt plus 5cm}def ez\-L\-C\-D3xx.\-wstate (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
-\item[{}]{I\-D}
+\item[{}]{I\-D, }
+\item[{}]{option}
 \end{DoxyParamCaption}
 )}}\label{df/d3e/group___widgets_gaada0b335d54904b4f4517755ace97e47}
 
@@ -655,7 +698,9 @@ The wstate command.
 
 
 \begin{DoxyParams}{Parameters}
-{\em I\-D} & \\
+{\em I\-D} & widget I\-D \\
+\hline
+{\em option} & 0 = delete, 1 = enable, 2 = disable, 3 = redraw \\
 \hline
 \end{DoxyParams}
 \hypertarget{group___widgets_ga7eaa2fac8abbadf04fa9afb49702906a}{\index{Widgets@{Widgets}!wvalue@{wvalue}}

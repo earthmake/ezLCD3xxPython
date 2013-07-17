@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../BannerV14.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ezLCD Python Module
    &#160;<span id="projectnumber">1.02</span>
@@ -109,13 +110,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga3bdde0a3f8505adbfb3c4b7107da7650"><td class="mdescLeft">&#160;</td><td class="mdescRight">The picture command will display a bitmap in bmp, jpg, gif formats with optional coordinates.  <a href="#ga3bdde0a3f8505adbfb3c4b7107da7650">More...</a><br/></td></tr>
 <tr class="separator:ga3bdde0a3f8505adbfb3c4b7107da7650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7099c8ffc9b76ad3213d241bb8b8070f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7e/group___bitmap_font.html#ga7099c8ffc9b76ad3213d241bb8b8070f">ezLCD3xx.font</a></td></tr>
-<tr class="memdesc:ga7099c8ffc9b76ad3213d241bb8b8070f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The font command will set current font to use.  <a href="#ga7099c8ffc9b76ad3213d241bb8b8070f">More...</a><br/></td></tr>
+<tr class="memdesc:ga7099c8ffc9b76ad3213d241bb8b8070f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The font command will set current font to use for printString fonts are located in the /EZSYS/FONTS and /EZUSER/FONTS <br/>
+ use the ezLCD-3xx Font Converter from earthlcd.com <br/>
+ to convert truetype fonts to <a class="el" href="../../d0/dc0/classez_l_c_d3xx_1_1ez_l_c_d.html">ezLCD</a> format <br/>
+ internal fonts will display faster than external fonts.  <a href="#ga7099c8ffc9b76ad3213d241bb8b8070f">More...</a><br/></td></tr>
 <tr class="separator:ga7099c8ffc9b76ad3213d241bb8b8070f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga445e7a916dbdae456f88bea5fcd88745"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7e/group___bitmap_font.html#ga445e7a916dbdae456f88bea5fcd88745">ezLCD3xx.fonto</a></td></tr>
 <tr class="memdesc:ga445e7a916dbdae456f88bea5fcd88745"><td class="mdescLeft">&#160;</td><td class="mdescRight">The FONTO command will change the orientation or direction the text prints.  <a href="#ga445e7a916dbdae456f88bea5fcd88745">More...</a><br/></td></tr>
 <tr class="separator:ga445e7a916dbdae456f88bea5fcd88745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafe8f092541df1ab4d72798e5f3b4e66d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7e/group___bitmap_font.html#gafe8f092541df1ab4d72798e5f3b4e66d">ezLCD3xx.printChar</a></td></tr>
-<tr class="separator:gafe8f092541df1ab4d72798e5f3b4e66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac3a90d479a0423de66988b9850f4852c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7e/group___bitmap_font.html#gac3a90d479a0423de66988b9850f4852c">ezLCD3xx.printString</a></td></tr>
 <tr class="memdesc:gac3a90d479a0423de66988b9850f4852c"><td class="mdescLeft">&#160;</td><td class="mdescRight">print string in current color and font and optional coordinates  <a href="#gac3a90d479a0423de66988b9850f4852c">More...</a><br/></td></tr>
 <tr class="separator:gac3a90d479a0423de66988b9850f4852c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,11 +148,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The font command will set current font to use. </p>
+<p>The font command will set current font to use for printString fonts are located in the /EZSYS/FONTS and /EZUSER/FONTS <br/>
+ use the ezLCD-3xx Font Converter from earthlcd.com <br/>
+ to convert truetype fonts to <a class="el" href="../../d0/dc0/classez_l_c_d3xx_1_1ez_l_c_d.html">ezLCD</a> format <br/>
+ internal fonts will display faster than external fonts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">font</td><td>font name <br/>
- '0' and '1' are internal fonts </td></tr>
+ '0' and '1' are internal fonts '0' is medium and '1' is small <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># Set font to internal medium font</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;LCD.font(<span class="stringliteral">&#39;0&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># Set font to LCD24</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;LCD.font(<span class="stringliteral">&#39;LCD24&#39;</span>) </div>
+</div><!-- fragment --></td></tr>
   </table>
   </dd>
 </dl>
@@ -171,7 +180,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>orientation</em>&#160;</td>
+          <td class="paramname"><em>orientation</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -184,10 +193,26 @@ Functions</h2></td></tr>
 <p>The FONTO command will change the orientation or direction the text prints. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">orientation</td><td>0=0 1=90 2=180 3=270 </td></tr>
+    <tr><td class="paramname">orientation</td><td>0 90 180 270 </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>orientation current orientation if orientation is not suppled <div class="image">
+<img src="../../fonto.png" alt="fonto.png"/>
+</div>
+ <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;LCD.fonto(0)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;LCD.color(YELLOW)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;LCD.printString(<span class="stringliteral">&#39;Hello&#39;</span>,100,100)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;LCD.fonto(90)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;LCD.color(RED)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;LCD.printString(<span class="stringliteral">&#39;Hello&#39;</span>,100,100)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;LCD.fonto(180)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;LCD.color(BLUE)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;LCD.printString(<span class="stringliteral">&#39;Hello&#39;</span>,100,100)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;LCD.fonto(270)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;LCD.color(GREEN)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;LCD.printString(<span class="stringliteral">&#39;Hello&#39;</span>,100,100)</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -233,38 +258,15 @@ Functions</h2></td></tr>
     <tr><td class="paramname">image</td><td>filename of image 'logo.gif' </td></tr>
     <tr><td class="paramname">x</td><td>x coordinates </td></tr>
     <tr><td class="paramname">y</td><td>y coordinates <br/>
- x y are optional and if not supplied will display image at current xy </td></tr>
+ x y are optional and if not supplied will display image at current xy <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># display python.gif at 10 10</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;LCD.picture(<span class="stringliteral">&#39;python.gif&#39;</span>,10,10)    </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># display python.gif at current x y</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;LCD.picture(<span class="stringliteral">&#39;python.gif&#39;</span>)</div>
+</div><!-- fragment --></td></tr>
   </table>
   </dd>
 </dl>
 
-</div>
-</div>
-<a class="anchor" id="gafe8f092541df1ab4d72798e5f3b4e66d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def ezLCD3xx.printChar </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>character</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">add here
-</pre> 
 </div>
 </div>
 <a class="anchor" id="gac3a90d479a0423de66988b9850f4852c"></a>
@@ -293,7 +295,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>y</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>y</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>orientation</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -308,8 +316,17 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">string</td><td>string to print </td></tr>
     <tr><td class="paramname">x</td><td>x coordinates </td></tr>
-    <tr><td class="paramname">y</td><td>y coordinates <br/>
- x y are optional and if not supplied will print string at current xy </td></tr>
+    <tr><td class="paramname">y</td><td>y coordinates </td></tr>
+    <tr><td class="paramname">orientation</td><td>rotate text direction <br/>
+ x y are optional and if not supplied will print string at current xy <br/>
+ orientation is optional but if used x y must be supplied <br/>
+ ** orientation will be restored to previous orientation after printing string ** <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># display string &#39;Hello World&#39; at 10 10</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;LCD.printString(<span class="stringliteral">&#39;Hello World&#39;</span>,10,10)   </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># display string &#39;Hello World&#39; at current x y</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;LCD.printString(<span class="stringliteral">&#39;Hello World&#39;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"># diplay string &#39;Hello World&#39; at 10 10 rotated 90</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;LCD.printString(<span class="stringliteral">&#39;Hello World&#39;</span>,10,10,90) </div>
+</div><!-- fragment --></td></tr>
   </table>
   </dd>
 </dl>
@@ -321,7 +338,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 12:04:23 for ezLCD Python Module by
+    <li class="footer">Generated on Wed Jul 17 2013 16:10:16 for ezLCD Python Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../BannerV14.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ezLCD Python Module
    &#160;<span id="projectnumber">1.02</span>
@@ -133,14 +134,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga63bb01e1f5ef0fe2ae2acec0ed90e5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The box command will draw a box starting from the current xy in width and height with option for filled.  <a href="#ga63bb01e1f5ef0fe2ae2acec0ed90e5bd">More...</a><br/></td></tr>
 <tr class="separator:ga63bb01e1f5ef0fe2ae2acec0ed90e5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabfcfb31f2d88c7397332abcc6b324c7c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/df0/group___drawing.html#gabfcfb31f2d88c7397332abcc6b324c7c">ezLCD3xx.circle</a></td></tr>
+<tr class="memdesc:gabfcfb31f2d88c7397332abcc6b324c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The circle command will draw a circle in the current xy with radius and optional filled.  <a href="#gabfcfb31f2d88c7397332abcc6b324c7c">More...</a><br/></td></tr>
 <tr class="separator:gabfcfb31f2d88c7397332abcc6b324c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga12fb93d2d6f7ce3f08ad988c09624d57"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/df0/group___drawing.html#ga12fb93d2d6f7ce3f08ad988c09624d57">ezLCD3xx.pie</a></td></tr>
+<tr class="memdesc:ga12fb93d2d6f7ce3f08ad988c09624d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pie command will draw a pie slice at current xy.  <a href="#ga12fb93d2d6f7ce3f08ad988c09624d57">More...</a><br/></td></tr>
 <tr class="separator:ga12fb93d2d6f7ce3f08ad988c09624d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga13a0a8fb9c906a687f2a42864d973cc1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/df0/group___drawing.html#ga13a0a8fb9c906a687f2a42864d973cc1">ezLCD3xx.arc</a></td></tr>
+<tr class="memdesc:ga13a0a8fb9c906a687f2a42864d973cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The arc command will draw a arc i the current xy optional filled.  <a href="#ga13a0a8fb9c906a687f2a42864d973cc1">More...</a><br/></td></tr>
 <tr class="separator:ga13a0a8fb9c906a687f2a42864d973cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2f55674143f1e4b06e42f09aaf0da71c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/df0/group___drawing.html#ga2f55674143f1e4b06e42f09aaf0da71c">ezLCD3xx.clipArea</a></td></tr>
+<tr class="memdesc:ga2f55674143f1e4b06e42f09aaf0da71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cliparea command allows you to designate a rectangular/box area that you can draw in.  <a href="#ga2f55674143f1e4b06e42f09aaf0da71c">More...</a><br/></td></tr>
 <tr class="separator:ga2f55674143f1e4b06e42f09aaf0da71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabd1433160288289495e6c006e77951e6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/df0/group___drawing.html#gabd1433160288289495e6c006e77951e6">ezLCD3xx.clipEnable</a></td></tr>
+<tr class="memdesc:gabd1433160288289495e6c006e77951e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The clipenable command enables or disables cliparea.  <a href="#gabd1433160288289495e6c006e77951e6">More...</a><br/></td></tr>
 <tr class="separator:gabd1433160288289495e6c006e77951e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -186,9 +192,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The ARC command draws an arc at current XY position. Replace {R} with the desired radius of the arc, in pixels.
-fill =1 will draw a filled circle
-</pre> 
+
+<p>The arc command will draw a arc i the current xy optional filled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>radius of arc </td></tr>
+    <tr><td class="paramname">start</td><td>start angle </td></tr>
+    <tr><td class="paramname">end</td><td>end angle </td></tr>
+    <tr><td class="paramname">fill</td><td>1=filled arc 0=outline only *optional defaults to outline </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ga63bb01e1f5ef0fe2ae2acec0ed90e5bd"></a>
@@ -253,12 +268,6 @@ fill =1 will draw a filled circle
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>radius</em>, </td>
         </tr>
         <tr>
@@ -274,9 +283,16 @@ fill =1 will draw a filled circle
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">draw a circle with radius in pixels
-fill =1 will draw a filled circle
-</pre> 
+
+<p>The circle command will draw a circle in the current xy with radius and optional filled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>radius of circle </td></tr>
+    <tr><td class="paramname">fill</td><td>1=filled circle 0=outline only *optional defaults to outline </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ga2f55674143f1e4b06e42f09aaf0da71c"></a>
@@ -320,6 +336,10 @@ fill =1 will draw a filled circle
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The cliparea command allows you to designate a rectangular/box area that you can draw in. </p>
+<p><br/>
+ Any surrounding area will be protected and no changes can be made to it </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">left</td><td></td></tr>
@@ -355,6 +375,8 @@ fill =1 will draw a filled circle
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The clipenable command enables or disables cliparea. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">enable</td><td>0=off 1=on </td></tr>
@@ -478,13 +500,13 @@ fill =1 will draw a filled circle
 <p>The colorId command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">R</td><td></td></tr>
-    <tr><td class="paramname">G</td><td></td></tr>
-    <tr><td class="paramname">B</td><td></td></tr>
+    <tr><td class="paramname">R</td><td>Red Value </td></tr>
+    <tr><td class="paramname">G</td><td>Green Value </td></tr>
+    <tr><td class="paramname">B</td><td>Blue Value </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>color as a tuple </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>color as a tuple if r g b is None </dd></dl>
 
 </div>
 </div>
@@ -632,8 +654,17 @@ fill =1 will draw a filled circle
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The PIE command draws a section of a circle (pie slice) at current xy position.
-</pre> 
+
+<p>The pie command will draw a pie slice at current xy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>radius of pie </td></tr>
+    <tr><td class="paramname">start</td><td>start angle </td></tr>
+    <tr><td class="paramname">end</td><td>end angle </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="gad3c0ce418a0feea4a0fa40f803c90196"></a>
@@ -710,11 +741,16 @@ fill =1 will draw a filled circle
 <p>The xy command will set or return the x y coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>optional </td></tr>
-    <tr><td class="paramname">y</td><td>optional </td></tr>
+    <tr><td class="paramname">x</td><td>x position </td></tr>
+    <tr><td class="paramname">y</td><td>y position </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>x y if x and y not supplied <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># Set x y to 100 100</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;LCD.xy(100,100)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># Get Current x y</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;(x,y)=LCD.xy()</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -723,7 +759,7 @@ fill =1 will draw a filled circle
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 12:04:23 for ezLCD Python Module by
+    <li class="footer">Generated on Wed Jul 17 2013 16:10:16 for ezLCD Python Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
