@@ -630,10 +630,9 @@ class ezLCD(object):
 	# @endcode
 	def wstack(self, option):
 			self.ser.write('wstack %d\r' % (option))		
-			test = self.ser.readline()
-			if len(test) != 1:
-				(ID, info, data) = test.split()
-				return (int(ID), int(info), int(data))
+			test = self.ser.readline().split()
+			if len(test) != 1 and len(test) == 3:
+				return int(test[0]),int(test[1]),int(test[2])
 			else:
 				return 0,0,0
 	## The wvalue command will set or return a value to or from a widget
@@ -641,6 +640,7 @@ class ezLCD(object):
 	# @param value
 	#
 	def wvalue(self, ID, value = None):
+		test =0,0,0
 		if value == None:
 			self.ser.flushInput()
 			self.ser.write('wvalue %d\r' % (ID))

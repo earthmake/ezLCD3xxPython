@@ -1,0 +1,30 @@
+'minimal.ezm 
+verbose off
+cmd cdc
+
+'set some fonts for widgets
+fontw 0 0
+fontw 1 0
+fontw 2 0
+fontw 3 serif24
+fontw 4 serif24
+fontw 5 serif24
+fontw 6 serif24
+fontw 7 serif24
+'Set some themes for widgets
+theme 0   1   2 0 0 0  3  3   1 0 0
+theme 1 155 152 3 3 3  24  4   5 0 1
+theme 2   5  20 3 3 3  4  4   5 0 2
+theme 3   9   3 0 0 0  8  8   9 0 3
+theme 4   7   3 0 0 0  6  6   6 6 4
+theme 5 126 118 3 3 3 35 35  36 0 5
+theme 6 111 106 3 3 3 12 12 101 0 6
+theme 7  58  48 3 3 3 14 14  54 0 7
+
+color white
+print "Python CDC Mode 115200 Baud  "
+'print device model
+print 65
+print "  "
+'print firmware version
+print 66

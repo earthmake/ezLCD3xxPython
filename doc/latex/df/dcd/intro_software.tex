@@ -1,5 +1,9 @@
 Minimal example will open the ez\-L\-C\-D port clear the screen and print 'Hello From Python' in red \par
   
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics{minimal.png}}
+\end{DoxyImageNoCaption}
+ 
 \begin{DoxyCodeInclude}
 1 \textcolor{comment}{# Minimal ezLCD Python demo}
 2 \textcolor{comment}{#}
@@ -35,78 +39,91 @@ Minimal example will open the ez\-L\-C\-D port clear the screen and print 'Hello
 32 LCD.printString(\textcolor{stringliteral}{"Hello From Python"},80,100)
 33 
 \end{DoxyCodeInclude}
- Button example will display a button widget then poll for button presses and update screen  
+ Button example will display a button widget then poll for button presses and update screen \par
+  
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics{button.png}}
+\end{DoxyImageNoCaption}
+ 
 \begin{DoxyCodeInclude}
-1 \textcolor{comment}{# Minimal ezLCD Python demo}
+1 \textcolor{comment}{# Button ezLCD Python demo}
 2 \textcolor{comment}{#}
 3 
 4 \textcolor{keyword}{import} platform
 5 \textcolor{keyword}{import} sys
 6 
-7 
-8 sys.path.append(\textcolor{stringliteral}{"C:\(\backslash\)Users\(\backslash\)codeman\(\backslash\)Documents\(\backslash\)GitHub\(\backslash\)ezLCD3xxPython\(\backslash\)module"}) 
-9 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
-10 
-11 \textcolor{comment}{#check what OS we are on}
-12 \textcolor{comment}{#Windows}
-13 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
-14     LCD = ezLCD(\textcolor{stringliteral}{'com6'}) 
-15 \textcolor{comment}{#Mac}
-16 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
-17     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
-18 \textcolor{comment}{# Bail out if comport error}
-19 \textcolor{keywordflow}{if} LCD.openSerial()==\textcolor{keyword}{False}:
-20     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
-21     \textcolor{keywordflow}{raise} SystemExit
-22 
-23 \textcolor{comment}{# Turn verbose off }
-24 LCD.verbose(\textcolor{stringliteral}{'off'})
-25 \textcolor{comment}{# Turn off button press info from ezLCD}
-26 LCD.wquiet(ON)
-27 \textcolor{comment}{# CLear screen}
-28 LCD.cls()
-29 \textcolor{comment}{# Set draw color to red}
-30 LCD.color(RED)
-31 \textcolor{comment}{# Set widget font 0}
-32 LCD.fontw(0,\textcolor{stringliteral}{'1'})
-33 \textcolor{comment}{# Set wodget font 1}
-34 LCD.fontw(1,\textcolor{stringliteral}{'0'})
-35 \textcolor{comment}{# Set theme #1 }
-36 LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
-37 \textcolor{comment}{# Print string at coordinates x=80 and y=100}
-38 LCD.printString(\textcolor{stringliteral}{"Hello From Python"},80,100)
-39 \textcolor{comment}{# Draw button widget with a ID of 1}
-40 LCD.button( 1,  80, 150, 155, 50, 1, 0, 10, 1, 3, \textcolor{stringliteral}{'Press Here'})
-41 \textcolor{comment}{# Clear widget stack}
-42 LCD.wstack(CLEAR)
-43 
-44 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
-45     \textcolor{comment}{# check widget stack this will return widget updates (button press ect.) last in first out order}
-46     (ID, Info, Data) = LCD.wstack(LIFO)
-47     \textcolor{comment}{# check if ID = 1 widget 1 and info = pressed }
-48     \textcolor{keywordflow}{if} ID == 1 \textcolor{keywordflow}{and} Info == 4:
-49         \textcolor{comment}{# move cursor to x=35 y=30 and draw a black box to clear previous text}
-50         \textcolor{comment}{# then print button data}
-51         LCD.xy(35,30)
-52         LCD.color(BLACK)
-53         LCD.box(250,40,FILLED)
-54         LCD.color(YELLOW)
-55         LCD.printString(\textcolor{stringliteral}{'Button Pressed'}, 90, 30)
-56     \textcolor{comment}{# check if ID = 1 widget 1 and info = pressed and released}
-57     \textcolor{keywordflow}{if} ID == 1 \textcolor{keywordflow}{and} Info == 1:
-58         \textcolor{comment}{# move cursor to x=35 y=30 and draw a black box to clear previous text}
-59         \textcolor{comment}{# then print button data}
-60         LCD.xy(35,30)
-61         LCD.color(BLACK)
-62         LCD.box(250,40,FILLED)
-63         LCD.color(YELLOW)        
-64         LCD.printString(\textcolor{stringliteral}{'Button Pressed and Released'}, 35, 30)
-65         LCD.snapshot(0,0,320,240,\textcolor{stringliteral}{'button.bmp'})
-66         
+7 sys.path.append(\textcolor{stringliteral}{"C:\(\backslash\)Users\(\backslash\)segler\(\backslash\)Documents\(\backslash\)GitHub\(\backslash\)ezLCD3xxPython\(\backslash\)module"}) 
+8 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
+9 
+10 \textcolor{comment}{#check what OS we are on}
+11 \textcolor{comment}{#Windows}
+12 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
+13     LCD = ezLCD(\textcolor{stringliteral}{'com4'}) 
+14 \textcolor{comment}{#Mac}
+15 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
+16     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
+17 \textcolor{comment}{# Bail out if comport error}
+18 \textcolor{keywordflow}{if} LCD.openSerial()==\textcolor{keyword}{False}:
+19     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
+20     \textcolor{keywordflow}{raise} SystemExit
+21 
+22 \textcolor{comment}{# Turn verbose off }
+23 LCD.verbose(\textcolor{stringliteral}{'off'})
+24 \textcolor{comment}{# Turn off button press info from ezLCD}
+25 LCD.wquiet(ON)
+26 \textcolor{comment}{# CLear screen}
+27 LCD.cls()
+28 \textcolor{comment}{# Set draw color to red}
+29 LCD.color(RED)
+30 \textcolor{comment}{# Set widget font 0}
+31 LCD.fontw(0,\textcolor{stringliteral}{'1'})
+32 \textcolor{comment}{# Set wodget font 1}
+33 LCD.fontw(1,\textcolor{stringliteral}{'0'})
+34 \textcolor{comment}{# Set theme #1 }
+35 LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
+36 \textcolor{comment}{# Print string at coordinates x=80 and y=100}
+37 LCD.printString(\textcolor{stringliteral}{"Hello From Python"},80,100)
+38 \textcolor{comment}{# Draw button widget with a ID of 1}
+39 LCD.button( 1,  80, 150, 155, 50, 1, 0, 10, 6, 3, \textcolor{stringliteral}{'Press Here'})
+40 \textcolor{comment}{# Draw a staticText box}
+41 LCD.staticText(2, 35, 30, 250, 30, 8, 1, 1,\textcolor{stringliteral}{'Press Button'})
+42 \textcolor{comment}{# Clear widget stack}
+43 LCD.wstack(CLEAR)
+44 
+45 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+46     \textcolor{comment}{# check widget stack this will return widget updates (button press ect.) last in first out order}
+47     (ID, Info, Data) = LCD.wstack(LIFO)
+48     \textcolor{comment}{# check if ID = 1 widget 1 and info = pressed }
+49     \textcolor{keywordflow}{if} ID == 1 \textcolor{keywordflow}{and} Info == 4:
+50         \textcolor{comment}{# clear the stack just to be safe}
+51         LCD.wstack(CLEAR)
+52         \textcolor{comment}{# change draw color to yellow}
+53         LCD.color(YELLOW)
+54         \textcolor{comment}{# change change string 1 for text on static text ID 2}
+55         LCD.string(1,\textcolor{stringliteral}{'Button Pressed'})
+56         \textcolor{comment}{# redraw static text box ID 2 3=redraw      }
+57         LCD.wstate(2, 3)
+58     \textcolor{comment}{# check if ID = 1 widget 1 and info = pressed and released}
+59     \textcolor{keywordflow}{if} ID == 1 \textcolor{keywordflow}{and} Info == 1:
+60         \textcolor{comment}{# clear the stack just to be safe}
+61         LCD.wstack(CLEAR)
+62         \textcolor{comment}{# change draw color to yellow}
+63         LCD.color(YELLOW)
+64         \textcolor{comment}{# change change string 1 for text on static text ID 2}
+65         LCD.string(1,\textcolor{stringliteral}{'Button Pressed and Released'})
+66         \textcolor{comment}{# redraw static text box ID 2 3=redraw}
+67         LCD.wstate(2, 3)
+68 
+69         
 \end{DoxyCodeInclude}
 
 
-Load example will display the cpu load as a graph  
+Load example will display the cpu load as a graph \par
+  
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics{load.png}}
+\end{DoxyImageNoCaption}
+ 
 \begin{DoxyCodeInclude}
 1 \textcolor{comment}{#!/usr/bin/env python}
 2 \textcolor{comment}{# Python Serial library for ezLCD3xx}
@@ -129,7 +146,7 @@ Load example will display the cpu load as a graph
 19 \textcolor{keyword}{import} time
 20 \textcolor{keyword}{import} psutil
 21     
-22 sys.path.append(\textcolor{stringliteral}{"C:\(\backslash\)Users\(\backslash\)codeman\(\backslash\)Documents\(\backslash\)GitHub\(\backslash\)ezLCD3xxPython\(\backslash\)module"}) 
+22 sys.path.append(\textcolor{stringliteral}{"C:\(\backslash\)Users\(\backslash\)segler\(\backslash\)Documents\(\backslash\)GitHub\(\backslash\)ezLCD3xxPython\(\backslash\)module"}) 
 23 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
 24 
 25 \textcolor{keyword}{def }drawGrid():
@@ -169,14 +186,14 @@ Load example will display the cpu load as a graph
 59     LCD.wstate(7,REDRAW)
 60             
 61 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
-62     LCD = ezLCD(\textcolor{stringliteral}{'com6'}) 
+62     LCD = ezLCD(\textcolor{stringliteral}{'com58'}) 
 63 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
 64     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
 65 \textcolor{keywordflow}{if} LCD.openSerial()==\textcolor{keyword}{False}:
 66     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
 67     \textcolor{keywordflow}{raise} SystemExit   
 68     
-69 LCD.verbose(\textcolor{stringliteral}{'off'})
+69 LCD.verbose(\textcolor{stringliteral}{'OFF'})
 70 LCD.wquiet(ON)
 71 LCD.cls()
 72 LCD.fontw(0,\textcolor{stringliteral}{'1'})
@@ -241,20 +258,18 @@ Load example will display the cpu load as a graph
 131         lx =0
 132         ly1 =239
 133         ly2 =239
-134         LCD.snapshot(0,0,320,240,\textcolor{stringliteral}{'load.bmp'})
-135         sys.exit()      
-136         drawGrid()
-137     (ID, info, data) = LCD.wstack(LIFO)
-138     LCD.wstack(CLEAR)
-139     \textcolor{keywordflow}{if} ID == 5 \textcolor{keywordflow}{and} info==1:
-140         res +=1
-141         drawTime(res)  
-142     \textcolor{keywordflow}{if} ID == 6 \textcolor{keywordflow}{and} info==1:
-143         \textcolor{keywordflow}{if} res > 1:
-144             res -=1
-145             drawTime(res)
-146 LCD.closeSerial()
-147 \textcolor{comment}{# End Test Program --------------------------------------}
-148 
+134         drawGrid()
+135     (ID, info, data) = LCD.wstack(LIFO)
+136     LCD.wstack(CLEAR)
+137     \textcolor{keywordflow}{if} ID == 5 \textcolor{keywordflow}{and} info==1:
+138         res +=1
+139         drawTime(res)  
+140     \textcolor{keywordflow}{if} ID == 6 \textcolor{keywordflow}{and} info==1:
+141         \textcolor{keywordflow}{if} res > 1:
+142             res -=1
+143             drawTime(res)
+144 LCD.closeSerial()
+145 \textcolor{comment}{# End Test Program --------------------------------------}
+146 
 \end{DoxyCodeInclude}
  

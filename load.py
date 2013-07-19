@@ -19,7 +19,7 @@ import platform
 import time
 import psutil
 	
-sys.path.append("C:\Users\codeman\Documents\GitHub\ezLCD3xxPython\module") 
+sys.path.append("C:\Users\segler\Documents\GitHub\ezLCD3xxPython\module") 
 from ezLCD3xx import *
 
 def drawGrid():
@@ -59,14 +59,14 @@ def drawTime(res):
 	LCD.wstate(7,REDRAW)
 			
 if platform.system() == 'Windows':
-	LCD = ezLCD('com6') 
+	LCD = ezLCD('com58') 
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
 if LCD.openSerial()==False:
 	print 'Error Opening Port'
 	raise SystemExit   
 	
-LCD.verbose('off')
+LCD.verbose('OFF')
 LCD.wquiet(ON)
 LCD.cls()
 LCD.fontw(0,'1')
@@ -131,8 +131,6 @@ while True:
 		lx =0
 		ly1 =239
 		ly2 =239
-		LCD.snapshot(0,0,320,240,'load.bmp')
-		sys.exit()		
 		drawGrid()
 	(ID, info, data) = LCD.wstack(LIFO)
 	LCD.wstack(CLEAR)
