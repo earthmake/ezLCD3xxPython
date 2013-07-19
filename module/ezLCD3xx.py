@@ -15,8 +15,9 @@ import traceback
 # @image html ezLCD-303Front.png
 # @image html python.png
 # @image latex ezLCD-303Front.png 
-# @image latex python.png 
-#   
+# @image latex python.png
+
+
 
 BLACK = 0
 GRAY  = 1
@@ -174,14 +175,14 @@ class ezLCD(object):
 			self.WaitForCR()
 			
 	## The play command will play a macro stored on the drive of the ezLCD
-	# @param macro filename
+	# @param filename macro filename
 	#
 	def play(self, filename):	
 		self.ser.write('play %s\r' % (filename))
 		self.WaitForCR()
 
 	## The run command will run a macro stored on the drive of the ezLCD
-	# @param macro filename 
+	# @param filename macro filename 
 	#
 	def run(self, filename):	
 		self.ser.write('run %s\r' % (filename))
@@ -199,7 +200,7 @@ class ezLCD(object):
 	# @param y	starting y position 
 	# @param w	width 
 	# @param h  height
-	# @param filename.bmp
+	# @param filename filename.bmp
 	# Make sure you have space on the internal flash drive !		
 	def snapshot(self, x, y, w, h, filename):
 		self.ser.write('snapshot %d %d %d %d %s\r' % (x, y, w, h, filename))
@@ -237,6 +238,7 @@ class ezLCD(object):
 			self.WaitForCR()
 
 	## The colorId command
+	# @param ID color ID number
 	# @param R	Red Value
 	# @param G	Green Value
 	# @param B	Blue Value
@@ -377,9 +379,6 @@ class ezLCD(object):
 	# @param meterType
 	#												
 	def ameter(self, ID, x, y, width, height, options, value, minV, maxV, theme, stringID, meterType = 0):
-		"""
-		ameter [ID][x][y][width][height][options][value][minV][maxV][theme][stringID][type]
-		"""
 		self.ser.write('ameter %d %d %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, value, minV, maxV, theme, stringID, meterType))
 		self.WaitForCR()
 
@@ -548,13 +547,10 @@ class ezLCD(object):
 	# @param option
 	# @param resolution
 	# @param value
-	# @param mmax
+	# @param maxx
 	# @param theme
 	#	
 	def dial(self, ID, x, y, radius, option, resolution, value, maxx, theme):
-		"""
-		dial [ID][x][y][radius][option][resolution][value][max][theme]
-		"""
 		self.ser.write('dial %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, radius, option, resolution, value, maxx, theme))
 		self.WaitForCR()
 
@@ -680,7 +676,7 @@ class ezLCD(object):
 	# LCD.picture('python.gif',10,10)	
 	# # display python.gif at current x y
 	# LCD.picture('python.gif')
-	#	 
+	# @endcode	 
 	def picture(self, image, x=None, y=None):
 		if x!=None:
 			self.ser.write('image %x %y %s\r' % (x, y, image))
@@ -702,6 +698,7 @@ class ezLCD(object):
 	# LCD.font('0')
 	# # Set font to LCD24
 	# LCD.font('LCD24')
+	# @endcode
 	def font(self, font):
 		self.ser.write('font %s\r' % (font))
 		self.WaitForCR()
@@ -754,6 +751,7 @@ class ezLCD(object):
 	# LCD.printString('Hello World')
 	# # diplay string 'Hello World' at 10 10 rotated 90
 	# LCD.printString('Hello World',10,10,90)
+	# @endcode
 	def printString(self, string, x=None, y=None, orientation=None ):
 		if x != None:
 			self.xy(x, y)

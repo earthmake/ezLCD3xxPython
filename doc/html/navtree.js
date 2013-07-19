@@ -1,6 +1,8 @@
 var NAVTREE =
 [
   [ "ezLCD Python Module", "index.html", [
+    [ "Introduction To The Hardware", "d8/dc2/intro_hardware.html", null ],
+    [ "Introduction To The Software", "df/dcd/intro_software.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],

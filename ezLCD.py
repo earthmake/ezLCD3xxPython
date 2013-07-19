@@ -20,7 +20,7 @@ import wmi
 import time
 import psutil
 	
-sys.path.append("C:\Users\segler\Documents\GitHub\ezLCD3xxPython\module") 
+sys.path.append("C:\Users\codeman\Documents\GitHub\ezLCD3xxPython\module") 
 from ezLCD3xx import *
 
 def drawGrid():
@@ -63,7 +63,7 @@ def drawTime(res):
 	LCD.wstate(7,REDRAW)
 			
 if platform.system() == 'Windows':
-	LCD = ezLCD('com4') 
+	LCD = ezLCD('com6') 
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
 if LCD.openSerial()==False:
@@ -114,7 +114,6 @@ LCD.button( 6, 120, 200, 80, 30 , 1, 0, 10, 1, 3, 'LESS')
 #LCD.printString('Total Physical Memory ' +  str(psutil.TOTAL_PHYMEM), 0, 0)
 #LCD.printString('Number Of CPU Cores ' + str(psutil.NUM_CPUS),0 ,20)
 LCD.staticText(7, 0, 170, 220, 25, 8, 1, 5, 'test')
-LCD.slider( 8, 200,200,200,50,1, 75, 5, 25, 1)
 #sys.exit()
 drawGrid()
 x=0
@@ -153,6 +152,8 @@ while True:
 		lx =0
 		ly1 =239
 		ly2 =239
+		LCD.snapshot(0,0,320,240,'load.bmp')
+		sys.exit()		
 		drawGrid()
 	(ID, info, data) = LCD.wstack(LIFO)
 	LCD.wstack(CLEAR)
@@ -169,5 +170,4 @@ while True:
 #	LCD.setWvalue(4, cores[3])
 LCD.closeSerial()
 # End Test Program --------------------------------------
-
 

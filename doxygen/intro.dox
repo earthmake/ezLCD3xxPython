@@ -1,0 +1,31 @@
+
+
+/*! \page introHardware Introduction To The Hardware
+<p>
+    The ezLCD modules comtains a GPU an related circutry to drive a LCD display, USB interface <br>
+Internal 4mb MSD flash drive for storage of fonts, bitmaps and macros.<br>
+Display can be controlled through USB CDC Serial or TTL 3.3v Serial .<br>
+<br>
+	Commands are sent to the ezLCD though the serial interface, Commands are text based and end with a carrage return <b>cr</b>.<br>
+So if you send <b>cls</b> ending with a <b>cr</b> the device will clear the screen and return a <b>cr</b> when the command is complete,<br>
+some widgets take a bit of time (in the millsecond range) to complete so after sending a command allways wait for a <b>cr</b> to comeback before sending another command.<br>
+
+</p>
+*/
+
+
+/*! \page introSoftware Introduction To The Software
+	Minimal example will open the ezLCD port clear the screen and print 'Hello From Python' in red <br>
+ \image html minimal.png
+ \include minimal.py
+	Button example will display a button widget then poll for button presses and update screen 
+ \image html button.png
+ \include button.py
+
+	Load example will display the cpu load as a graph  
+ \image html load.png
+ \include load.py
+
+*/
+
+

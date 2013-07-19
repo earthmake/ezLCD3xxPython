@@ -1,0 +1,7 @@
+The ez\-L\-C\-D modules comtains a G\-P\-U an related circutry to drive a L\-C\-D display, U\-S\-B interface \par
+ Internal 4mb M\-S\-D flash drive for storage of fonts, bitmaps and macros.\par
+ Display can be controlled through U\-S\-B C\-D\-C Serial or T\-T\-L 3.\-3v Serial .\par
+ \par
+ Commands are sent to the ez\-L\-C\-D though the serial interface, Commands are text based and end with a carrage return {\bfseries cr}.\par
+ So if you send {\bfseries cls} ending with a {\bfseries cr} the device will clear the screen and return a {\bfseries cr} when the command is complete,\par
+ some widgets take a bit of time (in the millsecond range) to complete so after sending a command allways wait for a {\bfseries cr} to comeback before sending another command.\par

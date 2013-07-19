@@ -1,0 +1,9 @@
+
+## Info Page
+# @page Info Page
+The way the ezLCD works :
+	Commands are sent to the ezLCD though the serial interface, Commands are text based and end with a carrage return <b>cr</b>.
+So if you send <b>cls</b> ending with a <b>cr</b> the device will clear the screen and return a <b>cr</b> when the command is complete,
+some widgets take a bit of time to complete so after sending a command allways wait for a <b>cr</b> to comeback before sending another command.
+
+	 
