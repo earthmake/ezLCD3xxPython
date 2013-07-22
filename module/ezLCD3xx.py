@@ -11,13 +11,6 @@ import io
 import inspect
 import traceback
 
-## @mainpage 
-# @image html ezLCD-303Front.png
-# @image html python.png
-# @image latex ezLCD-303Front.png 
-# @image latex python.png
-
-
 
 BLACK = 0
 GRAY  = 1
@@ -87,17 +80,17 @@ class ezLCD(object):
 		self.ser.close()
 		print "ezLCD3xx "+ str(self.interface) +" close"
 
-
 	## This is a internal use function
 	# 
 	#
 	def WaitForCR(self):
-		cr = self.ser.read(1)
-		if cr == '1':
-			print 'Command Returned Error'
+		cr = self.ser.readline()
+		if cr != '\r':
+			print 'Command Returned Error', cr, len(cr)
 			frame = inspect.currentframe()
 			stack_trace = traceback.format_stack(frame)
 			print ''.join(stack_trace[:-2])
+		
 		
 # General --------------------------------------------------------------------
 
@@ -205,7 +198,11 @@ class ezLCD(object):
 	def snapshot(self, x, y, w, h, filename):
 		self.ser.write('snapshot %d %d %d %d %s\r' % (x, y, w, h, filename))
 		self.WaitForCR()
-			
+		
+	## The calibrate command will re calibrate the touch screen
+	def calibrate(self):
+		self.ser.write('calibrate\r')
+		self.WaitForCR()			
 	##
 	# @}
 	#
@@ -523,7 +520,9 @@ class ezLCD(object):
 	# @param theme
 	# @param stringID
 	#												
-	def progressBar(self, ID, x, y, width, height, options, value, mmax, theme, stringID):
+	def progressBar(self, ID, x, y, width, height, options, value, mmax, theme, stringID, string = None ):
+		if string != None:
+			self.string(stringID, string)
 		self.ser.write('progress %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, value, mmax, theme, stringID))
 		self.WaitForCR()
 
@@ -590,12 +589,12 @@ class ezLCD(object):
 	# \n String 64 is temp location.
 	# \n String 65 is the product string
 	# \n String 66 is the firmware string
-	def string(self, stringNumber, string = None):
+	def string(self, stringID, string = None):
 		if string !=None:
-			self.ser.write('string %d "%s"\r' % (stringNumber, string))
+			self.ser.write('string %d "%s"\r' % (stringID, string))
 			self.WaitForCR()
 		else:
-			self.ser.write('string %d\r' % (stringNumber))
+			self.ser.write('string %d\r' % (stringID))
 			return self.ser.readline()
 
 	## The wstack command will return the stack of widgets pressed 32 levels

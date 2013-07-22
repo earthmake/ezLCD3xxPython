@@ -3,17 +3,20 @@
 
 import platform
 import sys
-
-sys.path.append("C:\Users\segler\Documents\GitHub\ezLCD3xxPython\module") 
+sys.path.append('module') 
 from ezLCD3xx import *
 
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com4') 
+	LCD = ezLCD('com9') 
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
+#Linux
+elif platform.system() == 'Linux':
+	LCD = ezLCD('/dev/ttyACM0')
+
 # Bail out if comport error
 if LCD.openSerial()==False:
 	print 'Error Opening Port'

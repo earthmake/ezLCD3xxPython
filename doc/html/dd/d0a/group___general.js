@@ -1,6 +1,7 @@
 var group___general =
 [
     [ "backlight", "dd/d0a/group___general.html#gacecf5c1b5956caef4a4030f51bc4a809", null ],
+    [ "calibrate", "dd/d0a/group___general.html#gae53650dc26de7b1316c9241eec0751bb", null ],
     [ "cfgio", "dd/d0a/group___general.html#ga38687b7d07bf93afe6891d3dca6205f4", null ],
     [ "io", "dd/d0a/group___general.html#gaf87ad0b88f8a279c20666363bc7460b6", null ],
     [ "ping", "dd/d0a/group___general.html#ga92454899475445ff2d48eb7072f3c94e", null ],

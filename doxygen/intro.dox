@@ -1,4 +1,32 @@
 
+/*! \page install Installing the Module
+<p>
+install info here<br>
+requires pySerial http://pyserial.sourceforge.net/
+</p>
+*/
+
+/*! \page coordinatesSystem Coordinates System 
+\image html ezLCD303.png
+\image latex ezLCD303-coord.eps
+<p>
+The ezLCD uses a X Y coordinates system to specify the location for all graphics commands .<br>
+<b>One thing to note is that the displays X Y start at 0, so even though you have a display that is 480x272 pixels wide XMAX is 479 and YMAX is 271.</b><br>
+X direction is horizontal across the display starting at the left 0 and ending at the max width of the display.<br>
+Y direction is vertical starting at the top 0 and ending at the bottom of the display. <br>
+
+
+XMAX and YMAX Values for the ezLCD 3xx Line<br>
+arLCD     319 239<br>
+ezLCD-301 399 239<br>
+ezLCD-302  <br>
+ezLCD-303 319 239<br>
+ezLCD-313 319 239<br>
+ezLCD-304 479 271<br>
+
+</p>
+*/
+
 
 /*! \page introHardware Introduction To The Hardware
 <p>
@@ -7,21 +35,26 @@ Internal 4mb MSD flash drive for storage of fonts, bitmaps and macros.<br>
 Display can be controlled through USB CDC Serial or TTL 3.3v Serial .<br>
 <br>
 Once power is applied to the display it starts up and executes startup.ezm, it will look in /EZUSER/MACROS and if not found will look in /EZSYS/USERS .<br>
-What this file does in set all deafaults for the Display and communcations port.<br>
+What this file does in set all defaults for the Display and communcations port.<br>
 Including some default widget fonts and themes. <br>
 Its best to have a minimal one in the /EZUSER/MACROS directory with only the relevent settings in it . <br>
 <br>
 Sample minimal startup.ezm.
-\include startup.ezm
-	Commands are sent to the ezLCD though the serial interface, Commands are text based and end with a carrage return <b>cr</b>.<br>
-So if you send <b>cls</b> ending with a <b>cr</b> the device will clear the screen and return a <b>cr</b> when the command is complete,<br>
-some widgets take a bit of time (in the millsecond range) to complete so after sending a command allways wait for a <b>cr</b> to comeback before sending another command.<br>
+ \include startup.ezm
+The ezLCD by default will load startup.ezm but you can have startup1.ezm through startup5.ezm <br>
+So if you press the touch screen at power up in any of the areas show below you can execute the other startup macros.<br>
+ \image html startupZones.png
+ \image latex load.png
 
 </p>
 */
 
 
 /*! \page introSoftware Introduction To The Software
+	Commands are sent to the ezLCD though the serial interface, Commands are text based and end with a carrage return <b>cr</b>.<br>
+So if you send <b>cls</b> ending with a <b>cr</b> the device will clear the screen and return a <b>cr</b> when the command is complete,<br>
+some widgets take a bit of time (in the millsecond range) to complete so after sending a command allways wait for a <b>cr</b> to comeback before sending another command.<br>
+<br>
 	Minimal example will open the ezLCD port clear the screen and print 'Hello From Python' in red <br>
  \image html minimal.png
  \image latex minimal.png

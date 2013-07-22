@@ -3,17 +3,21 @@ The ez\-L\-C\-D modules contains a G\-P\-U an related circutry to drive a L\-C\-
  Display can be controlled through U\-S\-B C\-D\-C Serial or T\-T\-L 3.\-3v Serial .\par
  \par
  Once power is applied to the display it starts up and executes startup.\-ezm, it will look in /\-E\-Z\-U\-S\-E\-R/\-M\-A\-C\-R\-O\-S and if not found will look in /\-E\-Z\-S\-Y\-S/\-U\-S\-E\-R\-S .\par
- What this file does in set all deafaults for the Display and communcations port.\par
+ What this file does in set all defaults for the Display and communcations port.\par
  Including some default widget fonts and themes. \par
  Its best to have a minimal one in the /\-E\-Z\-U\-S\-E\-R/\-M\-A\-C\-R\-O\-S directory with only the relevent settings in it . \par
  \par
  Sample minimal startup.\-ezm. 
 \begin{DoxyCodeInclude}
-\textcolor{stringliteral}{'minimal.ezm }
-\textcolor{stringliteral}{verbose off}
+\textcolor{stringliteral}{'minimal startup.ezm}
+\textcolor{stringliteral}{}
+\textcolor{stringliteral}{'}Turn off \hyperlink{group___general_gaa497e8573c045944d589b17fd7dd36ac}{verbose} echo of commands
+\hyperlink{group___general_gaa497e8573c045944d589b17fd7dd36ac}{verbose} off
+
+\textcolor{stringliteral}{'Set command port to USB CDC}
 \textcolor{stringliteral}{cmd cdc}
 \textcolor{stringliteral}{}
-\textcolor{stringliteral}{'}\textcolor{keyword}{set} some fonts \textcolor{keywordflow}{for} widgets
+\textcolor{stringliteral}{'}set some fonts \textcolor{keywordflow}{for} widgets
 \hyperlink{group___widgets_gad527fa9cb9cda35802e26af7e1870f96}{fontw} 0 0
 \hyperlink{group___widgets_gad527fa9cb9cda35802e26af7e1870f96}{fontw} 1 0
 \hyperlink{group___widgets_gad527fa9cb9cda35802e26af7e1870f96}{fontw} 2 0
@@ -22,6 +26,7 @@ The ez\-L\-C\-D modules contains a G\-P\-U an related circutry to drive a L\-C\-
 \hyperlink{group___widgets_gad527fa9cb9cda35802e26af7e1870f96}{fontw} 5 serif24
 \hyperlink{group___widgets_gad527fa9cb9cda35802e26af7e1870f96}{fontw} 6 serif24
 \hyperlink{group___widgets_gad527fa9cb9cda35802e26af7e1870f96}{fontw} 7 serif24
+
 \textcolor{stringliteral}{'Set some themes for widgets}
 \textcolor{stringliteral}{theme 0   1   2 0 0 0  3  3   1 0 0}
 \textcolor{stringliteral}{theme 1 155 152 3 3 3  24  4   5 0 1}
@@ -40,6 +45,9 @@ print \textcolor{stringliteral}{"  "}
 \textcolor{stringliteral}{'print firmware version}
 \textcolor{stringliteral}{print 66}
 \end{DoxyCodeInclude}
- Commands are sent to the ez\-L\-C\-D though the serial interface, Commands are text based and end with a carrage return {\bfseries cr}.\par
- So if you send {\bfseries cls} ending with a {\bfseries cr} the device will clear the screen and return a {\bfseries cr} when the command is complete,\par
- some widgets take a bit of time (in the millsecond range) to complete so after sending a command allways wait for a {\bfseries cr} to comeback before sending another command.\par
+ The ez\-L\-C\-D by default will load startup.\-ezm but you can have startup1.\-ezm through startup5.\-ezm \par
+ So if you press the touch screen at power up in any of the areas show below you can execute the other startup macros.\par
+  
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics{load.png}}
+\end{DoxyImageNoCaption}
