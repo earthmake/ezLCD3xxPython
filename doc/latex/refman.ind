@@ -1,222 +1,219 @@
 \begin{theindex}
 
   \item {\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}
-    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
-		\hyperpage{44}
+    \subitem {module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{52}
 
   \indexspace
 
   \item {ameter}
-    \subitem {Widgets}, \hyperpage{31}
+    \subitem {Widgets}, \hyperpage{40}
   \item {ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}
-    \subitem {Widgets}, \hyperpage{32}
+    \subitem {Widgets}, \hyperpage{41}
   \item {arc}
-    \subitem {Primitve Drawing Commands}, \hyperpage{27}
+    \subitem {Primitve Drawing Commands}, \hyperpage{36}
 
   \indexspace
 
   \item {backlight}
-    \subitem {Commands}, \hyperpage{24}
-  \item {Bitmaps and Fonts}, \hyperpage{39}
-    \subitem {font}, \hyperpage{39}
-    \subitem {fonto}, \hyperpage{39}
-    \subitem {picture}, \hyperpage{40}
-    \subitem {print\discretionary {-}{}{}String}, \hyperpage{40}
+    \subitem {Commands}, \hyperpage{33}
+  \item {Bitmaps and Fonts}, \hyperpage{47}
+    \subitem {font}, \hyperpage{47}
+    \subitem {fonto}, \hyperpage{47}
+    \subitem {picture}, \hyperpage{48}
+    \subitem {print\discretionary {-}{}{}String}, \hyperpage{48}
   \item {box}
-    \subitem {Primitve Drawing Commands}, \hyperpage{28}
+    \subitem {Primitve Drawing Commands}, \hyperpage{36}
   \item {button}
-    \subitem {Widgets}, \hyperpage{32}
+    \subitem {Widgets}, \hyperpage{41}
 
   \indexspace
 
   \item {cfgio}
-    \subitem {Commands}, \hyperpage{24}
+    \subitem {Commands}, \hyperpage{34}
   \item {choice}
-    \subitem {Widgets}, \hyperpage{32}
+    \subitem {Widgets}, \hyperpage{41}
   \item {circle}
-    \subitem {Primitve Drawing Commands}, \hyperpage{28}
+    \subitem {Primitve Drawing Commands}, \hyperpage{37}
   \item {clip\discretionary {-}{}{}Area}
-    \subitem {Primitve Drawing Commands}, \hyperpage{28}
+    \subitem {Primitve Drawing Commands}, \hyperpage{37}
   \item {clip\discretionary {-}{}{}Enable}
-    \subitem {Primitve Drawing Commands}, \hyperpage{28}
-  \item {close\discretionary {-}{}{}Serial}
-    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
-		\hyperpage{44}
+    \subitem {Primitve Drawing Commands}, \hyperpage{37}
   \item {cls}
-    \subitem {Primitve Drawing Commands}, \hyperpage{28}
+    \subitem {Primitve Drawing Commands}, \hyperpage{37}
   \item {color}
-    \subitem {Primitve Drawing Commands}, \hyperpage{29}
+    \subitem {Primitve Drawing Commands}, \hyperpage{37}
   \item {color\discretionary {-}{}{}Id}
-    \subitem {Primitve Drawing Commands}, \hyperpage{29}
-  \item {Commands}, \hyperpage{23}
-    \subitem {backlight}, \hyperpage{24}
-    \subitem {cfgio}, \hyperpage{24}
-    \subitem {io}, \hyperpage{24}
-    \subitem {ping}, \hyperpage{24}
-    \subitem {play}, \hyperpage{24}
-    \subitem {reset}, \hyperpage{25}
-    \subitem {run}, \hyperpage{25}
-    \subitem {snapshot}, \hyperpage{25}
-    \subitem {verbose}, \hyperpage{25}
-    \subitem {wquiet}, \hyperpage{25}
-    \subitem {xmax}, \hyperpage{25}
-    \subitem {ymax}, \hyperpage{26}
+    \subitem {Primitve Drawing Commands}, \hyperpage{38}
+  \item {Commands}, \hyperpage{33}
+    \subitem {backlight}, \hyperpage{33}
+    \subitem {cfgio}, \hyperpage{34}
+    \subitem {io}, \hyperpage{34}
+    \subitem {ping}, \hyperpage{34}
+    \subitem {play}, \hyperpage{34}
+    \subitem {reset}, \hyperpage{34}
+    \subitem {run}, \hyperpage{34}
+    \subitem {snapshot}, \hyperpage{35}
+    \subitem {verbose}, \hyperpage{35}
+    \subitem {wquiet}, \hyperpage{35}
+    \subitem {xmax}, \hyperpage{35}
+    \subitem {ymax}, \hyperpage{35}
 
   \indexspace
 
   \item {dial}
-    \subitem {Widgets}, \hyperpage{33}
+    \subitem {Widgets}, \hyperpage{42}
   \item {dmeter}
-    \subitem {Widgets}, \hyperpage{33}
-
-  \indexspace
-
-  \item {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
-		\hyperpage{41}
-    \subitem {\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}, 
-		\hyperpage{44}
-    \subitem {close\discretionary {-}{}{}Serial}, \hyperpage{44}
-    \subitem {Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}, 
-		\hyperpage{44}
-  \item {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D}, 
-		\hyperpage{45}
+    \subitem {Widgets}, \hyperpage{42}
 
   \indexspace
 
   \item {font}
-    \subitem {Bitmaps and Fonts}, \hyperpage{39}
+    \subitem {Bitmaps and Fonts}, \hyperpage{47}
   \item {fonto}
-    \subitem {Bitmaps and Fonts}, \hyperpage{39}
+    \subitem {Bitmaps and Fonts}, \hyperpage{47}
   \item {fontw}
-    \subitem {Widgets}, \hyperpage{33}
+    \subitem {Widgets}, \hyperpage{42}
 
   \indexspace
 
   \item {group\discretionary {-}{}{}Box}
-    \subitem {Widgets}, \hyperpage{34}
+    \subitem {Widgets}, \hyperpage{43}
 
   \indexspace
 
   \item {io}
-    \subitem {Commands}, \hyperpage{24}
+    \subitem {Commands}, \hyperpage{34}
 
   \indexspace
 
   \item {line}
-    \subitem {Primitve Drawing Commands}, \hyperpage{29}
+    \subitem {Primitve Drawing Commands}, \hyperpage{38}
   \item {line\discretionary {-}{}{}Type}
-    \subitem {Primitve Drawing Commands}, \hyperpage{29}
+    \subitem {Primitve Drawing Commands}, \hyperpage{38}
   \item {line\discretionary {-}{}{}Width}
-    \subitem {Primitve Drawing Commands}, \hyperpage{29}
+    \subitem {Primitve Drawing Commands}, \hyperpage{38}
+
+  \indexspace
+
+  \item {module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{49}
+  \item {module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D}, 
+		\hyperpage{53}
+  \item {module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}
+    \subitem {\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}, 
+		\hyperpage{52}
+    \subitem {Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}, 
+		\hyperpage{52}
 
   \indexspace
 
   \item {picture}
-    \subitem {Bitmaps and Fonts}, \hyperpage{40}
+    \subitem {Bitmaps and Fonts}, \hyperpage{48}
   \item {pie}
-    \subitem {Primitve Drawing Commands}, \hyperpage{30}
+    \subitem {Primitve Drawing Commands}, \hyperpage{38}
   \item {ping}
-    \subitem {Commands}, \hyperpage{24}
+    \subitem {Commands}, \hyperpage{34}
   \item {play}
-    \subitem {Commands}, \hyperpage{24}
+    \subitem {Commands}, \hyperpage{34}
   \item {plot}
-    \subitem {Primitve Drawing Commands}, \hyperpage{30}
-  \item {Primitve Drawing Commands}, \hyperpage{27}
-    \subitem {arc}, \hyperpage{27}
-    \subitem {box}, \hyperpage{28}
-    \subitem {circle}, \hyperpage{28}
-    \subitem {clip\discretionary {-}{}{}Area}, \hyperpage{28}
-    \subitem {clip\discretionary {-}{}{}Enable}, \hyperpage{28}
-    \subitem {cls}, \hyperpage{28}
-    \subitem {color}, \hyperpage{29}
-    \subitem {color\discretionary {-}{}{}Id}, \hyperpage{29}
-    \subitem {line}, \hyperpage{29}
-    \subitem {line\discretionary {-}{}{}Type}, \hyperpage{29}
-    \subitem {line\discretionary {-}{}{}Width}, \hyperpage{29}
-    \subitem {pie}, \hyperpage{30}
-    \subitem {plot}, \hyperpage{30}
-    \subitem {xy}, \hyperpage{30}
+    \subitem {Primitve Drawing Commands}, \hyperpage{39}
+  \item {Primitve Drawing Commands}, \hyperpage{36}
+    \subitem {arc}, \hyperpage{36}
+    \subitem {box}, \hyperpage{36}
+    \subitem {circle}, \hyperpage{37}
+    \subitem {clip\discretionary {-}{}{}Area}, \hyperpage{37}
+    \subitem {clip\discretionary {-}{}{}Enable}, \hyperpage{37}
+    \subitem {cls}, \hyperpage{37}
+    \subitem {color}, \hyperpage{37}
+    \subitem {color\discretionary {-}{}{}Id}, \hyperpage{38}
+    \subitem {line}, \hyperpage{38}
+    \subitem {line\discretionary {-}{}{}Type}, \hyperpage{38}
+    \subitem {line\discretionary {-}{}{}Width}, \hyperpage{38}
+    \subitem {pie}, \hyperpage{38}
+    \subitem {plot}, \hyperpage{39}
+    \subitem {xy}, \hyperpage{39}
   \item {print\discretionary {-}{}{}String}
-    \subitem {Bitmaps and Fonts}, \hyperpage{40}
+    \subitem {Bitmaps and Fonts}, \hyperpage{48}
   \item {progress\discretionary {-}{}{}Bar}
-    \subitem {Widgets}, \hyperpage{34}
+    \subitem {Widgets}, \hyperpage{43}
 
   \indexspace
 
   \item {radio\discretionary {-}{}{}Button}
-    \subitem {Widgets}, \hyperpage{34}
+    \subitem {Widgets}, \hyperpage{43}
   \item {reset}
-    \subitem {Commands}, \hyperpage{25}
+    \subitem {Commands}, \hyperpage{34}
   \item {run}
-    \subitem {Commands}, \hyperpage{25}
+    \subitem {Commands}, \hyperpage{34}
 
   \indexspace
 
   \item {slider}
-    \subitem {Widgets}, \hyperpage{35}
+    \subitem {Widgets}, \hyperpage{43}
   \item {snapshot}
-    \subitem {Commands}, \hyperpage{25}
+    \subitem {Commands}, \hyperpage{35}
   \item {static\discretionary {-}{}{}Text}
-    \subitem {Widgets}, \hyperpage{35}
+    \subitem {Widgets}, \hyperpage{44}
   \item {string}
-    \subitem {Widgets}, \hyperpage{35}
+    \subitem {Widgets}, \hyperpage{44}
 
   \indexspace
 
   \item {theme}
-    \subitem {Widgets}, \hyperpage{36}
+    \subitem {Widgets}, \hyperpage{44}
   \item {touch\discretionary {-}{}{}Zone}
-    \subitem {Widgets}, \hyperpage{36}
+    \subitem {Widgets}, \hyperpage{45}
 
   \indexspace
 
   \item {verbose}
-    \subitem {Commands}, \hyperpage{25}
+    \subitem {Commands}, \hyperpage{35}
 
   \indexspace
 
   \item {Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}
-    \subitem {ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
-		\hyperpage{44}
-  \item {Widgets}, \hyperpage{31}
-    \subitem {ameter}, \hyperpage{31}
+    \subitem {module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}, 
+		\hyperpage{52}
+  \item {Widgets}, \hyperpage{40}
+    \subitem {ameter}, \hyperpage{40}
     \subitem {ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}, 
-		\hyperpage{32}
-    \subitem {button}, \hyperpage{32}
-    \subitem {choice}, \hyperpage{32}
-    \subitem {dial}, \hyperpage{33}
-    \subitem {dmeter}, \hyperpage{33}
-    \subitem {fontw}, \hyperpage{33}
-    \subitem {group\discretionary {-}{}{}Box}, \hyperpage{34}
-    \subitem {progress\discretionary {-}{}{}Bar}, \hyperpage{34}
-    \subitem {radio\discretionary {-}{}{}Button}, \hyperpage{34}
-    \subitem {slider}, \hyperpage{35}
-    \subitem {static\discretionary {-}{}{}Text}, \hyperpage{35}
-    \subitem {string}, \hyperpage{35}
-    \subitem {theme}, \hyperpage{36}
-    \subitem {touch\discretionary {-}{}{}Zone}, \hyperpage{36}
-    \subitem {wstack}, \hyperpage{36}
-    \subitem {wstate}, \hyperpage{37}
-    \subitem {wvalue}, \hyperpage{37}
+		\hyperpage{41}
+    \subitem {button}, \hyperpage{41}
+    \subitem {choice}, \hyperpage{41}
+    \subitem {dial}, \hyperpage{42}
+    \subitem {dmeter}, \hyperpage{42}
+    \subitem {fontw}, \hyperpage{42}
+    \subitem {group\discretionary {-}{}{}Box}, \hyperpage{43}
+    \subitem {progress\discretionary {-}{}{}Bar}, \hyperpage{43}
+    \subitem {radio\discretionary {-}{}{}Button}, \hyperpage{43}
+    \subitem {slider}, \hyperpage{43}
+    \subitem {static\discretionary {-}{}{}Text}, \hyperpage{44}
+    \subitem {string}, \hyperpage{44}
+    \subitem {theme}, \hyperpage{44}
+    \subitem {touch\discretionary {-}{}{}Zone}, \hyperpage{45}
+    \subitem {wstack}, \hyperpage{45}
+    \subitem {wstate}, \hyperpage{46}
+    \subitem {wvalue}, \hyperpage{46}
   \item {wquiet}
-    \subitem {Commands}, \hyperpage{25}
+    \subitem {Commands}, \hyperpage{35}
   \item {wstack}
-    \subitem {Widgets}, \hyperpage{36}
+    \subitem {Widgets}, \hyperpage{45}
   \item {wstate}
-    \subitem {Widgets}, \hyperpage{37}
+    \subitem {Widgets}, \hyperpage{46}
   \item {wvalue}
-    \subitem {Widgets}, \hyperpage{37}
+    \subitem {Widgets}, \hyperpage{46}
 
   \indexspace
 
   \item {xmax}
-    \subitem {Commands}, \hyperpage{25}
+    \subitem {Commands}, \hyperpage{35}
   \item {xy}
-    \subitem {Primitve Drawing Commands}, \hyperpage{30}
+    \subitem {Primitve Drawing Commands}, \hyperpage{39}
 
   \indexspace
 
   \item {ymax}
-    \subitem {Commands}, \hyperpage{26}
+    \subitem {Commands}, \hyperpage{35}
 
 \end{theindex}

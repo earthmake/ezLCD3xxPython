@@ -1,108 +1,106 @@
-\indexentry{Commands@{Commands}|hyperpage}{21}
-\indexentry{Commands@{Commands}!backlight@{backlight}|hyperpage}{21}
-\indexentry{backlight@{backlight}!Commands@{Commands}|hyperpage}{21}
-\indexentry{Commands@{Commands}!cfgio@{cfgio}|hyperpage}{22}
-\indexentry{cfgio@{cfgio}!Commands@{Commands}|hyperpage}{22}
-\indexentry{Commands@{Commands}!io@{io}|hyperpage}{22}
-\indexentry{io@{io}!Commands@{Commands}|hyperpage}{22}
-\indexentry{Commands@{Commands}!ping@{ping}|hyperpage}{22}
-\indexentry{ping@{ping}!Commands@{Commands}|hyperpage}{22}
-\indexentry{Commands@{Commands}!play@{play}|hyperpage}{22}
-\indexentry{play@{play}!Commands@{Commands}|hyperpage}{22}
-\indexentry{Commands@{Commands}!reset@{reset}|hyperpage}{22}
-\indexentry{reset@{reset}!Commands@{Commands}|hyperpage}{22}
-\indexentry{Commands@{Commands}!run@{run}|hyperpage}{22}
-\indexentry{run@{run}!Commands@{Commands}|hyperpage}{22}
-\indexentry{Commands@{Commands}!snapshot@{snapshot}|hyperpage}{23}
-\indexentry{snapshot@{snapshot}!Commands@{Commands}|hyperpage}{23}
-\indexentry{Commands@{Commands}!verbose@{verbose}|hyperpage}{23}
-\indexentry{verbose@{verbose}!Commands@{Commands}|hyperpage}{23}
-\indexentry{Commands@{Commands}!wquiet@{wquiet}|hyperpage}{23}
-\indexentry{wquiet@{wquiet}!Commands@{Commands}|hyperpage}{23}
-\indexentry{Commands@{Commands}!xmax@{xmax}|hyperpage}{23}
-\indexentry{xmax@{xmax}!Commands@{Commands}|hyperpage}{23}
-\indexentry{Commands@{Commands}!ymax@{ymax}|hyperpage}{23}
-\indexentry{ymax@{ymax}!Commands@{Commands}|hyperpage}{23}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{24}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!arc@{arc}|hyperpage}{24}
-\indexentry{arc@{arc}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{24}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!box@{box}|hyperpage}{24}
-\indexentry{box@{box}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{24}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!circle@{circle}|hyperpage}{25}
-\indexentry{circle@{circle}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{25}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!clip\discretionary {-}{}{}Area@{clip\discretionary {-}{}{}Area}|hyperpage}{25}
-\indexentry{clip\discretionary {-}{}{}Area@{clip\discretionary {-}{}{}Area}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{25}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!clip\discretionary {-}{}{}Enable@{clip\discretionary {-}{}{}Enable}|hyperpage}{25}
-\indexentry{clip\discretionary {-}{}{}Enable@{clip\discretionary {-}{}{}Enable}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{25}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!cls@{cls}|hyperpage}{25}
-\indexentry{cls@{cls}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{25}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!color@{color}|hyperpage}{25}
-\indexentry{color@{color}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{25}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!color\discretionary {-}{}{}Id@{color\discretionary {-}{}{}Id}|hyperpage}{25}
-\indexentry{color\discretionary {-}{}{}Id@{color\discretionary {-}{}{}Id}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{25}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!line@{line}|hyperpage}{27}
-\indexentry{line@{line}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{27}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!line\discretionary {-}{}{}Type@{line\discretionary {-}{}{}Type}|hyperpage}{27}
-\indexentry{line\discretionary {-}{}{}Type@{line\discretionary {-}{}{}Type}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{27}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!line\discretionary {-}{}{}Width@{line\discretionary {-}{}{}Width}|hyperpage}{27}
-\indexentry{line\discretionary {-}{}{}Width@{line\discretionary {-}{}{}Width}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{27}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!pie@{pie}|hyperpage}{27}
-\indexentry{pie@{pie}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{27}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!plot@{plot}|hyperpage}{27}
-\indexentry{plot@{plot}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{27}
-\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!xy@{xy}|hyperpage}{28}
-\indexentry{xy@{xy}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{28}
-\indexentry{Widgets@{Widgets}|hyperpage}{29}
-\indexentry{Widgets@{Widgets}!ameter@{ameter}|hyperpage}{29}
-\indexentry{ameter@{ameter}!Widgets@{Widgets}|hyperpage}{29}
-\indexentry{Widgets@{Widgets}!ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color@{ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}|hyperpage}{30}
-\indexentry{ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color@{ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}!Widgets@{Widgets}|hyperpage}{30}
-\indexentry{Widgets@{Widgets}!button@{button}|hyperpage}{30}
-\indexentry{button@{button}!Widgets@{Widgets}|hyperpage}{30}
-\indexentry{Widgets@{Widgets}!choice@{choice}|hyperpage}{30}
-\indexentry{choice@{choice}!Widgets@{Widgets}|hyperpage}{30}
-\indexentry{Widgets@{Widgets}!dial@{dial}|hyperpage}{31}
-\indexentry{dial@{dial}!Widgets@{Widgets}|hyperpage}{31}
-\indexentry{Widgets@{Widgets}!dmeter@{dmeter}|hyperpage}{31}
-\indexentry{dmeter@{dmeter}!Widgets@{Widgets}|hyperpage}{31}
-\indexentry{Widgets@{Widgets}!fontw@{fontw}|hyperpage}{31}
-\indexentry{fontw@{fontw}!Widgets@{Widgets}|hyperpage}{31}
-\indexentry{Widgets@{Widgets}!group\discretionary {-}{}{}Box@{group\discretionary {-}{}{}Box}|hyperpage}{32}
-\indexentry{group\discretionary {-}{}{}Box@{group\discretionary {-}{}{}Box}!Widgets@{Widgets}|hyperpage}{32}
-\indexentry{Widgets@{Widgets}!progress\discretionary {-}{}{}Bar@{progress\discretionary {-}{}{}Bar}|hyperpage}{32}
-\indexentry{progress\discretionary {-}{}{}Bar@{progress\discretionary {-}{}{}Bar}!Widgets@{Widgets}|hyperpage}{32}
-\indexentry{Widgets@{Widgets}!radio\discretionary {-}{}{}Button@{radio\discretionary {-}{}{}Button}|hyperpage}{32}
-\indexentry{radio\discretionary {-}{}{}Button@{radio\discretionary {-}{}{}Button}!Widgets@{Widgets}|hyperpage}{32}
-\indexentry{Widgets@{Widgets}!slider@{slider}|hyperpage}{32}
-\indexentry{slider@{slider}!Widgets@{Widgets}|hyperpage}{32}
-\indexentry{Widgets@{Widgets}!static\discretionary {-}{}{}Text@{static\discretionary {-}{}{}Text}|hyperpage}{33}
-\indexentry{static\discretionary {-}{}{}Text@{static\discretionary {-}{}{}Text}!Widgets@{Widgets}|hyperpage}{33}
-\indexentry{Widgets@{Widgets}!string@{string}|hyperpage}{33}
-\indexentry{string@{string}!Widgets@{Widgets}|hyperpage}{33}
-\indexentry{Widgets@{Widgets}!theme@{theme}|hyperpage}{33}
-\indexentry{theme@{theme}!Widgets@{Widgets}|hyperpage}{33}
-\indexentry{Widgets@{Widgets}!touch\discretionary {-}{}{}Zone@{touch\discretionary {-}{}{}Zone}|hyperpage}{34}
-\indexentry{touch\discretionary {-}{}{}Zone@{touch\discretionary {-}{}{}Zone}!Widgets@{Widgets}|hyperpage}{34}
-\indexentry{Widgets@{Widgets}!wstack@{wstack}|hyperpage}{34}
-\indexentry{wstack@{wstack}!Widgets@{Widgets}|hyperpage}{34}
-\indexentry{Widgets@{Widgets}!wstate@{wstate}|hyperpage}{35}
-\indexentry{wstate@{wstate}!Widgets@{Widgets}|hyperpage}{35}
-\indexentry{Widgets@{Widgets}!wvalue@{wvalue}|hyperpage}{35}
-\indexentry{wvalue@{wvalue}!Widgets@{Widgets}|hyperpage}{35}
-\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{36}
-\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!font@{font}|hyperpage}{36}
-\indexentry{font@{font}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{36}
-\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!fonto@{fonto}|hyperpage}{36}
-\indexentry{fonto@{fonto}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{36}
-\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!picture@{picture}|hyperpage}{37}
-\indexentry{picture@{picture}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{37}
-\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!print\discretionary {-}{}{}String@{print\discretionary {-}{}{}String}|hyperpage}{37}
-\indexentry{print\discretionary {-}{}{}String@{print\discretionary {-}{}{}String}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{37}
-\indexentry{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}|hyperpage}{39}
-\indexentry{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}!\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}@{\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}|hyperpage}{42}
-\indexentry{\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}@{\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}!ezLCD3xx@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}|hyperpage}{42}
-\indexentry{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}!close\discretionary {-}{}{}Serial@{close\discretionary {-}{}{}Serial}|hyperpage}{42}
-\indexentry{close\discretionary {-}{}{}Serial@{close\discretionary {-}{}{}Serial}!ezLCD3xx@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}|hyperpage}{42}
-\indexentry{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}!Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R@{Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}|hyperpage}{42}
-\indexentry{Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R@{Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}!ezLCD3xx@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}|hyperpage}{42}
-\indexentry{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D@{ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D}|hyperpage}{43}
+\indexentry{Commands@{Commands}|hyperpage}{33}
+\indexentry{Commands@{Commands}!backlight@{backlight}|hyperpage}{33}
+\indexentry{backlight@{backlight}!Commands@{Commands}|hyperpage}{33}
+\indexentry{Commands@{Commands}!cfgio@{cfgio}|hyperpage}{34}
+\indexentry{cfgio@{cfgio}!Commands@{Commands}|hyperpage}{34}
+\indexentry{Commands@{Commands}!io@{io}|hyperpage}{34}
+\indexentry{io@{io}!Commands@{Commands}|hyperpage}{34}
+\indexentry{Commands@{Commands}!ping@{ping}|hyperpage}{34}
+\indexentry{ping@{ping}!Commands@{Commands}|hyperpage}{34}
+\indexentry{Commands@{Commands}!play@{play}|hyperpage}{34}
+\indexentry{play@{play}!Commands@{Commands}|hyperpage}{34}
+\indexentry{Commands@{Commands}!reset@{reset}|hyperpage}{34}
+\indexentry{reset@{reset}!Commands@{Commands}|hyperpage}{34}
+\indexentry{Commands@{Commands}!run@{run}|hyperpage}{34}
+\indexentry{run@{run}!Commands@{Commands}|hyperpage}{34}
+\indexentry{Commands@{Commands}!snapshot@{snapshot}|hyperpage}{35}
+\indexentry{snapshot@{snapshot}!Commands@{Commands}|hyperpage}{35}
+\indexentry{Commands@{Commands}!verbose@{verbose}|hyperpage}{35}
+\indexentry{verbose@{verbose}!Commands@{Commands}|hyperpage}{35}
+\indexentry{Commands@{Commands}!wquiet@{wquiet}|hyperpage}{35}
+\indexentry{wquiet@{wquiet}!Commands@{Commands}|hyperpage}{35}
+\indexentry{Commands@{Commands}!xmax@{xmax}|hyperpage}{35}
+\indexentry{xmax@{xmax}!Commands@{Commands}|hyperpage}{35}
+\indexentry{Commands@{Commands}!ymax@{ymax}|hyperpage}{35}
+\indexentry{ymax@{ymax}!Commands@{Commands}|hyperpage}{35}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{36}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!arc@{arc}|hyperpage}{36}
+\indexentry{arc@{arc}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{36}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!box@{box}|hyperpage}{36}
+\indexentry{box@{box}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{36}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!circle@{circle}|hyperpage}{37}
+\indexentry{circle@{circle}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{37}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!clip\discretionary {-}{}{}Area@{clip\discretionary {-}{}{}Area}|hyperpage}{37}
+\indexentry{clip\discretionary {-}{}{}Area@{clip\discretionary {-}{}{}Area}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{37}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!clip\discretionary {-}{}{}Enable@{clip\discretionary {-}{}{}Enable}|hyperpage}{37}
+\indexentry{clip\discretionary {-}{}{}Enable@{clip\discretionary {-}{}{}Enable}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{37}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!cls@{cls}|hyperpage}{37}
+\indexentry{cls@{cls}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{37}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!color@{color}|hyperpage}{37}
+\indexentry{color@{color}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{37}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!color\discretionary {-}{}{}Id@{color\discretionary {-}{}{}Id}|hyperpage}{38}
+\indexentry{color\discretionary {-}{}{}Id@{color\discretionary {-}{}{}Id}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{38}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!line@{line}|hyperpage}{38}
+\indexentry{line@{line}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{38}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!line\discretionary {-}{}{}Type@{line\discretionary {-}{}{}Type}|hyperpage}{38}
+\indexentry{line\discretionary {-}{}{}Type@{line\discretionary {-}{}{}Type}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{38}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!line\discretionary {-}{}{}Width@{line\discretionary {-}{}{}Width}|hyperpage}{38}
+\indexentry{line\discretionary {-}{}{}Width@{line\discretionary {-}{}{}Width}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{38}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!pie@{pie}|hyperpage}{38}
+\indexentry{pie@{pie}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{38}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!plot@{plot}|hyperpage}{39}
+\indexentry{plot@{plot}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{39}
+\indexentry{Primitve Drawing Commands@{Primitve Drawing Commands}!xy@{xy}|hyperpage}{39}
+\indexentry{xy@{xy}!Primitve Drawing Commands@{Primitve Drawing Commands}|hyperpage}{39}
+\indexentry{Widgets@{Widgets}|hyperpage}{40}
+\indexentry{Widgets@{Widgets}!ameter@{ameter}|hyperpage}{40}
+\indexentry{ameter@{ameter}!Widgets@{Widgets}|hyperpage}{40}
+\indexentry{Widgets@{Widgets}!ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color@{ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}|hyperpage}{41}
+\indexentry{ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color@{ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}!Widgets@{Widgets}|hyperpage}{41}
+\indexentry{Widgets@{Widgets}!button@{button}|hyperpage}{41}
+\indexentry{button@{button}!Widgets@{Widgets}|hyperpage}{41}
+\indexentry{Widgets@{Widgets}!choice@{choice}|hyperpage}{41}
+\indexentry{choice@{choice}!Widgets@{Widgets}|hyperpage}{41}
+\indexentry{Widgets@{Widgets}!dial@{dial}|hyperpage}{42}
+\indexentry{dial@{dial}!Widgets@{Widgets}|hyperpage}{42}
+\indexentry{Widgets@{Widgets}!dmeter@{dmeter}|hyperpage}{42}
+\indexentry{dmeter@{dmeter}!Widgets@{Widgets}|hyperpage}{42}
+\indexentry{Widgets@{Widgets}!fontw@{fontw}|hyperpage}{42}
+\indexentry{fontw@{fontw}!Widgets@{Widgets}|hyperpage}{42}
+\indexentry{Widgets@{Widgets}!group\discretionary {-}{}{}Box@{group\discretionary {-}{}{}Box}|hyperpage}{43}
+\indexentry{group\discretionary {-}{}{}Box@{group\discretionary {-}{}{}Box}!Widgets@{Widgets}|hyperpage}{43}
+\indexentry{Widgets@{Widgets}!progress\discretionary {-}{}{}Bar@{progress\discretionary {-}{}{}Bar}|hyperpage}{43}
+\indexentry{progress\discretionary {-}{}{}Bar@{progress\discretionary {-}{}{}Bar}!Widgets@{Widgets}|hyperpage}{43}
+\indexentry{Widgets@{Widgets}!radio\discretionary {-}{}{}Button@{radio\discretionary {-}{}{}Button}|hyperpage}{43}
+\indexentry{radio\discretionary {-}{}{}Button@{radio\discretionary {-}{}{}Button}!Widgets@{Widgets}|hyperpage}{43}
+\indexentry{Widgets@{Widgets}!slider@{slider}|hyperpage}{43}
+\indexentry{slider@{slider}!Widgets@{Widgets}|hyperpage}{43}
+\indexentry{Widgets@{Widgets}!static\discretionary {-}{}{}Text@{static\discretionary {-}{}{}Text}|hyperpage}{44}
+\indexentry{static\discretionary {-}{}{}Text@{static\discretionary {-}{}{}Text}!Widgets@{Widgets}|hyperpage}{44}
+\indexentry{Widgets@{Widgets}!string@{string}|hyperpage}{44}
+\indexentry{string@{string}!Widgets@{Widgets}|hyperpage}{44}
+\indexentry{Widgets@{Widgets}!theme@{theme}|hyperpage}{44}
+\indexentry{theme@{theme}!Widgets@{Widgets}|hyperpage}{44}
+\indexentry{Widgets@{Widgets}!touch\discretionary {-}{}{}Zone@{touch\discretionary {-}{}{}Zone}|hyperpage}{45}
+\indexentry{touch\discretionary {-}{}{}Zone@{touch\discretionary {-}{}{}Zone}!Widgets@{Widgets}|hyperpage}{45}
+\indexentry{Widgets@{Widgets}!wstack@{wstack}|hyperpage}{45}
+\indexentry{wstack@{wstack}!Widgets@{Widgets}|hyperpage}{45}
+\indexentry{Widgets@{Widgets}!wstate@{wstate}|hyperpage}{46}
+\indexentry{wstate@{wstate}!Widgets@{Widgets}|hyperpage}{46}
+\indexentry{Widgets@{Widgets}!wvalue@{wvalue}|hyperpage}{46}
+\indexentry{wvalue@{wvalue}!Widgets@{Widgets}|hyperpage}{46}
+\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{47}
+\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!font@{font}|hyperpage}{47}
+\indexentry{font@{font}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{47}
+\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!fonto@{fonto}|hyperpage}{47}
+\indexentry{fonto@{fonto}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{47}
+\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!picture@{picture}|hyperpage}{48}
+\indexentry{picture@{picture}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{48}
+\indexentry{Bitmaps and Fonts@{Bitmaps and Fonts}!print\discretionary {-}{}{}String@{print\discretionary {-}{}{}String}|hyperpage}{48}
+\indexentry{print\discretionary {-}{}{}String@{print\discretionary {-}{}{}String}!Bitmaps and Fonts@{Bitmaps and Fonts}|hyperpage}{48}
+\indexentry{module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx@{module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}|hyperpage}{49}
+\indexentry{module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx@{module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}!\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}@{\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}|hyperpage}{52}
+\indexentry{\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}@{\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}!module::ezLCD3xx@{module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}|hyperpage}{52}
+\indexentry{module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx@{module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}!Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R@{Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}|hyperpage}{52}
+\indexentry{Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R@{Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}!module::ezLCD3xx@{module\discretionary {-}{}{}::ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx}|hyperpage}{52}
+\indexentry{module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D@{module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D}|hyperpage}{53}

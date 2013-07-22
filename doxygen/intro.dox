@@ -77,12 +77,13 @@ some widgets take a bit of time (in the millsecond range) to complete so after s
 Themes will specify the colors used on widgets (buttons, sliders ect)<br>
 The command looks bad but is easy to understand .<br>
 \image html themes.png
-
+\image latex themes.png
 </p>
 
 */
 /*! \page colors Color Table
 \image html colors.png
+\image latex colors.png
 */
 
 /*! \page introFonts Introduction To Fonts
@@ -95,7 +96,7 @@ The command looks bad but is easy to understand .<br>
 
 /*! \page introBitmaps Introduction To Bitmaps
 <p>
-
+picture supports gif, jpg and bmp
 
 </p>
 */
@@ -103,8 +104,18 @@ The command looks bad but is easy to understand .<br>
 
 /*! \page introWidgets Introduction To Widgets
 <p>
-
-
+	Buttons<br>
+	TouchZone<br>
+	Slider<br>
+	ProgressBar<br>
+	AnalogMeter<br>
+	DigitalMeter<br>
+	StaticText<br>
+	GroupBox<br>
+	Dial<br>
+	Choice<br>
+	CheckBox<br>
+	Radio<br>
 </p>
 */
 
