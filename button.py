@@ -9,7 +9,7 @@ from ezLCD3xx import *
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com9') 
+	LCD = ezLCD('com4') 
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -39,7 +39,7 @@ LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
 # Print string at coordinates x=80 and y=100
 LCD.printString("Hello From Python",80,100)
 # Draw button widget with a ID of 1
-LCD.button( 1,  80, 150, 155, 50, 1, 0, 10, 6, 3, 'Press Here')
+LCD.button( 1,  80, 150, 155, 50, 1, 0, 10, 6, 3,'Press Here')
 # Draw a staticText box
 LCD.staticText(2, 35, 30, 250, 30, 8, 1, 1,'Press Button')
 # Clear widget stack
@@ -48,10 +48,11 @@ LCD.wstack(CLEAR)
 while True:
 	# check widget stack this will return widget updates (button press ect.) last in first out order
 	(ID, Info, Data) = LCD.wstack(LIFO)
+#	print ID, Info, Data
 	# check if ID = 1 widget 1 and info = pressed 
 	if ID == 1 and Info == 4:
 		# clear the stack just to be safe
-		LCD.wstack(CLEAR)
+#		LCD.wstack(CLEAR)
 		# change draw color to yellow
 		LCD.color(YELLOW)
 		# change change string 1 for text on static text ID 2
@@ -61,7 +62,7 @@ while True:
 	# check if ID = 1 widget 1 and info = pressed and released
 	if ID == 1 and Info == 1:
 		# clear the stack just to be safe
-		LCD.wstack(CLEAR)
+#		LCD.wstack(CLEAR)
 		# change draw color to yellow
 		LCD.color(YELLOW)
 		# change change string 1 for text on static text ID 2

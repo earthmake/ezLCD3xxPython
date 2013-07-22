@@ -2,9 +2,14 @@ var NAVTREE =
 [
   [ "ezLCD Python Module", "index.html", [
     [ "Installing the Module", "d9/d87/install.html", null ],
-    [ "Coordinates System", "d6/dc9/coordinates_system.html", null ],
+    [ "Introduction To The Coordinates System", "d6/dc9/coordinates_system.html", null ],
     [ "Introduction To The Hardware", "d8/dc2/intro_hardware.html", null ],
     [ "Introduction To The Software", "df/dcd/intro_software.html", null ],
+    [ "Introduction To Themes", "df/df8/intro_themes.html", null ],
+    [ "Color Table", "d7/db2/colors.html", null ],
+    [ "Introduction To Fonts", "d4/d22/intro_fonts.html", null ],
+    [ "Introduction To Bitmaps", "dd/d79/intro_bitmaps.html", null ],
+    [ "Introduction To Widgets", "d0/d90/intro_widgets.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -24,7 +29,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+".html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

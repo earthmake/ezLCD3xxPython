@@ -11,7 +11,6 @@ import io
 import inspect
 import traceback
 
-
 BLACK = 0
 GRAY  = 1
 SILVER= 2
@@ -55,6 +54,7 @@ class ezLCD(object):
 		self.interface = interface
 		self.ser = None
 
+			
 	## open serial port
 	# @var self.interface 123
 	# @var self.ser 123
@@ -63,7 +63,7 @@ class ezLCD(object):
 		self.ser = serial.Serial()
 		self.ser.baudrate = 115200 
 		self.ser.port = self.interface
-		self.ser.timeout = .1
+		self.ser.timeout = .2
 		try:
 			self.ser.open()
 			self.sio = io.TextIOWrapper( io.BufferedRWPair( self.ser, self.ser)) # TextWrapper
@@ -74,9 +74,6 @@ class ezLCD(object):
 			return False
 
 	def closeSerial(self):
-		'''
-		close
-		'''
 		self.ser.close()
 		print "ezLCD3xx "+ str(self.interface) +" close"
 
@@ -84,13 +81,13 @@ class ezLCD(object):
 	# 
 	#
 	def WaitForCR(self):
-		cr = self.ser.readline()
+		cr = self.ser.read(1) #self.ser.readline()
 		if cr != '\r':
 			print 'Command Returned Error', cr, len(cr)
 			frame = inspect.currentframe()
 			stack_trace = traceback.format_stack(frame)
 			print ''.join(stack_trace[:-2])
-		
+			
 		
 # General --------------------------------------------------------------------
 

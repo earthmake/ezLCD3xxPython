@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['waitforcr',['WaitForCR',['../df/d76/namespaceez_l_c_d3xx.html#a685d0b172e0c0099f6dda0fbc4d820ad',1,'ezLCD3xx']]],
+  ['waitforcr',['WaitForCR',['../d2/d2f/namespacemodule_1_1ez_l_c_d3xx.html#a9c709d105cdc1e75f3b59214ba0f65d8',1,'module::ezLCD3xx']]],
   ['widgets',['Widgets',['../df/d3e/group___widgets.html',1,'']]],
-  ['wquiet',['wquiet',['../dd/d0a/group___general.html#ga78b38855b8bcb0609d340a80210a0d0f',1,'ezLCD3xx']]],
-  ['wstack',['wstack',['../df/d3e/group___widgets.html#ga70b40969e280a9c315b84c18848309ca',1,'ezLCD3xx']]],
-  ['wstate',['wstate',['../df/d3e/group___widgets.html#gaada0b335d54904b4f4517755ace97e47',1,'ezLCD3xx']]],
-  ['wvalue',['wvalue',['../df/d3e/group___widgets.html#ga7eaa2fac8abbadf04fa9afb49702906a',1,'ezLCD3xx']]]
+  ['wquiet',['wquiet',['../dd/d0a/group___general.html#gae760b8839f85e30c2a294a593e77b9d7',1,'module::ezLCD3xx']]],
+  ['wstack',['wstack',['../df/d3e/group___widgets.html#ga223301539fa77d634fc44b480a08f6a7',1,'module::ezLCD3xx']]],
+  ['wstate',['wstate',['../df/d3e/group___widgets.html#ga68f19c87c7284b550f150b81327125aa',1,'module::ezLCD3xx']]],
+  ['wvalue',['wvalue',['../df/d3e/group___widgets.html#ga57c35a2e95d92bbeaeefc71ffd9998fc',1,'module::ezLCD3xx']]]
 ];

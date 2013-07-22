@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="765"
+   height="990"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="C:\Users\Segler\Documents\GitHub\ezLCD3xxPython\doxygen\themes.png"
+   inkscape:export-xdpi="100.19589"
+   inkscape:export-ydpi="100.19589"
+   sodipodi:docname="themes.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.5645218"
+     inkscape:cx="481.93762"
+     inkscape:cy="902.25604"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-from-guide="false"
+     inkscape:window-width="1664"
+     inkscape:window-height="937"
+     inkscape:window-x="1971"
+     inkscape:window-y="13"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3801"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-62.36218)">
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="101.28842"
+       y="121.32536"
+       id="text3906"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3908"
+         x="101.28842"
+         y="121.32536"
+         style="font-size:14px;font-weight:bold;-inkscape-font-specification:Sans Bold">                                                                          LCD.theme( 1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1 )</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="138.82536"
+         style="font-size:14px"
+         id="tspan3936" /><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="154.65422"
+         id="tspan3910"
+         style="font-weight:bold;-inkscape-font-specification:Sans Bold">Style Component Description </tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="169.65422"
+         id="tspan3912">Theme ID number. </tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="184.65422"
+         id="tspan3938">EmbossDkColor Dark emboss color used for 3-D effect of Objects.</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="199.65422"
+         id="tspan3914">EmbossLtColor Light emboss color used for 3-D effect of Objects.</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="214.65422"
+         id="tspan3916">TextColor0</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="229.65422"
+         id="tspan3918">TextColor1</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="244.65422"
+         id="tspan3922">TextColorDisabled Text color used for Objects that are disabled.</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="259.65421"
+         id="tspan3924">Color0</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="274.65421"
+         id="tspan3926">Color1</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="289.65421"
+         id="tspan3930">ColorDisabled Color used to render Objects that are disabled.</tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="304.65421"
+         id="tspan3934">CommonBkColor A common background color of Objects. </tspan><tspan
+         sodipodi:role="line"
+         x="101.28842"
+         y="319.65421"
+         id="tspan3964">Font number defined with the fontw command. </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 499.82229,124.23486 0,60.17351 -41.95033,0"
+       id="path3942"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 457.84594,199.43438 c 72.57765,0 72.57765,0 72.57765,0 l 0,-75.5827"
+       id="path3944"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 162.75131,213.81472 389.78659,0 0,-89.70052"
+       id="path3946"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 584.11284,124.14549 0,119.99509 -136.33025,0"
+       id="path3950"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 137.76278,259.16039 465.76271,0 0,-135.03472"
+       id="path3952"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 137.76302,273.08872 485.56772,0 0,-148.96281"
+       id="path3954"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 431.623,289.19322 206.48092,0 0,-164.74324"
+       id="path3956"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 413.07746,304.4791 240.78196,0 0,-180.315"
+       id="path3958"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 351.33951,318.79795 c 318.48075,0 318.48075,0 318.48075,0 l 0,-194.66697"
+       id="path3966"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.03156638;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 568.17201,123.75115 c 0,101.97252 0,101.97252 0,101.97252 l -405.58419,0"
+       id="path3990"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.04765058;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 204.79071,169.34675 271.03531,0 0,-44.89638"
+       id="path3992"
+       inkscape:connector-curvature="0" />
+    <image
+       y="417.36218"
+       x="204"
+       id="image4031"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAAA/CAYAAABw3VNyAAAABHNCSVQICAgIfAhkiAAAAutJREFU eJzt3T9u2zAUx3Gq6CEKJEAy9iZeew8vHX2EjFl6j6y9ScYUSAHfQh0KFowqUe+RfJSe9f0AQeCE +kf/TJG0Ew7jOI4B2LlPW58AIEFQ4QJBhQsEFS4QVLhAUOHC55KNHu8vrc8DN+7t/alqe1VQY0C/ fvtedVAcT8xOaWAH6YT/4/2FgKLa68tzUVhFQZ0L6c8fX9QHwzGdztcPj0vCuhrUaUgJKEqdztfw +vL877EmrNlRP7d7tJSGNATdoFw8mKIlRa1fv/+2oA93+lmjxRaV1hQ9SFtV0YQ/rSlaii2rBu9M wQWCChcIKlwgqHCBoMIFggoXCCpcKPo86hrNH2APg8UZ7FOuXtJ6kJY7EpOgxspMK3xawfF38fsR ngBJvWjKHclmt/6l4AJzNu2jHr2VgByDKbhg0ketMe0CDMN8t0DSdci12EtdjaVttOV7kl57r7q1 sGlQ5wYL08obx/yIeGnAMY7zA7W1AV7ueJLyWjV9c+21W9etpc1u/aVP0FLFTH9eUoHabVo8ScOw /FV6HqXnZVm3tbq1qKW3Tun0zdqxc7fCaauT24+mvKXaaw/Btm5b6xZU64tpdQsNYf1cteWtWU/t 7WHqcHeDqVLSsCwNIFJpK6EtvwXrY2/9QgzhhoKqoX2zgTcntud6HlXySk9HqPHx3H4001LawY6F kmvf0/61XAc1NVdhS1Mo2srdewuqufY97l+i26enpBc2N5eX2yYdpUompmOfUzoLoS2fI60XaTnt tVvXrSXTT0/13LZm3rF1+dr9WJ1fj7q1cjO3ftw2ggoXCCpcIKhwgaDCBYIKFwgqXCCocIGgwgWC ChdEQZ0uvwLUaPo//N/en/5bxQJoTbqEj/jWfzpfi14JQPRwdynOUDaoaatK64rWNAuiiZeYnCpZ 2QLHNNeKNl9iMmLpc7RSsmivuI9au946EEKHZdBTtK7Qqm3oioIK9MY7U3CBoMIFggoXCCpcIKhw 4Q909zkWTdFqfwAAAABJRU5ErkJggg== "
+       height="157"
+       width="386" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="338.36621"
+       y="416.20053"
+       id="text4040"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4042"
+         x="338.36621"
+         y="416.20053">EmbossLtColor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="337.427"
+       y="590.3418"
+       id="text4044"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4046"
+         x="337.427"
+         y="590.3418">EmbossDkColor</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4048"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:14px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4050"><rect
+           id="rect4052"
+           width="94.971085"
+           height="14.610935"
+           x="173.33882"
+           y="332.5079" /></flowRegion><flowPara
+         id="flowPara4054" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="121.32332"
+       y="502.07068"
+       id="text4056"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="121.32332"
+         y="502.07068"
+         id="tspan4060">TextColor0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="593.88165"
+       y="499.642"
+       id="text4064"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4066"
+         x="593.88165"
+         y="499.642">Font</tspan><tspan
+         sodipodi:role="line"
+         x="593.88165"
+         y="517.14197"
+         id="tspan4068" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.31079912px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 383.63536,440.10988 0,-20.61833"
+       id="path4070"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 382.87845,556.17433 0,21"
+       id="path4072"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.20203865px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 533.44897,496.48373 53.46118,0"
+       id="path4076"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.29733336px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 257.91261,499.17986 -53.85836,0"
+       id="path4078"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="355.97552"
+       y="84.121986"
+       id="text4080"
+       sodipodi:linespacing="125%"
+       transform="translate(0,62.36218)"><tspan
+         sodipodi:role="line"
+         id="tspan4082"
+         x="355.97552"
+         y="84.121986" /><tspan
+         sodipodi:role="line"
+         id="tspan4084"
+         x="355.97552"
+         y="101.62199" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="449.33862"
+       y="417.02426"
+       id="text4002"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4004"
+         x="449.33862"
+         y="417.02426">CommonBkColor</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 500,359 c 0,38 0,38 0,38"
+       id="path4006"
+       inkscape:connector-curvature="0"
+       transform="translate(0,62.36218)" />
+  </g>
+</svg>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interface',['interface',['../df/d76/namespaceez_l_c_d3xx.html#afcf658508c426a01de8e18e7fb3530ca',1,'ezLCD3xx']]]
+  ['interface',['interface',['../d2/d2f/namespacemodule_1_1ez_l_c_d3xx.html#a7b991a20f0d09f5aa52033fd043ae286',1,'module::ezLCD3xx']]]
 ];

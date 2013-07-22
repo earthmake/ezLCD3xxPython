@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['groupbox',['groupBox',['../df/d3e/group___widgets.html#ga794dde0f8237dcfcd90646e0eeb2ca65',1,'ezLCD3xx']]]
+  ['groupbox',['groupBox',['../df/d3e/group___widgets.html#ga189db08deeaf2ff69fad7e7e3612fe5b',1,'module::ezLCD3xx']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ameter',['ameter',['../df/d3e/group___widgets.html#ga01020dc360dfbd9f463bf5478e42566e',1,'ezLCD3xx']]],
-  ['ameter_5fcolor',['ameter_color',['../df/d3e/group___widgets.html#ga87633e350f72285b45b9df28eff6ba18',1,'ezLCD3xx']]],
-  ['arc',['arc',['../d7/df0/group___drawing.html#ga13a0a8fb9c906a687f2a42864d973cc1',1,'ezLCD3xx']]]
+  ['ameter',['ameter',['../df/d3e/group___widgets.html#ga437287c80e84027b6b9bebfe31764202',1,'module::ezLCD3xx']]],
+  ['ameter_5fcolor',['ameter_color',['../df/d3e/group___widgets.html#gabe969d0e420d69f79a659f115e810acd',1,'module::ezLCD3xx']]],
+  ['arc',['arc',['../d7/df0/group___drawing.html#gac515d84e432747e244699747380556ea',1,'module::ezLCD3xx']]]
 ];

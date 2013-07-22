@@ -1,16 +1,16 @@
 var group___general =
 [
-    [ "backlight", "dd/d0a/group___general.html#gacecf5c1b5956caef4a4030f51bc4a809", null ],
-    [ "calibrate", "dd/d0a/group___general.html#gae53650dc26de7b1316c9241eec0751bb", null ],
-    [ "cfgio", "dd/d0a/group___general.html#ga38687b7d07bf93afe6891d3dca6205f4", null ],
-    [ "io", "dd/d0a/group___general.html#gaf87ad0b88f8a279c20666363bc7460b6", null ],
-    [ "ping", "dd/d0a/group___general.html#ga92454899475445ff2d48eb7072f3c94e", null ],
-    [ "play", "dd/d0a/group___general.html#ga15f87f284189816d98ab5bf0b5a94a99", null ],
-    [ "reset", "dd/d0a/group___general.html#gabc1cd3bb62dfa8a8f37f5da5cbb3e85c", null ],
-    [ "run", "dd/d0a/group___general.html#ga7faa11f7fbe4da6ba981a5b8c4cb37aa", null ],
-    [ "snapshot", "dd/d0a/group___general.html#ga8a1ef000b3c71704260c9e5f949e80de", null ],
-    [ "verbose", "dd/d0a/group___general.html#gaa497e8573c045944d589b17fd7dd36ac", null ],
-    [ "wquiet", "dd/d0a/group___general.html#ga78b38855b8bcb0609d340a80210a0d0f", null ],
-    [ "xmax", "dd/d0a/group___general.html#gabe06f9371514b4556accd06145b9c104", null ],
-    [ "ymax", "dd/d0a/group___general.html#gabcb8010d7c29b1c514e70cefe3bb856c", null ]
+    [ "backlight", "dd/d0a/group___general.html#ga8b73d9d966ac29c172e81aac05bf9bf9", null ],
+    [ "calibrate", "dd/d0a/group___general.html#ga44f3daeee41eaaf35752594e6543a619", null ],
+    [ "cfgio", "dd/d0a/group___general.html#ga84837123679c1b262b8bb29108019dda", null ],
+    [ "io", "dd/d0a/group___general.html#gad7ece2d1355d0be3f7df9ce216cb5286", null ],
+    [ "ping", "dd/d0a/group___general.html#ga123be6aba6fc316922b71e3fe1bc7aaf", null ],
+    [ "play", "dd/d0a/group___general.html#ga7d904406a210cad98e2d762dae76d553", null ],
+    [ "reset", "dd/d0a/group___general.html#gad09d3f52045f116eb41726211f8909a4", null ],
+    [ "run", "dd/d0a/group___general.html#ga0535965cf75c9a6f4f6039a1d1399d81", null ],
+    [ "snapshot", "dd/d0a/group___general.html#gaf906c49e26bdd7b09f58d80675a0d4f5", null ],
+    [ "verbose", "dd/d0a/group___general.html#ga350c2e1be0d3d074d79d7a7278c44a22", null ],
+    [ "wquiet", "dd/d0a/group___general.html#gae760b8839f85e30c2a294a593e77b9d7", null ],
+    [ "xmax", "dd/d0a/group___general.html#ga594f839f4d44b15ece850c795ec8e7ba", null ],
+    [ "ymax", "dd/d0a/group___general.html#gae8e395513eeb5519612f3e988a059106", null ]
 ];

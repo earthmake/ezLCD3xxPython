@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['picture',['picture',['../d2/d7e/group___bitmap_font.html#ga3bdde0a3f8505adbfb3c4b7107da7650',1,'ezLCD3xx']]],
-  ['pie',['pie',['../d7/df0/group___drawing.html#ga12fb93d2d6f7ce3f08ad988c09624d57',1,'ezLCD3xx']]],
-  ['ping',['ping',['../dd/d0a/group___general.html#ga92454899475445ff2d48eb7072f3c94e',1,'ezLCD3xx']]],
-  ['play',['play',['../dd/d0a/group___general.html#ga15f87f284189816d98ab5bf0b5a94a99',1,'ezLCD3xx']]],
-  ['plot',['plot',['../d7/df0/group___drawing.html#gad3c0ce418a0feea4a0fa40f803c90196',1,'ezLCD3xx']]],
-  ['printstring',['printString',['../d2/d7e/group___bitmap_font.html#gac3a90d479a0423de66988b9850f4852c',1,'ezLCD3xx']]],
-  ['progressbar',['progressBar',['../df/d3e/group___widgets.html#ga1e17ba92ebcd90504fdc0f8fddb84bf0',1,'ezLCD3xx']]]
+  ['picture',['picture',['../d2/d7e/group___bitmap_font.html#ga675ef467cb7a69ab8c19024bfd0775d6',1,'module::ezLCD3xx']]],
+  ['pie',['pie',['../d7/df0/group___drawing.html#gadc61344b718ac7728cad63f85a9712d5',1,'module::ezLCD3xx']]],
+  ['ping',['ping',['../dd/d0a/group___general.html#ga123be6aba6fc316922b71e3fe1bc7aaf',1,'module::ezLCD3xx']]],
+  ['play',['play',['../dd/d0a/group___general.html#ga7d904406a210cad98e2d762dae76d553',1,'module::ezLCD3xx']]],
+  ['plot',['plot',['../d7/df0/group___drawing.html#gaad72ea59743ea85183832ede89d9eb22',1,'module::ezLCD3xx']]],
+  ['printstring',['printString',['../d2/d7e/group___bitmap_font.html#ga9156f7c9f1239d24a3a8a7ade64291d8',1,'module::ezLCD3xx']]],
+  ['progressbar',['progressBar',['../df/d3e/group___widgets.html#ga9eeb62ec0060e5ba57e42986b2d555ae',1,'module::ezLCD3xx']]]
 ];
