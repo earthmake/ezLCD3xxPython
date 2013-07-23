@@ -1,0 +1,76 @@
+\hypertarget{_touch_zone_i_m_8py-example}{\section{Touch\-Zone\-I\-M.\-py}
+}
+
+\begin{DoxyCodeInclude}
+1 \textcolor{comment}{# Button Align ezLCD Python demo}
+2 \textcolor{comment}{#}
+3 
+4 \textcolor{keyword}{import} platform
+5 \textcolor{keyword}{import} sys
+6 sys.path.append(\textcolor{stringliteral}{'..\(\backslash\)module'}) 
+7 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
+8 
+9 \textcolor{comment}{#check what OS we are on}
+10 \textcolor{comment}{#Windows}
+11 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
+12     LCD = ezLCD(\textcolor{stringliteral}{'com58'}) 
+13 \textcolor{comment}{#Mac}
+14 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
+15     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
+16 \textcolor{comment}{#Linux}
+17 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Linux'}:
+18     LCD = ezLCD(\textcolor{stringliteral}{'/dev/ttyACM0'})
+19 
+20 \textcolor{comment}{# Bail out if comport error}
+21 \textcolor{keywordflow}{if} LCD.openSerial()==\textcolor{keyword}{False}:
+22     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
+23     \textcolor{keywordflow}{raise} SystemExit
+24 
+25 tzData = ( 1, 0, 33,  2, 46, 33, 3, 92, 33, 4, 138, 33, 5, 184, 33, 6, 230, 33, 7, 276, 33, 
+26            8, 0, 79, 9, 46, 79, 10, 92, 79, 11, 138, 79, 12, 184, 79, 13, 230, 79, 14, 276, 79,  
+27           15, 0, 125, 16, 46, 125, 17, 92, 125, 18, 138, 125, 19, 184, 125, 20, 230, 125, 21, 276, 125) 
+28 
+29 \textcolor{comment}{# Turn verbose off }
+30 LCD.verbose(\textcolor{stringliteral}{'off'})
+31 \textcolor{comment}{# Turn off button press info from ezLCD}
+32 LCD.wquiet(ON)
+33 \textcolor{comment}{# CLear screen}
+34 LCD.cls()
+35 \textcolor{comment}{# Set draw color to red}
+36 LCD.color(RED)
+37 \textcolor{comment}{# Set widget font 0}
+38 LCD.fontw(0,\textcolor{stringliteral}{'1'})
+39 \textcolor{comment}{# Set wodget font 1}
+40 LCD.fontw(1,\textcolor{stringliteral}{'0'})
+41 \textcolor{comment}{# Set theme #1 }
+42 LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
+43 \textcolor{comment}{# Draw button widget with a ID of 1}
+44 LCD.picture(\textcolor{stringliteral}{'im.gif'}) \textcolor{comment}{# this will get a timeout error because it takes a bit to draw}
+45 LCD.color(RED)
+46 LCD.xy(0,0)
+47 LCD.box(320,240)
+48 LCD.printString(\textcolor{stringliteral}{'TouchZone Demo'}, 80, 10)
+49 tzX = 0
+50 tzY = 33
+51 \textcolor{keywordflow}{for} count \textcolor{keywordflow}{in} range(0, 63, 3):
+52     LCD.touchZone(tzData[count], tzData[count+1], tzData[count+2],43 ,43, ENABLE)
+53 
+54 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+55     (ID, Info, Data) = LCD.wstack(FIFO)
+56     \textcolor{keywordflow}{if} ID > 0 \textcolor{keywordflow}{and} Info ==4:
+57         ID -=1
+58         LCD.color(BLACK)
+59         LCD.xy(tzData[(ID*3)+1],tzData[(ID*3)+2] )
+60         LCD.box(43,45)
+61         string =\textcolor{stringliteral}{'TouchZone '} + str(ID+1) +\textcolor{stringliteral}{' Pressed'}
+62         LCD.printString(string, 60, 200)
+63     \textcolor{keywordflow}{if} ID > 0 \textcolor{keywordflow}{and} Info ==1 \textcolor{keywordflow}{or} Info ==2:
+64         ID -=1
+65         LCD.color(WHITE)        
+66         LCD.xy(tzData[(ID*3)+1],tzData[(ID*3)+2] )
+67         LCD.box(43,45)
+68         LCD.printString(string, 60, 200)
+69         
+70 
+\end{DoxyCodeInclude}
+ 

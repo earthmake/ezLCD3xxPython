@@ -193,8 +193,10 @@ class ezLCD(object):
 	# @param filename filename.bmp
 	# Make sure you have space on the internal flash drive !		
 	def snapshot(self, x, y, w, h, filename):
+		self.ser.timeout = 25		
 		self.ser.write('snapshot %d %d %d %d %s\r' % (x, y, w, h, filename))
 		self.WaitForCR()
+		self.ser.timeout = .2		
 		
 	## The calibrate command will re calibrate the touch screen
 	def calibrate(self):
@@ -516,10 +518,10 @@ class ezLCD(object):
 	# @param mmax
 	# @param theme
 	# @param stringID
-	#												
-	def progressBar(self, ID, x, y, width, height, options, value, mmax, theme, stringID, string = None ):
+	# @param text												
+	def progressBar(self, ID, x, y, width, height, options, value, mmax, theme, stringID, text = None ):
 		if string != None:
-			self.string(stringID, string)
+			self.string(stringID, text)
 		self.ser.write('progress %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, value, mmax, theme, stringID))
 		self.WaitForCR()
 
@@ -578,7 +580,7 @@ class ezLCD(object):
 		self.WaitForCR()
 
 	## The string command will set or return a internal string
-	# @param stringNumber number of string to set or return
+	# @param stringID number of string to set or return
 	# @param string string to set optional
 	# \n internal strings are used for text on buttons and other widgets
 	# \n Strings are defined as 128 characters.  There are 64 strings (0 to 63).
@@ -674,12 +676,13 @@ class ezLCD(object):
 	# LCD.picture('python.gif')
 	# @endcode	 
 	def picture(self, image, x=None, y=None):
+		self.ser.timeout = 3
 		if x!=None:
 			self.ser.write('image %x %y %s\r' % (x, y, image))
 		else:
 			self.ser.write('image %s\r' % (image))
 		self.WaitForCR()
-
+		self.ser.timeout = .2
 # Text --------------------------------------------------------------------
 
 	## The font command will set current font to use for printString

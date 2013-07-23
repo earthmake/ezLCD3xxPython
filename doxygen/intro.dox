@@ -75,7 +75,7 @@ some widgets take a bit of time (in the millsecond range) to complete so after s
 /*! \page introThemes Introduction To Themes
 <p>
 Themes will specify the colors used on widgets (buttons, sliders ect)<br>
-The command looks bad but is easy to understand .<br>
+You can have 16 themes numbered 0-15. <br> 
 \image html themes.png
 \image latex themes.eps
 </p>
@@ -103,20 +103,68 @@ picture supports gif, jpg and bmp
 
 
 /*! \page introWidgets Introduction To Widgets
-<p>
-	Buttons<br>
+	\section overView Over View of Widgets
+	<p>
+	text text<br>
+	</p>	
+	\section buttons Buttons
+	<p>
+	text text<br>
+	</p>
 	\image html buttons.png
-	TouchZone<br>
-	Slider<br>
-	ProgressBar<br>
-	AnalogMeter<br>
-	DigitalMeter<br>
-	StaticText<br>
-	GroupBox<br>
-	Dial<br>
-	Choice<br>
-	CheckBox<br>
-	Radio<br>
-</p>
+	\section touchZone TouchZone
+	<p>
+	TouchZones work like buttons but do not display any graphics on their own<br>
+	You have to supply the image.<br>
+	So we can take the image below and can make 21 TouchZones one for each Emoticon<br>
+	\image html TouchZone.png
+	</p>
+	\section slider Slider
+	<p>
+	text text<br>
+	</p>
+	\section progressBar ProgressBar
+	<p>
+	text text<br>
+	</p>
+	\section analogMeter AnalogMeter
+	<p>
+	text text<br>
+	</p>
+	\section digitalMeter DigitalMeter
+	<p>
+	text text<br>
+	</p>
+	\section staticText StaticText
+	<p>
+	text text<br>
+	</p>
+	\section groupBox GroupBox
+	<p>
+	text text<br>
+	</p>
+	\section dial Dial
+	<p>
+	text text<br>
+	</p>
+	\section choice Choice
+	<p>
+	text text<br>
+	</p>
+	\section checkBox CheckBox
+	<p>
+	text text<br>
+	</p>
+	\section radioButtons Radio Buttons
+	<p>
+	text text<br>
+	</p>
 */
 
+/*! \page examples Examples
+	\example ButtonOptions.py
+	\example ButtonAlign.py
+	\example ButtonRadius.py
+	\example TouchZoneIM.py
+
+*/

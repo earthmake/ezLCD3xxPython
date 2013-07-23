@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="990"
+   height="765"
+   id="svg4388"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 13">
+  <defs
+     id="defs4390" />
+  <sodipodi:namedview
+     inkscape:document-units="px"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0182338"
+     inkscape:cx="503.55998"
+     inkscape:cy="424.40649"
+     inkscape:current-layer="layer1"
+     id="namedview4392"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4397"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4394">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-225)">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4399"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4401"><rect
+           id="rect4403"
+           width="384.98035"
+           height="83.477882"
+           x="117.85113"
+           y="38.251362" /></flowRegion><flowPara
+         id="flowPara4405"></flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180"
+       y="260"
+       id="text4407"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="180"
+         y="260"
+         id="tspan4429">slider  ( ID, x, y, width, height, options, rrange, resolution, value, theme  )</tspan><tspan
+         sodipodi:role="line"
+         x="180"
+         y="277.5"
+         id="tspan4453" /><tspan
+         sodipodi:role="line"
+         x="180"
+         y="295"
+         id="tspan4431" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="60"
+       y="300"
+       id="text4455"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4457"
+         x="60"
+         y="300">Widget ID</tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="317.5"
+         id="tspan4459">Start X Coordinate</tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="335"
+         id="tspan4461">Start Y Coordinate</tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="352.5"
+         id="tspan4463">Width In Pixels</tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="370"
+         id="tspan4465">Height In Pixels</tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="387.5"
+         id="tspan4467">Options</tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="405"
+         id="tspan4469">Range Max Value</tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="422.5"
+         id="tspan4471">Thumb Width </tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="440"
+         id="tspan4473">Value Initial Value </tspan><tspan
+         sodipodi:role="line"
+         x="60"
+         y="457.5"
+         id="tspan4475">Theme </tspan></text>
+    <g
+       id="g4557"
+       transform="translate(0,-80)">
+      <text
+         transform="translate(0,225)"
+         sodipodi:linespacing="125%"
+         id="text4477"
+         y="327.96872"
+         x="60.889751"
+         style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="327.96872"
+           x="60.889751"
+           id="tspan4479"
+           sodipodi:role="line"></tspan><tspan
+           y="345.46872"
+           x="60.889751"
+           id="tspan4481"
+           sodipodi:role="line">Option: </tspan><tspan
+           id="tspan4483"
+           y="362.96872"
+           x="60.889751"
+           sodipodi:role="line" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4485"
+         y="590"
+         x="100"
+         style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan4511"
+           y="590"
+           x="100"
+           sodipodi:role="line">1=draw horizontal</tspan><tspan
+           id="tspan4545"
+           y="607.5"
+           x="100"
+           sodipodi:role="line">2=horizontal disabled</tspan><tspan
+           id="tspan4547"
+           y="625"
+           x="100"
+           sodipodi:role="line">3=vertical</tspan><tspan
+           id="tspan4549"
+           y="642.5"
+           x="100"
+           sodipodi:role="line">4=vertical disabled</tspan><tspan
+           id="tspan4513"
+           y="660"
+           x="100"
+           sodipodi:role="line">5=horizontal scrollbar</tspan><tspan
+           id="tspan4551"
+           y="677.5"
+           x="100"
+           sodipodi:role="line">6=horizontal scrollbar disabled</tspan><tspan
+           id="tspan4555"
+           y="695"
+           x="100"
+           sodipodi:role="line">7=vertical scrollbar</tspan><tspan
+           id="tspan4515"
+           y="712.5"
+           x="100"
+           sodipodi:role="line">8=vertical scrollbar disabled</tspan></text>
+    </g>
+  </g>
+</svg>

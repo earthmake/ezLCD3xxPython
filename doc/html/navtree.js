@@ -9,7 +9,22 @@ var NAVTREE =
     [ "Color Table", "d7/db2/colors.html", null ],
     [ "Introduction To Fonts", "d4/d22/intro_fonts.html", null ],
     [ "Introduction To Bitmaps", "dd/d79/intro_bitmaps.html", null ],
-    [ "Introduction To Widgets", "d0/d90/intro_widgets.html", null ],
+    [ "Introduction To Widgets", "d0/d90/intro_widgets.html", [
+      [ "Over View of Widgets", "d0/d90/intro_widgets.html#overView", null ],
+      [ "Buttons", "d0/d90/intro_widgets.html#buttons", null ],
+      [ "TouchZone", "d0/d90/intro_widgets.html#touchZone", null ],
+      [ "Slider", "d0/d90/intro_widgets.html#slider", null ],
+      [ "ProgressBar", "d0/d90/intro_widgets.html#progressBar", null ],
+      [ "AnalogMeter", "d0/d90/intro_widgets.html#analogMeter", null ],
+      [ "DigitalMeter", "d0/d90/intro_widgets.html#digitalMeter", null ],
+      [ "StaticText", "d0/d90/intro_widgets.html#staticText", null ],
+      [ "GroupBox", "d0/d90/intro_widgets.html#groupBox", null ],
+      [ "Dial", "d0/d90/intro_widgets.html#dial", null ],
+      [ "Choice", "d0/d90/intro_widgets.html#choice", null ],
+      [ "CheckBox", "d0/d90/intro_widgets.html#checkBox", null ],
+      [ "Radio Buttons", "d0/d90/intro_widgets.html#radioButtons", null ]
+    ] ],
+    [ "Examples", "d4/de9/examples.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -23,7 +38,8 @@ var NAVTREE =
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ]
-    ] ]
+    ] ],
+    [ "Examples", "examples.html", "examples" ]
   ] ]
 ];
 
