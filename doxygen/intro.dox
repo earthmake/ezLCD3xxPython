@@ -77,7 +77,7 @@ some widgets take a bit of time (in the millsecond range) to complete so after s
 Themes will specify the colors used on widgets (buttons, sliders ect)<br>
 The command looks bad but is easy to understand .<br>
 \image html themes.png
-\image latex themes.png
+\image latex themes.eps
 </p>
 
 */
@@ -105,6 +105,7 @@ picture supports gif, jpg and bmp
 /*! \page introWidgets Introduction To Widgets
 <p>
 	Buttons<br>
+	\image html buttons.png
 	TouchZone<br>
 	Slider<br>
 	ProgressBar<br>

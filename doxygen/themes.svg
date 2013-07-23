@@ -18,7 +18,7 @@
    inkscape:export-filename="C:\Users\Segler\Documents\GitHub\ezLCD3xxPython\doxygen\themes.png"
    inkscape:export-xdpi="100.19589"
    inkscape:export-ydpi="100.19589"
-   sodipodi:docname="themes.svg">
+   sodipodi:docname="themes.eps">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -28,18 +28,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.78226089"
-     inkscape:cx="455.32305"
-     inkscape:cy="525.71267"
+     inkscape:zoom="1.9961866"
+     inkscape:cx="391.28256"
+     inkscape:cy="710.53934"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:snap-from-guide="false"
-     inkscape:window-width="1664"
-     inkscape:window-height="937"
-     inkscape:window-x="1971"
-     inkscape:window-y="13"
-     inkscape:window-maximized="0">
+     inkscape:window-width="1920"
+     inkscape:window-height="1138"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="grid3801"
@@ -66,7 +66,7 @@
      id="layer1"
      transform="translate(0,-62.36218)">
     <g
-       id="g4008">
+       id="g3129">
       <text
          sodipodi:linespacing="125%"
          id="text3906"
@@ -74,7 +74,7 @@
          x="101.28842"
          style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           style="font-size:14px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+           style="font-size:14px;font-weight:bold;fill:#ff0000;-inkscape-font-specification:Sans Bold"
            y="121.32536"
            x="101.28842"
            id="tspan3908"
@@ -88,7 +88,7 @@
            id="tspan3910"
            y="154.65422"
            x="101.28842"
-           sodipodi:role="line">Style Component Description </tspan><tspan
+           sodipodi:role="line">Theme Component Description </tspan><tspan
            id="tspan3912"
            y="169.65422"
            x="101.28842"
