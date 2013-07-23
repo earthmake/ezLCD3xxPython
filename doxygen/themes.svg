@@ -16,8 +16,8 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    inkscape:export-filename="C:\Users\Segler\Documents\GitHub\ezLCD3xxPython\doxygen\themes.png"
-   inkscape:export-xdpi="100.19589"
-   inkscape:export-ydpi="100.19589"
+   inkscape:export-xdpi="124.14043"
+   inkscape:export-ydpi="124.14043"
    sodipodi:docname="themes.svg">
   <defs
      id="defs4" />
@@ -28,12 +28,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70575854"
-     inkscape:cx="966.37282"
-     inkscape:cy="487.18239"
+     inkscape:zoom="1.2763502"
+     inkscape:cx="512.28069"
+     inkscape:cy="610.10942"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      inkscape:snap-from-guide="false"
      inkscape:window-width="1920"
      inkscape:window-height="1018"
@@ -56,7 +56,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -216,7 +216,8 @@
          x="355.97552"
          y="101.62199" /></text>
     <g
-       id="g3848">
+       id="g3848"
+       transform="translate(-24,-1.0000026)">
       <image
          width="386"
          height="157"
@@ -290,7 +291,7 @@
          style="fill:none;stroke:#000000;stroke-width:1.04859376px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          transform="matrix(0.71428571,0,0,1,113.23117,63.316503)"
-         d="m 402,474.5 a 3.5,2.5 0 1 1 -7,0 3.5,2.5 0 1 1 7,0 z"
+         d="m 402,474.5 c 0,1.38071 -1.567,2.5 -3.5,2.5 -1.933,0 -3.5,-1.11929 -3.5,-2.5 0,-1.38071 1.567,-2.5 3.5,-2.5 1.933,0 3.5,1.11929 3.5,2.5 z"
          sodipodi:ry="2.5"
          sodipodi:rx="3.5"
          sodipodi:cy="474.5"
@@ -300,7 +301,7 @@
          sodipodi:type="arc" />
       <path
          transform="matrix(1,0,0,1.6666667,-0.3542288,-191.23682)"
-         d="m 518,378.5 a 2.5,1.5 0 1 1 -5,0 2.5,1.5 0 1 1 5,0 z"
+         d="m 518,378.5 c 0,0.82843 -1.11929,1.5 -2.5,1.5 -1.38071,0 -2.5,-0.67157 -2.5,-1.5 0,-0.82843 1.11929,-1.5 2.5,-1.5 1.38071,0 2.5,0.67157 2.5,1.5 z"
          sodipodi:ry="1.5"
          sodipodi:rx="2.5"
          sodipodi:cy="378.5"
@@ -310,7 +311,7 @@
          sodipodi:type="arc" />
       <path
          transform="matrix(1,0,0,2.5,0.12523879,-478.19853)"
-         d="m 401,360 a 2.5,1 0 1 1 -5,0 2.5,1 0 1 1 5,0 z"
+         d="m 401,360 c 0,0.55228 -1.11929,1 -2.5,1 -1.38071,0 -2.5,-0.44772 -2.5,-1 0,-0.55228 1.11929,-1 2.5,-1 1.38071,0 2.5,0.44772 2.5,1 z"
          sodipodi:ry="1"
          sodipodi:rx="2.5"
          sodipodi:cy="360"
@@ -321,7 +322,7 @@
       <path
          inkscape:transform-center-y="-1.7220334"
          transform="matrix(2.5,0,0,1.25,-408.06262,-41.354122)"
-         d="m 274,418 a 1,2 0 1 1 -2,0 1,2 0 1 1 2,0 z"
+         d="m 274,418 c 0,1.10457 -0.44772,2 -1,2 -0.55228,0 -1,-0.89543 -1,-2 0,-1.10457 0.44772,-2 1,-2 0.55228,0 1,0.89543 1,2 z"
          sodipodi:ry="2"
          sodipodi:rx="1"
          sodipodi:cy="418"
