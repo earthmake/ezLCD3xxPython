@@ -9,7 +9,7 @@ from ezLCD3xx import *
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com58') 
+	LCD = ezLCD('com4') 
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -41,7 +41,7 @@ LCD.fontw(1,'0')
 # Set theme #1 
 LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
 # Draw button widget with a ID of 1
-LCD.picture('im.gif') # this will get a timeout error because it takes a bit to draw
+LCD.picture('im.gif') 
 LCD.color(RED)
 LCD.xy(0,0)
 LCD.box(320,240)

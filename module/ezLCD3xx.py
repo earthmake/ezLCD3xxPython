@@ -374,7 +374,9 @@ class ezLCD(object):
 	# @param stringID
 	# @param meterType
 	#												
-	def ameter(self, ID, x, y, width, height, options, value, minV, maxV, theme, stringID, meterType = 0):
+	def ameter(self, ID, x, y, width, height, options, value, minV, maxV, theme, stringID, meterType = 0, text = None):
+		if text != None:
+			self.string(stringID, text)
 		self.ser.write('ameter %d %d %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, value, minV, maxV, theme, stringID, meterType))
 		self.WaitForCR()
 
@@ -520,11 +522,31 @@ class ezLCD(object):
 	# @param stringID
 	# @param text												
 	def progressBar(self, ID, x, y, width, height, options, value, mmax, theme, stringID, text = None ):
-		if string != None:
+		if text != None:
 			self.string(stringID, text)
 		self.ser.write('progress %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, value, mmax, theme, stringID))
 		self.WaitForCR()
 
+	## The gauge widget
+	# @param ID 
+	# @param x
+	# @param y
+	# @param width
+	# @param height
+	# @param options
+	# @param value
+	# @param mmax
+	# @param theme
+	# @param stringID
+	# @param text												
+	def gauge(self, ID, x, y, width, height, options, initial, mmin, mmax, theme, stringID = None, text = None ):
+		if text != None:
+			self.string(stringID, text)
+			self.ser.write('gauge %d %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, initial, mmin, mmax, theme, stringID))
+		else:
+			self.ser.write('gauge %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, initial, mmin, mmax, theme))
+		self.WaitForCR()
+		
 	## The touchZone command
 	# @param ID 
 	# @param x
@@ -678,7 +700,7 @@ class ezLCD(object):
 	def picture(self, image, x=None, y=None):
 		self.ser.timeout = 3
 		if x!=None:
-			self.ser.write('image %x %y %s\r' % (x, y, image))
+			self.ser.write('image %d %d %s\r' % (x, y, image))
 		else:
 			self.ser.write('image %s\r' % (image))
 		self.WaitForCR()

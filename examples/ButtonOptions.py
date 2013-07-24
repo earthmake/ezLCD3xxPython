@@ -9,7 +9,7 @@ from ezLCD3xx import *
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-    LCD = ezLCD('com58') 
+    LCD = ezLCD('com4') 
 #Mac
 elif platform.system() == 'Dawrwin':
     LCD = ezLCD('/dev/tty.usbsomething')

@@ -9,7 +9,7 @@ from ezLCD3xx import *
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com58') 
+	LCD = ezLCD('com4') 
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -22,6 +22,7 @@ if LCD.openSerial()==False:
 	print 'Error Opening Port'
 	raise SystemExit
 
+filenames =['zero.gif','one.gif','two.gif','three.gif','four.gif','five.gif','six.gif','seven.gif','eight.gif','nine.gif','blank.gif']
 # Turn verbose off 
 LCD.verbose('off')
 # Turn off button press info from ezLCD
@@ -36,19 +37,11 @@ LCD.fontw(0,'1')
 LCD.fontw(1,'0')
 # Set theme #1 
 LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
-
 LCD.color(RED)
 LCD.xy(0,0)
 LCD.box(320,240)
-LCD.printString('Vertical Sliders Demo', 70, 10)
-LCD.fonto(90)
-LCD.color(WHITE)
-LCD.slider(1, 30, 40, 40, 180, 3, 100, 5, 50, 6)
-LCD.printString("Option = 1", 10, 210)
-LCD.slider(2, 100, 40, 40, 180, 4, 100, 5, 50, 6)
-LCD.printString("Option = 2", 80, 210)
-LCD.slider(3, 170, 40, 40, 180, 7, 100, 5, 50, 6)
-LCD.printString("Option = 5", 150, 210)
-LCD.slider(4, 240, 40, 40, 180, 8, 100, 5, 50, 6)
-LCD.printString("Option = 6", 220, 210)
-#LCD.snapshot(0,0,320,240,'SliderV.bmp')
+LCD.printString('TouchZone Demo', 80, 10)
+LCD.picture(filenames[1], 0, 0)
+LCD.picture(filenames[2], 70, 0)
+LCD.picture(filenames[3], 140,0)
+LCD.picture(filenames[4], 210, 0)

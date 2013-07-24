@@ -7,6 +7,7 @@ var group___widgets =
     [ "dial", "df/d3e/group___widgets.html#ga0122f7d8c41bb07221be8a778ca8fd53", null ],
     [ "dmeter", "df/d3e/group___widgets.html#gae047f70bd7485eafe1e352282cf3c999", null ],
     [ "fontw", "df/d3e/group___widgets.html#ga0efc2d431900e2b77a30e19bb556fb3a", null ],
+    [ "gauge", "df/d3e/group___widgets.html#gab71489d4d59dfc595166ed91ff97ed3b", null ],
     [ "groupBox", "df/d3e/group___widgets.html#ga189db08deeaf2ff69fad7e7e3612fe5b", null ],
     [ "progressBar", "df/d3e/group___widgets.html#ga9eeb62ec0060e5ba57e42986b2d555ae", null ],
     [ "radioButton", "df/d3e/group___widgets.html#gaef2c149d7df7f92b718a8660fd0db245", null ],

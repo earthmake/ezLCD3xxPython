@@ -1,0 +1,70 @@
+\hypertarget{_gauge_demo_8py-example}{\section{Gauge\-Demo.\-py}
+}
+
+\begin{DoxyCodeInclude}
+1 \textcolor{comment}{# # Gauge Python demo}
+2 \textcolor{comment}{# Ken Segler}
+3 \textcolor{comment}{# }
+4 \textcolor{comment}{#}
+5 
+6 \textcolor{keyword}{import} platform
+7 \textcolor{keyword}{import} sys
+8 \textcolor{keyword}{import} time \textcolor{keyword}{as} timer
+9 \textcolor{keyword}{import} random
+10 
+11 sys.path.append(\textcolor{stringliteral}{'..\(\backslash\)module'}) 
+12 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
+13 
+14 \textcolor{comment}{# check what OS we are on}
+15 \textcolor{comment}{# Windows}
+16 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
+17     LCD = ezLCD(\textcolor{stringliteral}{'com4'}) 
+18 \textcolor{comment}{# Mac}
+19 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
+20     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
+21 \textcolor{comment}{# Linux}
+22 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Linux'}:
+23     LCD = ezLCD(\textcolor{stringliteral}{'/dev/ttyACM0'})
+24 
+25 \textcolor{comment}{# Bail out if comport error}
+26 \textcolor{keywordflow}{if} LCD.openSerial() == \textcolor{keyword}{False}:
+27     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
+28     \textcolor{keywordflow}{raise} SystemExit
+29 
+30 \textcolor{comment}{# Turn verbose off }
+31 LCD.verbose(\textcolor{stringliteral}{'off'})
+32 \textcolor{comment}{# Turn off button press info from ezLCD}
+33 LCD.wquiet(ON)
+34 \textcolor{comment}{# Clear screen}
+35 LCD.cls()
+36 \textcolor{comment}{# Use internal medium font}
+37 LCD.fontw(1, \textcolor{stringliteral}{'0'})
+38 \textcolor{comment}{# Set draw color to red}
+39 LCD.color(RED)
+40 \textcolor{comment}{# set x y to 0 }
+41 LCD.xy(0, 0)
+42 \textcolor{comment}{# draw box}
+43 LCD.box(320, 240)
+44 \textcolor{comment}{# set theme #1}
+45 LCD.theme(1, 155, 152, 0, 0, 0, 151, 8, 9, 0, 1)
+46 \textcolor{comment}{# Set draw color to red}
+47 LCD.color(WHITE)
+48 \textcolor{comment}{# Print string at coordinates x=80 and y=100}
+49 LCD.printString(\textcolor{stringliteral}{"Gauge Demo"}, 100, 10)
+50 \textcolor{comment}{# LCD.printString(" Update Theme Based On Value", 30,40)}
+51 \textcolor{comment}{#   def gauge(self, ID, x, y, width, height, options, initial, mmin, mmax, theme, stringID = None, text =
+       None ):}
+52 LCD.gauge(1, 20, 90, 280, 30, 1, 1, 1, 200, 1, 1, \textcolor{stringliteral}{' Degrees F'})
+53 value = 1
+54 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+55     value += 1
+56     timer.sleep(.1)
+57     LCD.wvalue(1, value)
+58     \textcolor{keywordflow}{if} value > 200:
+59         value = 1
+60     \textcolor{keywordflow}{if} value == 120:
+61         LCD.snapshot(0, 0, 320, 240, \textcolor{stringliteral}{'gauge.bmp'})
+62 
+63 
+\end{DoxyCodeInclude}
+ 

@@ -15,6 +15,7 @@ var NAVTREE =
       [ "TouchZone", "d0/d90/intro_widgets.html#touchZone", null ],
       [ "Slider", "d0/d90/intro_widgets.html#slider", null ],
       [ "ProgressBar", "d0/d90/intro_widgets.html#progressBar", null ],
+      [ "Gauge", "d0/d90/intro_widgets.html#gauge", null ],
       [ "AnalogMeter", "d0/d90/intro_widgets.html#analogMeter", null ],
       [ "DigitalMeter", "d0/d90/intro_widgets.html#digitalMeter", null ],
       [ "StaticText", "d0/d90/intro_widgets.html#staticText", null ],

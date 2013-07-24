@@ -138,6 +138,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9eeb62ec0060e5ba57e42986b2d555ae"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3e/group___widgets.html#ga9eeb62ec0060e5ba57e42986b2d555ae">module.ezLCD3xx.progressBar</a></td></tr>
 <tr class="memdesc:ga9eeb62ec0060e5ba57e42986b2d555ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The progressBar command.  <a href="#ga9eeb62ec0060e5ba57e42986b2d555ae">More...</a><br/></td></tr>
 <tr class="separator:ga9eeb62ec0060e5ba57e42986b2d555ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab71489d4d59dfc595166ed91ff97ed3b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3e/group___widgets.html#gab71489d4d59dfc595166ed91ff97ed3b">module.ezLCD3xx.gauge</a></td></tr>
+<tr class="memdesc:gab71489d4d59dfc595166ed91ff97ed3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gauge widget.  <a href="#gab71489d4d59dfc595166ed91ff97ed3b">More...</a><br/></td></tr>
+<tr class="separator:gab71489d4d59dfc595166ed91ff97ed3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaeb901f189e33956b4cd51fbd78bcf957"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3e/group___widgets.html#gaeb901f189e33956b4cd51fbd78bcf957">module.ezLCD3xx.touchZone</a></td></tr>
 <tr class="memdesc:gaeb901f189e33956b4cd51fbd78bcf957"><td class="mdescLeft">&#160;</td><td class="mdescRight">The touchZone command.  <a href="#gaeb901f189e33956b4cd51fbd78bcf957">More...</a><br/></td></tr>
 <tr class="separator:gaeb901f189e33956b4cd51fbd78bcf957"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,7 +248,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>meterType</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>meterType</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>text</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -746,6 +755,116 @@ Functions</h2></td></tr>
     <tr><td class="paramname">fontnumber</td><td>number of the font </td></tr>
     <tr><td class="paramname">name</td><td>filename of font <br/>
  '0' and '1' are internal fonts </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gab71489d4d59dfc595166ed91ff97ed3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def module.ezLCD3xx.gauge </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>initial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mmin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mmax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>theme</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>stringID</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>text</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The gauge widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ID</td><td></td></tr>
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">width</td><td></td></tr>
+    <tr><td class="paramname">height</td><td></td></tr>
+    <tr><td class="paramname">options</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+    <tr><td class="paramname">mmax</td><td></td></tr>
+    <tr><td class="paramname">theme</td><td></td></tr>
+    <tr><td class="paramname">stringID</td><td></td></tr>
+    <tr><td class="paramname">text</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -1581,7 +1700,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 23 2013 15:39:47 for ezLCD Python Module by
+    <li class="footer">Generated on Wed Jul 24 2013 15:06:13 for ezLCD Python Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

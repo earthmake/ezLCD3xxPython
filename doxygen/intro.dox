@@ -127,7 +127,13 @@ picture supports gif, jpg and bmp
 	<p>
 	text text<br>
 	</p>
+	\section gauge Gauge
+	\image html gauge.png
+	<p>
+	text text<br>
+	</p>
 	\section analogMeter AnalogMeter
+	\image html AnalogMeterFull.png
 	<p>
 	text text<br>
 	</p>
@@ -166,5 +172,7 @@ picture supports gif, jpg and bmp
 	\example ButtonAlign.py
 	\example ButtonRadius.py
 	\example TouchZoneIM.py
+	\example GaugeDemo.py
+	\example ProgressTheme.py
 
 */

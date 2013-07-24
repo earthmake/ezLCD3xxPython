@@ -166,7 +166,7 @@ Commands are sent to the ez\-L\-C\-D though the serial interface, Commands are t
 31     LCD.color(GREEN)
 32     LCD.printString(\textcolor{stringliteral}{'Core 1'})
 33     LCD.color(YELLOW)
-34     LCD.printString(\textcolor{stringliteral}{'Core 2'})
+34     LCD.printString(\textcolor{stringliteral}{'  Core 2'})
 35     LCD.color(155)
 36     LCD.color(LIME)
 37     LCD.font(\textcolor{stringliteral}{'1'})
@@ -193,11 +193,11 @@ Commands are sent to the ez\-L\-C\-D though the serial interface, Commands are t
 58     LCD.string(5, str(res))
 59     LCD.wstate(7,REDRAW)
 60 
-61 
+61 comPort = raw\_input(\textcolor{stringliteral}{'Enter Com Port -> '})
 62 \textcolor{comment}{#check what OS we are on}
 63 \textcolor{comment}{#Windows}
 64 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
-65     LCD = ezLCD(\textcolor{stringliteral}{'com6'}) 
+65     LCD = ezLCD(comPort) 
 66 \textcolor{comment}{#Mac}
 67 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
 68     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
@@ -227,66 +227,59 @@ Commands are sent to the ez\-L\-C\-D though the serial interface, Commands are t
 92 LCD.cfgio(8,\textcolor{stringliteral}{'analog'})
 93 \textcolor{keywordflow}{print} LCD.xmax()
 94 \textcolor{keywordflow}{print} LCD.ymax()
-95 LCD.xy(100,100)
-96 (x,y) = LCD.xy()
-97 \textcolor{keywordflow}{print} int(x), int(y)
-98 (r,g,b)=LCD.colorId(3)
-99 \textcolor{keywordflow}{print} r,g,b
-100 \textcolor{keywordflow}{print} LCD.string(65)
-101 \textcolor{keywordflow}{print} LCD.string(66)
-102 \textcolor{keywordflow}{print} LCD.color()
-103 \textcolor{keywordflow}{print} LCD.io(8)
-104 
-105 
-106 LCD.button( 5, 20, 200, 80, 30 , 1, 0, 10, 1, 2, \textcolor{stringliteral}{'MORE'})
-107 LCD.button( 6, 120, 200, 80, 30 , 1, 0, 10, 1, 3, \textcolor{stringliteral}{'LESS'})
-108 LCD.staticText(7, 10, 170, 220, 25, 8, 1, 5, \textcolor{stringliteral}{'test'})
-109 drawGrid()
-110 x=0
-111 y1=239
-112 y2=239
-113 lx=0
-114 ly1=239
-115 ly2=239
-116 res=5
-117 drawTime(res)   
-118 LCD.wstack(CLEAR)     
-119 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
-120 
-121     oldinfo = info
-122     cores=psutil.cpu\_percent(interval=1, percpu=\textcolor{keyword}{True})
-123     y1 = 139 - cores[0]
-124     y2 = 139 - cores[1]
-125     \textcolor{keywordflow}{if} x!=0:
-126         LCD.color(GREEN)
-127         LCD.xy(lx,ly1)
-128         LCD.line(x, y1)
-129         LCD.color(YELLOW)
-130         LCD.xy(lx,ly2)
-131         LCD.line(x, y2)
-132     ly1 = y1
-133     ly2 = y2
-134     lx = x   
-135     x += 20/res
-136     
-137     \textcolor{keywordflow}{if} x >= 300:
-138         x=0
-139         y1=239
-140         y2=239
-141         lx =0
-142         ly1 =239
-143         ly2 =239
-144         drawGrid()
-145     (ID, info, data) = LCD.wstack(LIFO)
-146     LCD.wstack(CLEAR)
-147     \textcolor{keywordflow}{if} ID == 5 \textcolor{keywordflow}{and} info==1:
-148         res +=1
-149         drawTime(res)  
-150     \textcolor{keywordflow}{if} ID == 6 \textcolor{keywordflow}{and} info==1:
-151         \textcolor{keywordflow}{if} res > 1:
-152             res -=1
-153             drawTime(res)
-154 LCD.closeSerial()
-155 \textcolor{comment}{# End Test Program --------------------------------------}
+95 \textcolor{keywordflow}{print} LCD.string(65)
+96 \textcolor{keywordflow}{print} LCD.string(66)
+97 
+98 
+99 LCD.button( 5, 20, 200, 80, 30 , 1, 0, 10, 1, 2, \textcolor{stringliteral}{'MORE'})
+100 LCD.button( 6, 120, 200, 80, 30 , 1, 0, 10, 1, 3, \textcolor{stringliteral}{'LESS'})
+101 LCD.staticText(7, 10, 170, 220, 25, 8, 1, 5, \textcolor{stringliteral}{'test'})
+102 drawGrid()
+103 x=0
+104 y1=239
+105 y2=239
+106 lx=0
+107 ly1=239
+108 ly2=239
+109 res=5
+110 drawTime(res)   
+111 LCD.wstack(CLEAR)     
+112 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+113 
+114     oldinfo = info
+115     cores=psutil.cpu\_percent(interval=1, percpu=\textcolor{keyword}{True})
+116     y1 = 139 - cores[0]
+117     y2 = 139 - cores[1]
+118     \textcolor{keywordflow}{if} x!=0:
+119         LCD.color(GREEN)
+120         LCD.xy(lx,ly1)
+121         LCD.line(x, y1)
+122         LCD.color(YELLOW)
+123         LCD.xy(lx,ly2)
+124         LCD.line(x, y2)
+125     ly1 = y1
+126     ly2 = y2
+127     lx = x   
+128     x += 20/res
+129     
+130     \textcolor{keywordflow}{if} x >= 300:
+131         x=0
+132         y1=239
+133         y2=239
+134         lx =0
+135         ly1 =239
+136         ly2 =239
+137         drawGrid()
+138     (ID, info, data) = LCD.wstack(LIFO)
+139     LCD.wstack(CLEAR)
+140     \textcolor{keywordflow}{if} ID == 5 \textcolor{keywordflow}{and} info==1:
+141         res +=1
+142         drawTime(res)  
+143     \textcolor{keywordflow}{if} ID == 6 \textcolor{keywordflow}{and} info==1:
+144         \textcolor{keywordflow}{if} res > 1:
+145             res -=1
+146             drawTime(res)
+147 LCD.closeSerial()
+148 \textcolor{comment}{# End Test Program --------------------------------------}
 \end{DoxyCodeInclude}
  

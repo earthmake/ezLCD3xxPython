@@ -1,0 +1,85 @@
+\hypertarget{_progress_theme_8py-example}{\section{Progress\-Theme.\-py}
+}
+
+\begin{DoxyCodeInclude}
+1 \textcolor{comment}{## Progress bar Python demo}
+2 \textcolor{comment}{# Ken Segler}
+3 \textcolor{comment}{# }
+4 \textcolor{comment}{# This demo will display a progress bar and change the theme based on the value of the progress bar}
+5 \textcolor{comment}{# Starts with a green theme then at 30 changes to yellow then to red after 60}
+6 \textcolor{comment}{#}
+7 
+8 \textcolor{keyword}{import} platform
+9 \textcolor{keyword}{import} sys
+10 \textcolor{keyword}{import} time \textcolor{keyword}{as} timer
+11 \textcolor{keyword}{import} random
+12 
+13 sys.path.append(\textcolor{stringliteral}{'..\(\backslash\)module'}) 
+14 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
+15 
+16 \textcolor{comment}{#check what OS we are on}
+17 \textcolor{comment}{#Windows}
+18 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
+19     LCD = ezLCD(\textcolor{stringliteral}{'com4'}) 
+20 \textcolor{comment}{#Mac}
+21 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
+22     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
+23 \textcolor{comment}{#Linux}
+24 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Linux'}:
+25     LCD = ezLCD(\textcolor{stringliteral}{'/dev/ttyACM0'})
+26 
+27 \textcolor{comment}{# Bail out if comport error}
+28 \textcolor{keywordflow}{if} LCD.openSerial()==\textcolor{keyword}{False}:
+29     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
+30     \textcolor{keywordflow}{raise} SystemExit
+31 
+32 \textcolor{comment}{# Turn verbose off }
+33 LCD.verbose(\textcolor{stringliteral}{'off'})
+34 \textcolor{comment}{# Turn off button press info from ezLCD}
+35 LCD.wquiet(ON)
+36 \textcolor{comment}{# Clear screen}
+37 LCD.cls()
+38 \textcolor{comment}{# Use internal medium font}
+39 LCD.fontw(1,\textcolor{stringliteral}{'0'})
+40 \textcolor{comment}{# Set draw color to red}
+41 LCD.color(RED)
+42 \textcolor{comment}{# set x y to 0 }
+43 LCD.xy(0,0)
+44 \textcolor{comment}{# draw box}
+45 LCD.box(320,240)
+46 \textcolor{comment}{# set theme #1}
+47 LCD.theme(1, 155, 152, 0, 0, 0, 151, 8, 9, 0, 1)
+48 \textcolor{comment}{# Set draw color to red}
+49 LCD.color(WHITE)
+50 \textcolor{comment}{# Print string at coordinates x=80 and y=100}
+51 LCD.printString(\textcolor{stringliteral}{"Progress Bar Demo"},80,10)
+52 LCD.printString(\textcolor{stringliteral}{" Update Theme Based On Value"}, 30,40)
+53 LCD.progressBar(1, 20, 90, 280, 30, 1, 1, 100, 1, 1,\textcolor{stringliteral}{' PSI'})
+54 
+55 value = 1
+56 
+57 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+58     timer.sleep(.1)
+59     value +=1
+60     \textcolor{comment}{# update widget 1 value}
+61     LCD.wvalue(1, value)
+62     \textcolor{keywordflow}{if} value == 30:
+63         \textcolor{comment}{# change theme when value get to 30}
+64         LCD.theme(1, 155, 152, 0, 3, 0, 151, 6, 6, 6, 1)
+65         \textcolor{comment}{# redraw widget 1       }
+66         LCD.wstate(1, 3)
+67     \textcolor{keywordflow}{if} value == 60:
+68         \textcolor{comment}{# change theme when value get to 60}
+69         LCD.theme(1, 155, 152, 3, 0, 3, 151, 4, 5, 0, 1)
+70         \textcolor{comment}{# redraw widget 1}
+71         LCD.wstate(1,3)
+72     \textcolor{keywordflow}{if} value==100:
+73         \textcolor{comment}{# change theme when value get to 100        }
+74         LCD.theme(1, 155, 152, 3, 0, 0, 151, 8, 9, 0, 1)
+75         value = 1
+76         \textcolor{comment}{# reset widget 1 to 0}
+77         LCD.wvalue(1,value)
+78         \textcolor{comment}{# redraw widget 1}
+79         LCD.wstate(1,3)
+\end{DoxyCodeInclude}
+ 

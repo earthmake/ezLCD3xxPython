@@ -13,7 +13,7 @@
 9 \textcolor{comment}{#check what OS we are on}
 10 \textcolor{comment}{#Windows}
 11 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
-12     LCD = ezLCD(\textcolor{stringliteral}{'com58'}) 
+12     LCD = ezLCD(\textcolor{stringliteral}{'com4'}) 
 13 \textcolor{comment}{#Mac}
 14 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
 15     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
@@ -45,7 +45,7 @@
 41 \textcolor{comment}{# Set theme #1 }
 42 LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
 43 \textcolor{comment}{# Draw button widget with a ID of 1}
-44 LCD.picture(\textcolor{stringliteral}{'im.gif'}) \textcolor{comment}{# this will get a timeout error because it takes a bit to draw}
+44 LCD.picture(\textcolor{stringliteral}{'im.gif'}) 
 45 LCD.color(RED)
 46 LCD.xy(0,0)
 47 LCD.box(320,240)

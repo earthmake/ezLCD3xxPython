@@ -31,7 +31,7 @@ def drawGrid():
 	LCD.color(GREEN)
 	LCD.printString('Core 1')
 	LCD.color(YELLOW)
-	LCD.printString('Core 2')
+	LCD.printString('  Core 2')
 	LCD.color(155)
 	LCD.color(LIME)
 	LCD.font('1')
@@ -58,11 +58,11 @@ def drawTime(res):
 	LCD.string(5, str(res))
 	LCD.wstate(7,REDRAW)
 
-
+comPort = raw_input('Enter Com Port -> ')
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com6') 
+	LCD = ezLCD(comPort) 
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -92,15 +92,8 @@ LCD.color(WHITE)
 LCD.cfgio(8,'analog')
 print LCD.xmax()
 print LCD.ymax()
-LCD.xy(100,100)
-(x,y) = LCD.xy()
-print int(x), int(y)
-(r,g,b)=LCD.colorId(3)
-print r,g,b
 print LCD.string(65)
 print LCD.string(66)
-print LCD.color()
-print LCD.io(8)
 
 
 LCD.button( 5, 20, 200, 80, 30 , 1, 0, 10, 1, 2, 'MORE')
