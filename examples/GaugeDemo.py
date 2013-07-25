@@ -14,7 +14,7 @@ from ezLCD3xx import *
 # check what OS we are on
 # Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com4') 
+	LCD = ezLCD('com6') 
 # Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -42,7 +42,7 @@ LCD.xy(0, 0)
 # draw box
 LCD.box(320, 240)
 # set theme #1
-LCD.theme(1, 155, 152, 0, 0, 0, 151, 8, 9, 0, 1)
+LCD.theme(1, 155, 152, 3, 0, 0, 151, 8, 9, 0, 1)
 # Set draw color to red
 LCD.color(WHITE)
 # Print string at coordinates x=80 and y=100
@@ -57,7 +57,7 @@ while True:
 	LCD.wvalue(1, value)
 	if value > 200:
 		value = 1
-	if value == 120:
-		LCD.snapshot(0, 0, 320, 240, 'gauge.bmp')
+#	if value == 120:
+#		LCD.snapshot(0, 0, 320, 240, 'gauge.bmp')
 
 

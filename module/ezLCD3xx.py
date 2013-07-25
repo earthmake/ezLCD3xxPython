@@ -54,7 +54,30 @@ class ezLCD(object):
 		self.interface = interface
 		self.ser = None
 
-			
+	def findezLCD(self):
+		comPorts = []
+		for interface in range(1,100):
+			self.interface = ('COM'+str(interface))
+			self.ser = serial.Serial()
+			self.ser.baudrate = 115200 
+			self.ser.port = self.interface			
+			self.ser.timeout = .2
+			try:
+				self.ser.open()
+				self.sio = io.TextIOWrapper( io.BufferedRWPair( self.ser, self.ser)) # TextWrapper
+				self.ser.write('ping\r')
+				cr = self.ser.read(1) 
+				if cr == '0':
+					t=str(self.interface),self.string(65)[+1:-1] , self.string(66)[:-1]
+					comPorts.append(t) 
+					print 'Found it %s %s %s' %  (str(self.interface),self.string(65)[:-1] , self.string(66)[:-1])
+				self.ser.close()
+#				return self.interface
+			except :
+				self.ser.close()
+#				return False
+		print 'Done Searching'	
+		return comPorts		
 	## open serial port
 	# @var self.interface 123
 	# @var self.ser 123
@@ -410,7 +433,7 @@ class ezLCD(object):
 		self.WaitForCR()
 		
 		
-	## The button command
+	## The button widget
 	# @param ID 
 	# @param x
 	# @param y
@@ -493,7 +516,7 @@ class ezLCD(object):
 		self.ser.write('static %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, theme, stringID))
 		self.WaitForCR()				
 
-	## The slider command
+	## The slider widget
 	# @param ID 
 	# @param x
 	# @param y
@@ -509,7 +532,7 @@ class ezLCD(object):
 		self.ser.write('slider %d %d %d %d %d %d %d %d %d %d\r' % (ID, x, y, width, height, options, rrange, resolution, value, theme))
 		self.WaitForCR()
 
-	## The progressBar command
+	## The progressBar widget
 	# @param ID 
 	# @param x
 	# @param y
@@ -559,7 +582,7 @@ class ezLCD(object):
 		self.ser.write('touchzone %d %d %d %d %d %d\r' % (ID, x, y, width, height, options))
 		self.WaitForCR()
 
-	## The dial command
+	## The dial widget
 	# @param ID 
 	# @param x
 	# @param y
