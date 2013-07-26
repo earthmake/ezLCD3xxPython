@@ -104,13 +104,14 @@ class ezLCD(object):
 	# 
 	#
 	def WaitForCR(self):
-		cr = self.ser.read(1) #self.ser.readline()
+		cr = self.ser.read(1) #self.ser.readline() #  
 		if cr != '\r':
 			print 'Command Returned Error', cr, len(cr)
 			frame = inspect.currentframe()
 			stack_trace = traceback.format_stack(frame)
 			print ''.join(stack_trace[:-2])
-			
+			self.ser.flushInput()
+			self.ser.flushOutput()
 		
 # General --------------------------------------------------------------------
 
@@ -721,7 +722,7 @@ class ezLCD(object):
 	# LCD.picture('python.gif')
 	# @endcode	 
 	def picture(self, image, x=None, y=None):
-		self.ser.timeout = 3
+		self.ser.timeout = 5
 		if x!=None:
 			self.ser.write('image %d %d %s\r' % (x, y, image))
 		else:
