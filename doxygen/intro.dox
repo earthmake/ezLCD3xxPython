@@ -43,10 +43,10 @@ Sample minimal startup.ezm.
  \include startup.ezm
 The ezLCD by default will load startup.ezm but you can have startup1.ezm through startup5.ezm <br>
 So if you press the touch screen at power up in any of the areas show below you can execute the other startup macros.<br>
- \image html startupZones.png
- \image latex load.png
-
 </p>
+\image html startupZones.png
+\image latex startupZones.pdf
+
 */
 
 
@@ -58,13 +58,13 @@ some widgets take a bit of time (in the millsecond range) to complete so after s
 </p>
 <br>
 	Minimal example will open the ezLCD port clear the screen and print 'Hello From Python' in red <br>
- \image html minimal.png
- \image latex minimal.png
- \include minimal.py
+\image html minimal.png
+\image latex minimal.png
+\include minimal.py
 	Button example will display a button widget then poll for button presses and update screen <br>
- \image html button.png
- \image latex button.png
- \include button.py
+\image html button.png
+\image latex button.png
+\include button.py
 	Load example will display the cpu load as a graph  <br>
  \image html load.png
  \image latex load.png
@@ -79,11 +79,22 @@ You can have 16 themes numbered 0-15. <br>
 \image html themes.png
 \image latex themes.eps
 </p>
+\section themeButton Themes on Buttons
+\image html themeButton.png
+\image latex themeButton.eps
+\section themeSlider Themes on Sliders
+\image html themeSlider.png
+\image latex themeSlider.eps
+\section themeProgress Themes on Progress Bar
+\image html themeProgress.png
+\image latex themeProgress.eps
 
 */
 /*! \page colors Color Table
 \image html colors.png
-\image latex colors.png
+\image latex colors1.eps
+\image latex colors2.eps
+
 */
 
 /*! \page introFonts Introduction To Fonts

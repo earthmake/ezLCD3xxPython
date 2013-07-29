@@ -6,10 +6,13 @@ import sys
 sys.path.append('module') 
 from ezLCD3xx import *
 
+LCD = ezLCD(None) 
+comPort =  LCD.findezLCD()
+
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com6') 
+	LCD = ezLCD(comPort[0][0])
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -23,7 +26,7 @@ if LCD.openSerial()==False:
 	raise SystemExit
 
 # Turn verbose off 
-LCD.verbose('off')
+LCD.verbose(OFF)
 # Turn off button press info from ezLCD
 LCD.wquiet(ON)
 # CLear screen
@@ -44,10 +47,9 @@ LCD.button( 1,  80, 150, 155, 50, 1, 0, 10, 6, 3,'Press Here')
 LCD.staticText(2, 35, 30, 250, 30, 8, 1, 1,'Press Button')
 # Clear widget stack
 LCD.wstack(CLEAR)
-
 while True:
 	# check widget stack this will return widget updates (button press ect.) last in first out order
-	(ID, Info, Data) = LCD.wstack(LIFO)
+	(ID, Info, Data) = LCD.wstack(FIFO)
 #	print ID, Info, Data
 	# check if ID = 1 widget 1 and info = pressed 
 	if ID == 1 and Info == 4:

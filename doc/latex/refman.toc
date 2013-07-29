@@ -3,85 +3,112 @@
 \contentsline {chapter}{\numberline {3}Introduction To The Hardware}{5}{chapter.3}
 \contentsline {chapter}{\numberline {4}Introduction To The Software}{7}{chapter.4}
 \contentsline {chapter}{\numberline {5}Introduction To Themes}{13}{chapter.5}
-\contentsline {chapter}{\numberline {6}Color Table}{15}{chapter.6}
-\contentsline {chapter}{\numberline {7}Introduction To Fonts}{19}{chapter.7}
-\contentsline {chapter}{\numberline {8}Introduction To Bitmaps}{21}{chapter.8}
-\contentsline {chapter}{\numberline {9}Introduction To Widgets}{23}{chapter.9}
-\contentsline {chapter}{\numberline {10}Module Index}{25}{chapter.10}
-\contentsline {section}{\numberline {10.1}Modules}{25}{section.10.1}
-\contentsline {chapter}{\numberline {11}Namespace Index}{27}{chapter.11}
-\contentsline {section}{\numberline {11.1}Namespace List}{27}{section.11.1}
-\contentsline {chapter}{\numberline {12}Hierarchical Index}{29}{chapter.12}
-\contentsline {section}{\numberline {12.1}Class Hierarchy}{29}{section.12.1}
-\contentsline {chapter}{\numberline {13}Class Index}{31}{chapter.13}
-\contentsline {section}{\numberline {13.1}Class List}{31}{section.13.1}
-\contentsline {chapter}{\numberline {14}Module Documentation}{33}{chapter.14}
-\contentsline {section}{\numberline {14.1}Commands}{33}{section.14.1}
-\contentsline {subsection}{\numberline {14.1.1}Detailed Description}{33}{subsection.14.1.1}
-\contentsline {subsection}{\numberline {14.1.2}Function Documentation}{33}{subsection.14.1.2}
-\contentsline {subsubsection}{\numberline {14.1.2.1}backlight}{33}{subsubsection.14.1.2.1}
-\contentsline {subsubsection}{\numberline {14.1.2.2}cfgio}{34}{subsubsection.14.1.2.2}
-\contentsline {subsubsection}{\numberline {14.1.2.3}io}{34}{subsubsection.14.1.2.3}
-\contentsline {subsubsection}{\numberline {14.1.2.4}ping}{34}{subsubsection.14.1.2.4}
-\contentsline {subsubsection}{\numberline {14.1.2.5}play}{34}{subsubsection.14.1.2.5}
-\contentsline {subsubsection}{\numberline {14.1.2.6}reset}{34}{subsubsection.14.1.2.6}
-\contentsline {subsubsection}{\numberline {14.1.2.7}run}{34}{subsubsection.14.1.2.7}
-\contentsline {subsubsection}{\numberline {14.1.2.8}snapshot}{35}{subsubsection.14.1.2.8}
-\contentsline {subsubsection}{\numberline {14.1.2.9}verbose}{35}{subsubsection.14.1.2.9}
-\contentsline {subsubsection}{\numberline {14.1.2.10}wquiet}{35}{subsubsection.14.1.2.10}
-\contentsline {subsubsection}{\numberline {14.1.2.11}xmax}{35}{subsubsection.14.1.2.11}
-\contentsline {subsubsection}{\numberline {14.1.2.12}ymax}{35}{subsubsection.14.1.2.12}
-\contentsline {section}{\numberline {14.2}Primitve Drawing Commands}{36}{section.14.2}
-\contentsline {subsection}{\numberline {14.2.1}Detailed Description}{36}{subsection.14.2.1}
-\contentsline {subsection}{\numberline {14.2.2}Function Documentation}{36}{subsection.14.2.2}
-\contentsline {subsubsection}{\numberline {14.2.2.1}arc}{36}{subsubsection.14.2.2.1}
-\contentsline {subsubsection}{\numberline {14.2.2.2}box}{36}{subsubsection.14.2.2.2}
-\contentsline {subsubsection}{\numberline {14.2.2.3}circle}{37}{subsubsection.14.2.2.3}
-\contentsline {subsubsection}{\numberline {14.2.2.4}clip\discretionary {-}{}{}Area}{37}{subsubsection.14.2.2.4}
-\contentsline {subsubsection}{\numberline {14.2.2.5}clip\discretionary {-}{}{}Enable}{37}{subsubsection.14.2.2.5}
-\contentsline {subsubsection}{\numberline {14.2.2.6}cls}{37}{subsubsection.14.2.2.6}
-\contentsline {subsubsection}{\numberline {14.2.2.7}color}{37}{subsubsection.14.2.2.7}
-\contentsline {subsubsection}{\numberline {14.2.2.8}color\discretionary {-}{}{}Id}{38}{subsubsection.14.2.2.8}
-\contentsline {subsubsection}{\numberline {14.2.2.9}line}{39}{subsubsection.14.2.2.9}
-\contentsline {subsubsection}{\numberline {14.2.2.10}line\discretionary {-}{}{}Type}{39}{subsubsection.14.2.2.10}
-\contentsline {subsubsection}{\numberline {14.2.2.11}line\discretionary {-}{}{}Width}{39}{subsubsection.14.2.2.11}
-\contentsline {subsubsection}{\numberline {14.2.2.12}pie}{39}{subsubsection.14.2.2.12}
-\contentsline {subsubsection}{\numberline {14.2.2.13}plot}{39}{subsubsection.14.2.2.13}
-\contentsline {subsubsection}{\numberline {14.2.2.14}xy}{40}{subsubsection.14.2.2.14}
-\contentsline {section}{\numberline {14.3}Widgets}{41}{section.14.3}
-\contentsline {subsection}{\numberline {14.3.1}Detailed Description}{41}{subsection.14.3.1}
-\contentsline {subsection}{\numberline {14.3.2}Function Documentation}{41}{subsection.14.3.2}
-\contentsline {subsubsection}{\numberline {14.3.2.1}ameter}{41}{subsubsection.14.3.2.1}
-\contentsline {subsubsection}{\numberline {14.3.2.2}ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}{42}{subsubsection.14.3.2.2}
-\contentsline {subsubsection}{\numberline {14.3.2.3}button}{42}{subsubsection.14.3.2.3}
-\contentsline {subsubsection}{\numberline {14.3.2.4}choice}{42}{subsubsection.14.3.2.4}
-\contentsline {subsubsection}{\numberline {14.3.2.5}dial}{43}{subsubsection.14.3.2.5}
-\contentsline {subsubsection}{\numberline {14.3.2.6}dmeter}{43}{subsubsection.14.3.2.6}
-\contentsline {subsubsection}{\numberline {14.3.2.7}fontw}{43}{subsubsection.14.3.2.7}
-\contentsline {subsubsection}{\numberline {14.3.2.8}group\discretionary {-}{}{}Box}{44}{subsubsection.14.3.2.8}
-\contentsline {subsubsection}{\numberline {14.3.2.9}progress\discretionary {-}{}{}Bar}{44}{subsubsection.14.3.2.9}
-\contentsline {subsubsection}{\numberline {14.3.2.10}radio\discretionary {-}{}{}Button}{44}{subsubsection.14.3.2.10}
-\contentsline {subsubsection}{\numberline {14.3.2.11}slider}{45}{subsubsection.14.3.2.11}
-\contentsline {subsubsection}{\numberline {14.3.2.12}static\discretionary {-}{}{}Text}{45}{subsubsection.14.3.2.12}
-\contentsline {subsubsection}{\numberline {14.3.2.13}string}{45}{subsubsection.14.3.2.13}
-\contentsline {subsubsection}{\numberline {14.3.2.14}theme}{46}{subsubsection.14.3.2.14}
-\contentsline {subsubsection}{\numberline {14.3.2.15}touch\discretionary {-}{}{}Zone}{47}{subsubsection.14.3.2.15}
-\contentsline {subsubsection}{\numberline {14.3.2.16}wstack}{47}{subsubsection.14.3.2.16}
-\contentsline {subsubsection}{\numberline {14.3.2.17}wstate}{48}{subsubsection.14.3.2.17}
-\contentsline {subsubsection}{\numberline {14.3.2.18}wvalue}{48}{subsubsection.14.3.2.18}
-\contentsline {section}{\numberline {14.4}Bitmaps and Fonts}{49}{section.14.4}
-\contentsline {subsection}{\numberline {14.4.1}Detailed Description}{49}{subsection.14.4.1}
-\contentsline {subsection}{\numberline {14.4.2}Function Documentation}{49}{subsection.14.4.2}
-\contentsline {subsubsection}{\numberline {14.4.2.1}font}{49}{subsubsection.14.4.2.1}
-\contentsline {subsubsection}{\numberline {14.4.2.2}fonto}{49}{subsubsection.14.4.2.2}
-\contentsline {subsubsection}{\numberline {14.4.2.3}picture}{50}{subsubsection.14.4.2.3}
-\contentsline {subsubsection}{\numberline {14.4.2.4}print\discretionary {-}{}{}String}{50}{subsubsection.14.4.2.4}
-\contentsline {chapter}{\numberline {15}Namespace Documentation}{51}{chapter.15}
-\contentsline {section}{\numberline {15.1}module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx Namespace Reference}{51}{section.15.1}
-\contentsline {subsection}{\numberline {15.1.1}Detailed Description}{54}{subsection.15.1.1}
-\contentsline {subsection}{\numberline {15.1.2}Function Documentation}{54}{subsection.15.1.2}
-\contentsline {subsubsection}{\numberline {15.1.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{54}{subsubsection.15.1.2.1}
-\contentsline {subsubsection}{\numberline {15.1.2.2}Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}{54}{subsubsection.15.1.2.2}
-\contentsline {chapter}{\numberline {16}Class Documentation}{55}{chapter.16}
-\contentsline {section}{\numberline {16.1}module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D Class Reference}{55}{section.16.1}
-\contentsline {part}{Index}{56}{section*.9}
+\contentsline {section}{\numberline {5.1}Themes on Buttons}{14}{section.5.1}
+\contentsline {section}{\numberline {5.2}Themes on Sliders}{14}{section.5.2}
+\contentsline {section}{\numberline {5.3}Themes on Progress Bar}{15}{section.5.3}
+\contentsline {chapter}{\numberline {6}Color Table}{17}{chapter.6}
+\contentsline {chapter}{\numberline {7}Introduction To Fonts}{21}{chapter.7}
+\contentsline {chapter}{\numberline {8}Introduction To Bitmaps}{23}{chapter.8}
+\contentsline {chapter}{\numberline {9}Introduction To Widgets}{25}{chapter.9}
+\contentsline {section}{\numberline {9.1}Over View of Widgets}{25}{section.9.1}
+\contentsline {section}{\numberline {9.2}Buttons}{25}{section.9.2}
+\contentsline {section}{\numberline {9.3}Touch\discretionary {-}{}{}Zone}{25}{section.9.3}
+\contentsline {section}{\numberline {9.4}Slider}{25}{section.9.4}
+\contentsline {section}{\numberline {9.5}Progress\discretionary {-}{}{}Bar}{25}{section.9.5}
+\contentsline {section}{\numberline {9.6}Gauge}{25}{section.9.6}
+\contentsline {section}{\numberline {9.7}Analog\discretionary {-}{}{}Meter}{25}{section.9.7}
+\contentsline {section}{\numberline {9.8}Digital\discretionary {-}{}{}Meter}{26}{section.9.8}
+\contentsline {section}{\numberline {9.9}Static\discretionary {-}{}{}Text}{26}{section.9.9}
+\contentsline {section}{\numberline {9.10}Group\discretionary {-}{}{}Box}{26}{section.9.10}
+\contentsline {section}{\numberline {9.11}Dial}{26}{section.9.11}
+\contentsline {section}{\numberline {9.12}Choice}{26}{section.9.12}
+\contentsline {section}{\numberline {9.13}Check\discretionary {-}{}{}Box}{26}{section.9.13}
+\contentsline {section}{\numberline {9.14}Radio Buttons}{26}{section.9.14}
+\contentsline {chapter}{\numberline {10}Examples}{27}{chapter.10}
+\contentsline {chapter}{\numberline {11}Module Index}{29}{chapter.11}
+\contentsline {section}{\numberline {11.1}Modules}{29}{section.11.1}
+\contentsline {chapter}{\numberline {12}Namespace Index}{31}{chapter.12}
+\contentsline {section}{\numberline {12.1}Namespace List}{31}{section.12.1}
+\contentsline {chapter}{\numberline {13}Hierarchical Index}{33}{chapter.13}
+\contentsline {section}{\numberline {13.1}Class Hierarchy}{33}{section.13.1}
+\contentsline {chapter}{\numberline {14}Class Index}{35}{chapter.14}
+\contentsline {section}{\numberline {14.1}Class List}{35}{section.14.1}
+\contentsline {chapter}{\numberline {15}Module Documentation}{37}{chapter.15}
+\contentsline {section}{\numberline {15.1}Commands}{37}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}Detailed Description}{38}{subsection.15.1.1}
+\contentsline {subsection}{\numberline {15.1.2}Function Documentation}{38}{subsection.15.1.2}
+\contentsline {subsubsection}{\numberline {15.1.2.1}backlight}{38}{subsubsection.15.1.2.1}
+\contentsline {subsubsection}{\numberline {15.1.2.2}cfgio}{39}{subsubsection.15.1.2.2}
+\contentsline {subsubsection}{\numberline {15.1.2.3}direct}{39}{subsubsection.15.1.2.3}
+\contentsline {subsubsection}{\numberline {15.1.2.4}io}{39}{subsubsection.15.1.2.4}
+\contentsline {subsubsection}{\numberline {15.1.2.5}ping}{39}{subsubsection.15.1.2.5}
+\contentsline {subsubsection}{\numberline {15.1.2.6}play}{39}{subsubsection.15.1.2.6}
+\contentsline {subsubsection}{\numberline {15.1.2.7}reset}{39}{subsubsection.15.1.2.7}
+\contentsline {subsubsection}{\numberline {15.1.2.8}run}{40}{subsubsection.15.1.2.8}
+\contentsline {subsubsection}{\numberline {15.1.2.9}snapshot}{40}{subsubsection.15.1.2.9}
+\contentsline {subsubsection}{\numberline {15.1.2.10}verbose}{40}{subsubsection.15.1.2.10}
+\contentsline {subsubsection}{\numberline {15.1.2.11}wquiet}{40}{subsubsection.15.1.2.11}
+\contentsline {subsubsection}{\numberline {15.1.2.12}xmax}{40}{subsubsection.15.1.2.12}
+\contentsline {subsubsection}{\numberline {15.1.2.13}ymax}{40}{subsubsection.15.1.2.13}
+\contentsline {section}{\numberline {15.2}Primitve Drawing Commands}{41}{section.15.2}
+\contentsline {subsection}{\numberline {15.2.1}Detailed Description}{41}{subsection.15.2.1}
+\contentsline {subsection}{\numberline {15.2.2}Function Documentation}{41}{subsection.15.2.2}
+\contentsline {subsubsection}{\numberline {15.2.2.1}arc}{41}{subsubsection.15.2.2.1}
+\contentsline {subsubsection}{\numberline {15.2.2.2}box}{41}{subsubsection.15.2.2.2}
+\contentsline {subsubsection}{\numberline {15.2.2.3}circle}{42}{subsubsection.15.2.2.3}
+\contentsline {subsubsection}{\numberline {15.2.2.4}clip\discretionary {-}{}{}Area}{42}{subsubsection.15.2.2.4}
+\contentsline {subsubsection}{\numberline {15.2.2.5}clip\discretionary {-}{}{}Enable}{42}{subsubsection.15.2.2.5}
+\contentsline {subsubsection}{\numberline {15.2.2.6}cls}{42}{subsubsection.15.2.2.6}
+\contentsline {subsubsection}{\numberline {15.2.2.7}color}{42}{subsubsection.15.2.2.7}
+\contentsline {subsubsection}{\numberline {15.2.2.8}color\discretionary {-}{}{}Id}{43}{subsubsection.15.2.2.8}
+\contentsline {subsubsection}{\numberline {15.2.2.9}line}{44}{subsubsection.15.2.2.9}
+\contentsline {subsubsection}{\numberline {15.2.2.10}line\discretionary {-}{}{}Type}{44}{subsubsection.15.2.2.10}
+\contentsline {subsubsection}{\numberline {15.2.2.11}line\discretionary {-}{}{}Width}{44}{subsubsection.15.2.2.11}
+\contentsline {subsubsection}{\numberline {15.2.2.12}pie}{44}{subsubsection.15.2.2.12}
+\contentsline {subsubsection}{\numberline {15.2.2.13}plot}{44}{subsubsection.15.2.2.13}
+\contentsline {subsubsection}{\numberline {15.2.2.14}xy}{45}{subsubsection.15.2.2.14}
+\contentsline {section}{\numberline {15.3}Widgets}{46}{section.15.3}
+\contentsline {subsection}{\numberline {15.3.1}Detailed Description}{46}{subsection.15.3.1}
+\contentsline {subsection}{\numberline {15.3.2}Function Documentation}{46}{subsection.15.3.2}
+\contentsline {subsubsection}{\numberline {15.3.2.1}ameter}{46}{subsubsection.15.3.2.1}
+\contentsline {subsubsection}{\numberline {15.3.2.2}ameter\discretionary {-}{}{}\_\discretionary {-}{}{}color}{47}{subsubsection.15.3.2.2}
+\contentsline {subsubsection}{\numberline {15.3.2.3}button}{47}{subsubsection.15.3.2.3}
+\contentsline {subsubsection}{\numberline {15.3.2.4}choice}{47}{subsubsection.15.3.2.4}
+\contentsline {subsubsection}{\numberline {15.3.2.5}dial}{48}{subsubsection.15.3.2.5}
+\contentsline {subsubsection}{\numberline {15.3.2.6}dmeter}{48}{subsubsection.15.3.2.6}
+\contentsline {subsubsection}{\numberline {15.3.2.7}fontw}{48}{subsubsection.15.3.2.7}
+\contentsline {subsubsection}{\numberline {15.3.2.8}gauge}{49}{subsubsection.15.3.2.8}
+\contentsline {subsubsection}{\numberline {15.3.2.9}group\discretionary {-}{}{}Box}{49}{subsubsection.15.3.2.9}
+\contentsline {subsubsection}{\numberline {15.3.2.10}progress\discretionary {-}{}{}Bar}{49}{subsubsection.15.3.2.10}
+\contentsline {subsubsection}{\numberline {15.3.2.11}radio\discretionary {-}{}{}Button}{50}{subsubsection.15.3.2.11}
+\contentsline {subsubsection}{\numberline {15.3.2.12}slider}{50}{subsubsection.15.3.2.12}
+\contentsline {subsubsection}{\numberline {15.3.2.13}static\discretionary {-}{}{}Text}{50}{subsubsection.15.3.2.13}
+\contentsline {subsubsection}{\numberline {15.3.2.14}string}{51}{subsubsection.15.3.2.14}
+\contentsline {subsubsection}{\numberline {15.3.2.15}theme}{51}{subsubsection.15.3.2.15}
+\contentsline {subsubsection}{\numberline {15.3.2.16}touch\discretionary {-}{}{}Zone}{51}{subsubsection.15.3.2.16}
+\contentsline {subsubsection}{\numberline {15.3.2.17}wstack}{52}{subsubsection.15.3.2.17}
+\contentsline {subsubsection}{\numberline {15.3.2.18}wstate}{52}{subsubsection.15.3.2.18}
+\contentsline {subsubsection}{\numberline {15.3.2.19}wvalue}{52}{subsubsection.15.3.2.19}
+\contentsline {section}{\numberline {15.4}Bitmaps and Fonts}{54}{section.15.4}
+\contentsline {subsection}{\numberline {15.4.1}Detailed Description}{54}{subsection.15.4.1}
+\contentsline {subsection}{\numberline {15.4.2}Function Documentation}{54}{subsection.15.4.2}
+\contentsline {subsubsection}{\numberline {15.4.2.1}font}{54}{subsubsection.15.4.2.1}
+\contentsline {subsubsection}{\numberline {15.4.2.2}fonto}{54}{subsubsection.15.4.2.2}
+\contentsline {subsubsection}{\numberline {15.4.2.3}picture}{55}{subsubsection.15.4.2.3}
+\contentsline {subsubsection}{\numberline {15.4.2.4}print\discretionary {-}{}{}String}{55}{subsubsection.15.4.2.4}
+\contentsline {chapter}{\numberline {16}Namespace Documentation}{57}{chapter.16}
+\contentsline {section}{\numberline {16.1}module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx Namespace Reference}{57}{section.16.1}
+\contentsline {subsection}{\numberline {16.1.1}Detailed Description}{60}{subsection.16.1.1}
+\contentsline {subsection}{\numberline {16.1.2}Function Documentation}{60}{subsection.16.1.2}
+\contentsline {subsubsection}{\numberline {16.1.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{60}{subsubsection.16.1.2.1}
+\contentsline {subsubsection}{\numberline {16.1.2.2}Wait\discretionary {-}{}{}For\discretionary {-}{}{}C\discretionary {-}{}{}R}{60}{subsubsection.16.1.2.2}
+\contentsline {chapter}{\numberline {17}Class Documentation}{61}{chapter.17}
+\contentsline {section}{\numberline {17.1}module.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D3xx.\discretionary {-}{}{}ez\discretionary {-}{}{}L\discretionary {-}{}{}C\discretionary {-}{}{}D Class Reference}{61}{section.17.1}
+\contentsline {chapter}{\numberline {18}Example Documentation}{63}{chapter.18}
+\contentsline {section}{\numberline {18.1}Button\discretionary {-}{}{}Align.\discretionary {-}{}{}py}{63}{section.18.1}
+\contentsline {section}{\numberline {18.2}Button\discretionary {-}{}{}Options.\discretionary {-}{}{}py}{63}{section.18.2}
+\contentsline {section}{\numberline {18.3}Button\discretionary {-}{}{}Radius.\discretionary {-}{}{}py}{64}{section.18.3}
+\contentsline {section}{\numberline {18.4}Gauge\discretionary {-}{}{}Demo.\discretionary {-}{}{}py}{65}{section.18.4}
+\contentsline {section}{\numberline {18.5}Progress\discretionary {-}{}{}Theme.\discretionary {-}{}{}py}{66}{section.18.5}
+\contentsline {section}{\numberline {18.6}Touch\discretionary {-}{}{}Zone\discretionary {-}{}{}I\discretionary {-}{}{}M.\discretionary {-}{}{}py}{67}{section.18.6}
+\contentsline {part}{Index}{69}{section*.9}

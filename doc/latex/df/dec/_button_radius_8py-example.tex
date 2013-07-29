@@ -7,13 +7,13 @@
 3 
 4 \textcolor{keyword}{import} platform
 5 \textcolor{keyword}{import} sys
-6 sys.path.append(\textcolor{stringliteral}{'module'}) 
+6 sys.path.append(\textcolor{stringliteral}{'..\(\backslash\)module'}) 
 7 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
 8 
 9 \textcolor{comment}{#check what OS we are on}
 10 \textcolor{comment}{#Windows}
 11 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
-12     LCD = ezLCD(\textcolor{stringliteral}{'com6'}) 
+12     LCD = ezLCD(\textcolor{stringliteral}{'com4'}) 
 13 \textcolor{comment}{#Mac}
 14 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
 15     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})

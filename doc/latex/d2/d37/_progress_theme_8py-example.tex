@@ -17,69 +17,80 @@
 13 sys.path.append(\textcolor{stringliteral}{'..\(\backslash\)module'}) 
 14 \textcolor{keyword}{from} ezLCD3xx \textcolor{keyword}{import} *
 15 
-16 \textcolor{comment}{#check what OS we are on}
-17 \textcolor{comment}{#Windows}
-18 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
-19     LCD = ezLCD(\textcolor{stringliteral}{'com4'}) 
-20 \textcolor{comment}{#Mac}
-21 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
-22     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
-23 \textcolor{comment}{#Linux}
-24 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Linux'}:
-25     LCD = ezLCD(\textcolor{stringliteral}{'/dev/ttyACM0'})
-26 
-27 \textcolor{comment}{# Bail out if comport error}
-28 \textcolor{keywordflow}{if} LCD.openSerial()==\textcolor{keyword}{False}:
-29     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
-30     \textcolor{keywordflow}{raise} SystemExit
-31 
-32 \textcolor{comment}{# Turn verbose off }
-33 LCD.verbose(\textcolor{stringliteral}{'off'})
-34 \textcolor{comment}{# Turn off button press info from ezLCD}
-35 LCD.wquiet(ON)
-36 \textcolor{comment}{# Clear screen}
-37 LCD.cls()
-38 \textcolor{comment}{# Use internal medium font}
-39 LCD.fontw(1,\textcolor{stringliteral}{'0'})
-40 \textcolor{comment}{# Set draw color to red}
-41 LCD.color(RED)
-42 \textcolor{comment}{# set x y to 0 }
-43 LCD.xy(0,0)
-44 \textcolor{comment}{# draw box}
-45 LCD.box(320,240)
-46 \textcolor{comment}{# set theme #1}
-47 LCD.theme(1, 155, 152, 0, 0, 0, 151, 8, 9, 0, 1)
-48 \textcolor{comment}{# Set draw color to red}
-49 LCD.color(WHITE)
-50 \textcolor{comment}{# Print string at coordinates x=80 and y=100}
-51 LCD.printString(\textcolor{stringliteral}{"Progress Bar Demo"},80,10)
-52 LCD.printString(\textcolor{stringliteral}{" Update Theme Based On Value"}, 30,40)
-53 LCD.progressBar(1, 20, 90, 280, 30, 1, 1, 100, 1, 1,\textcolor{stringliteral}{' PSI'})
-54 
-55 value = 1
-56 
-57 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
-58     timer.sleep(.1)
-59     value +=1
-60     \textcolor{comment}{# update widget 1 value}
-61     LCD.wvalue(1, value)
-62     \textcolor{keywordflow}{if} value == 30:
-63         \textcolor{comment}{# change theme when value get to 30}
-64         LCD.theme(1, 155, 152, 0, 3, 0, 151, 6, 6, 6, 1)
-65         \textcolor{comment}{# redraw widget 1       }
-66         LCD.wstate(1, 3)
-67     \textcolor{keywordflow}{if} value == 60:
-68         \textcolor{comment}{# change theme when value get to 60}
-69         LCD.theme(1, 155, 152, 3, 0, 3, 151, 4, 5, 0, 1)
-70         \textcolor{comment}{# redraw widget 1}
-71         LCD.wstate(1,3)
-72     \textcolor{keywordflow}{if} value==100:
-73         \textcolor{comment}{# change theme when value get to 100        }
-74         LCD.theme(1, 155, 152, 3, 0, 0, 151, 8, 9, 0, 1)
-75         value = 1
-76         \textcolor{comment}{# reset widget 1 to 0}
-77         LCD.wvalue(1,value)
-78         \textcolor{comment}{# redraw widget 1}
-79         LCD.wstate(1,3)
+16 LCD = ezLCD(\textcolor{keywordtype}{None}) 
+17 comPort =  LCD.findezLCD()
+18 
+19 \textcolor{comment}{#check what OS we are on}
+20 \textcolor{comment}{#Windows}
+21 \textcolor{keywordflow}{if} platform.system() == \textcolor{stringliteral}{'Windows'}:
+22     LCD = ezLCD(comPort[0][0])
+23 \textcolor{comment}{#Mac}
+24 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Dawrwin'}:
+25     LCD = ezLCD(\textcolor{stringliteral}{'/dev/tty.usbsomething'})
+26 \textcolor{comment}{#Linux}
+27 \textcolor{keywordflow}{elif} platform.system() == \textcolor{stringliteral}{'Linux'}:
+28     LCD = ezLCD(\textcolor{stringliteral}{'/dev/ttyACM0'})
+29 
+30 \textcolor{comment}{# Bail out if comport error}
+31 \textcolor{keywordflow}{if} LCD.openSerial()==\textcolor{keyword}{False}:
+32     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Error Opening Port'}
+33     \textcolor{keywordflow}{raise} SystemExit
+34 
+35 \textcolor{comment}{# Turn verbose off }
+36 LCD.verbose(OFF)
+37 \textcolor{comment}{# Turn off button press info from ezLCD}
+38 LCD.wquiet(ON)
+39 \textcolor{comment}{# Clear screen}
+40 LCD.cls()
+41 \textcolor{comment}{# Use internal medium font}
+42 LCD.fontw(1,\textcolor{stringliteral}{'0'})
+43 \textcolor{comment}{# Set text font to internal medium}
+44 LCD.font(\textcolor{stringliteral}{'0'})
+45 \textcolor{comment}{# Set draw color to red}
+46 LCD.color(RED)
+47 \textcolor{comment}{# set x y to 0 }
+48 LCD.xy(0,0)
+49 \textcolor{comment}{# draw box}
+50 LCD.box(320,240)
+51 \textcolor{comment}{# set theme #1}
+52 LCD.theme(1, 155, 152, 3, 0, 0, 9, 8, 9, 0, 1)
+53 \textcolor{comment}{# Set draw color to red}
+54 LCD.color(WHITE)
+55 \textcolor{comment}{# Print string at coordinates x=80 and y=100}
+56 LCD.printString(\textcolor{stringliteral}{"Progress Bar Demo"},80,10)
+57 LCD.printString(\textcolor{stringliteral}{" Update Theme Based On Value"}, 30,40)
+58 LCD.progressBar(1, 20, 150, 280, 30, 1, 1, 100, 1, 1,\textcolor{stringliteral}{' PSI'})
+59 LCD.color(8)
+60 LCD.printString(\textcolor{stringliteral}{'LOW'}, 20,125)
+61 LCD.color(6)
+62 LCD.printString(\textcolor{stringliteral}{'MEDIUM'}, 120,125)
+63 LCD.color(4)
+64 LCD.printString(\textcolor{stringliteral}{'HIGH'}, 255,125)
+65 
+66 value = 1
+67 
+68 \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+69     timer.sleep(.1)
+70     value +=1
+71     \textcolor{comment}{# update widget 1 value}
+72     LCD.wvalue(1, value)
+73     \textcolor{keywordflow}{if} value == 30:
+74         \textcolor{comment}{# change theme when value get to 30}
+75         LCD.theme(1, 155, 152, 0, 3, 0, 37, 6, 6, 6, 1)
+76         \textcolor{comment}{# redraw widget 1       }
+77         LCD.wstate(1, 3)
+78     \textcolor{keywordflow}{if} value == 60:
+79         \textcolor{comment}{# change theme when value get to 60}
+80         LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
+81         \textcolor{comment}{# redraw widget 1}
+82         LCD.wstate(1,3)
+83     \textcolor{keywordflow}{if} value==100:
+84         \textcolor{comment}{# change theme when value get to 100        }
+85         LCD.theme(1, 155, 152, 3, 0, 0, 9, 8, 9, 0, 1)
+86         value = 1
+87         \textcolor{comment}{# reset widget 1 to 0}
+88         LCD.wvalue(1,value)
+89         \textcolor{comment}{# redraw widget 1}
+90         LCD.wstate(1,3)
 \end{DoxyCodeInclude}
  

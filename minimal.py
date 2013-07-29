@@ -37,3 +37,4 @@ LCD.color(BLUE)
 LCD.printString("Hello From Python",80,100)
 
 LCD.closeSerial()
+

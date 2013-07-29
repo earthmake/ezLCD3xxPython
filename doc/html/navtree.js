@@ -5,7 +5,11 @@ var NAVTREE =
     [ "Introduction To The Coordinates System", "d6/dc9/coordinates_system.html", null ],
     [ "Introduction To The Hardware", "d8/dc2/intro_hardware.html", null ],
     [ "Introduction To The Software", "df/dcd/intro_software.html", null ],
-    [ "Introduction To Themes", "df/df8/intro_themes.html", null ],
+    [ "Introduction To Themes", "df/df8/intro_themes.html", [
+      [ "Themes on Buttons", "df/df8/intro_themes.html#themeButton", null ],
+      [ "Themes on Sliders", "df/df8/intro_themes.html#themeSlider", null ],
+      [ "Themes on Progress Bar", "df/df8/intro_themes.html#themeProgress", null ]
+    ] ],
     [ "Color Table", "d7/db2/colors.html", null ],
     [ "Introduction To Fonts", "d4/d22/intro_fonts.html", null ],
     [ "Introduction To Bitmaps", "dd/d79/intro_bitmaps.html", null ],

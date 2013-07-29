@@ -6,10 +6,13 @@ import sys
 sys.path.append('..\module') 
 from ezLCD3xx import *
 
+LCD = ezLCD(None) 
+comPort =  LCD.findezLCD()
+
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com6') 
+	LCD = ezLCD(comPort[0][0])
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -23,7 +26,7 @@ if LCD.openSerial()==False:
 	raise SystemExit
 
 # Turn verbose off 
-LCD.verbose('off')
+LCD.verbose(OFF)
 # Turn off button press info from ezLCD
 LCD.wquiet(ON)
 # CLear screen
@@ -42,7 +45,7 @@ LCD.box(320,240)
 LCD.printString('Sliders Demo', 100, 10)
 LCD.color(WHITE)
 LCD.slider(1, 10, 40, 300, 40, 1, 100, 5, 50, 6)
-LCD.printString("Option = 1", 20, 40)
+#LCD.printString("Option = 1", 20, 40)
 LCD.color(BLACK)
 LCD.slider(2, 10, 90, 300, 40, 2, 100, 5, 50, 6)
 LCD.printString("Option = 2", 20, 90)
@@ -52,6 +55,6 @@ LCD.printString("Option = 5", 20, 140)
 LCD.slider(4, 10, 190, 300, 40, 6, 100, 5, 50, 6)
 LCD.color(BLACK)
 LCD.printString("Option = 6", 20, 190)
-#LCD.snapshot(0,0,320,240,'SliderH.bmp')
+LCD.snapshot(0,0,320,240,'SliderH.bmp')
 
 

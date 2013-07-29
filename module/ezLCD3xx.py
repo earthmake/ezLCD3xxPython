@@ -10,6 +10,7 @@ import serial
 import io
 import inspect
 import traceback
+import sys
 
 BLACK = 0
 GRAY  = 1
@@ -78,6 +79,8 @@ class ezLCD(object):
 #				return False
 		print 'Done Searching'	
 		return comPorts		
+	
+	
 	## open serial port
 	# @var self.interface 123
 	# @var self.ser 123
@@ -112,6 +115,8 @@ class ezLCD(object):
 			print ''.join(stack_trace[:-2])
 			self.ser.flushInput()
 			self.ser.flushOutput()
+			cr = 0
+#			sys.exit()
 		
 # General --------------------------------------------------------------------
 
@@ -119,11 +124,24 @@ class ezLCD(object):
 	#   \defgroup General Commands
 	#   @{
 
+	## The direct command will send a string direct to the GPU
+	# @param string string to send
+	#
+	def direct(self, string ):
+		self.ser.write('%s\r' % string)
+		self.WaitForCR()
+
 	## The Verbose command will turn on or off more verbose errors
 	# @param state 0=off 1=on
 	#
 	def verbose(self, state ):
-		self.ser.write('verbose ' + state + '\r')
+		print '*** ezLCD3xx Module Verbose Need to Fix this command in the firmware'
+		if state == 0:
+			self.ser.write('verbose off\r')
+		else:
+			self.ser.write('verbose on\r' )
+		#self.ser.write('verbose %d\r' % state )
+		
 		self.WaitForCR()
 
 	## The xmax command will return the max x of current display
@@ -192,14 +210,14 @@ class ezLCD(object):
 	# @param filename macro filename
 	#
 	def play(self, filename):	
-		self.ser.write('play %s\r' % (filename))
+		self.ser.write('play "%s"\r' % (filename))
 		self.WaitForCR()
 
 	## The run command will run a macro stored on the drive of the ezLCD
 	# @param filename macro filename 
 	#
 	def run(self, filename):	
-		self.ser.write('run %s\r' % (filename))
+		self.ser.write('run "%s"\r' % (filename))
 		self.WaitForCR()
 
 	## The reset command will reset the ezLCD and run startup.ezm same as power up
@@ -218,7 +236,7 @@ class ezLCD(object):
 	# Make sure you have space on the internal flash drive !		
 	def snapshot(self, x, y, w, h, filename):
 		self.ser.timeout = 25		
-		self.ser.write('snapshot %d %d %d %d %s\r' % (x, y, w, h, filename))
+		self.ser.write('snapshot %d %d %d %d "%s"\r' % (x, y, w, h, filename))
 		self.WaitForCR()
 		self.ser.timeout = .2		
 		
@@ -226,6 +244,38 @@ class ezLCD(object):
 	def calibrate(self):
 		self.ser.write('calibrate\r')
 		self.WaitForCR()			
+	
+	## touchX return last press x
+	#
+	#
+	def touchX(self):
+		self.ser.flushInput()
+		self.ser.write('touchx\r')
+		return int(self.ser.readline())
+	
+	## touchY return last press x
+	#
+	#
+	def touchY(self):
+		self.ser.flushInput()		
+		self.ser.write('touchy\r')
+		return int(self.ser.readline())
+
+	## touchS return last press x
+	#
+	#
+	def touchS(self):
+		self.ser.flushInput()		
+		self.ser.write('touchs\r')
+		return int(self.ser.readline())
+			
+	## touchS return last press x
+	#
+	#
+	def getPixel(self, x, y):
+		self.ser.write('getpixel %d %d\r' % (x, y))
+		return self.ser.readline()
+				
 	##
 	# @}
 	#
@@ -263,7 +313,7 @@ class ezLCD(object):
 	# @param G	Green Value
 	# @param B	Blue Value
 	# @return color as a tuple if r g b is None 
-	def colorId(self,ID ,R=None, G=None, B=None):
+	def colorID(self,ID ,R=None, G=None, B=None):
 		if R == None and G == None and B == None:
 			self.ser.write('colorid %d\r' % (ID))
 			return self.ser.readline().split()
@@ -634,12 +684,13 @@ class ezLCD(object):
 	# \n String 64 is temp location.
 	# \n String 65 is the product string
 	# \n String 66 is the firmware string
+	# string cmd = 16
 	def string(self, stringID, string = None):
 		if string !=None:
-			self.ser.write('string %d "%s"\r' % (stringID, string))
+			self.ser.write('16 %d "%s"\r' % (stringID, string))
 			self.WaitForCR()
 		else:
-			self.ser.write('string %d\r' % (stringID))
+			self.ser.write('16 %d\r' % (stringID))
 			return self.ser.readline()
 
 	## The wstack command will return the stack of widgets pressed 32 levels
@@ -684,7 +735,6 @@ class ezLCD(object):
 	# @param value
 	#
 	def wvalue(self, ID, value = None):
-		test =0,0,0
 		if value == None:
 			self.ser.flushInput()
 			self.ser.write('wvalue %d\r' % (ID))
@@ -721,14 +771,17 @@ class ezLCD(object):
 	# # display python.gif at current x y
 	# LCD.picture('python.gif')
 	# @endcode	 
+	# image cmd = 24
 	def picture(self, image, x=None, y=None):
-		self.ser.timeout = 5
+		self.ser.timeout = 5	# make serial timeout longer form image draws
 		if x!=None:
-			self.ser.write('image %d %d %s\r' % (x, y, image))
+			self.ser.write('24 %d %d "%s"\r' % (x, y, image))
 		else:
-			self.ser.write('image %s\r' % (image))
+			self.ser.write('24 "%s"\r' % (image))
 		self.WaitForCR()
 		self.ser.timeout = .2
+		
+		
 # Text --------------------------------------------------------------------
 
 	## The font command will set current font to use for printString
@@ -803,8 +856,10 @@ class ezLCD(object):
 		if orientation !=None:
 			temp = int(self.fonto())
 			self.fonto(orientation)
+		self.ser.timeout = 2
 		self.ser.write('print "%s"\r' % (string))			
 		self.WaitForCR()
+		self.ser.timeout = .2
 		if orientation !=None:
 			self.fonto(temp)
 			temp = self.fonto()

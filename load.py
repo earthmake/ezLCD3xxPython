@@ -58,11 +58,13 @@ def drawTime(res):
 	LCD.string(5, str(res))
 	LCD.wstate(7,REDRAW)
 
-comPort = raw_input('Enter Com Port -> ')
+LCD = ezLCD(None) 
+comPort =  LCD.findezLCD()
+
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD(comPort) 
+	LCD = ezLCD(comPort[0][0])
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')

@@ -1382,14 +1382,14 @@ EXTRA_PACKAGES         =
 # the first chapter. If it is left blank doxygen will generate a 
 # standard header. Notice: only use this tag if you know what you are doing!
 
-LATEX_HEADER           = ../doc/latex/header.tex
+LATEX_HEADER           = header.tex
 
 # The LATEX_FOOTER tag can be used to specify a personal LaTeX footer for 
 # the generated latex document. The footer should contain everything after 
 # the last chapter. If it is left blank doxygen will generate a 
 # standard footer. Notice: only use this tag if you know what you are doing!
 
-LATEX_FOOTER           = ../doc/latex/footer.tex
+LATEX_FOOTER           = footer.tex
 
 # The LATEX_EXTRA_FILES tag can be used to specify one or more extra images 
 # or other source files which should be copied to the LaTeX output directory. 
