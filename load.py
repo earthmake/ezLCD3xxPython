@@ -64,7 +64,10 @@ comPort =  LCD.findezLCD()
 #check what OS we are on
 #Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD(comPort[0][0])
+	for ez in range(0,len(comPort)):
+		if comPort[ez][3] == 'Unit1':
+			LCD = ezLCD(comPort[ez][0])
+			break
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -76,15 +79,14 @@ if LCD.openSerial()==False:
 	print 'Error Opening Port'
 	raise SystemExit
 
-LCD.ping()
-LCD.verbose('OFF')
+LCD.verbose(OFF)
 LCD.wquiet(ON)
 LCD.cls()
 LCD.fontw(0,'1')
 LCD.fontw(1,'0')
 LCD.fontw(2,'serif24')
 LCD.theme(1, 155, 152, 3, 0, 3, 24, 4, 5, 0, 1)
-LCD.backlight(100, 5, 10)
+LCD.backLight(100)
 LCD.cls()
 LCD.font('0')
 LCD.fonto(0)
@@ -138,7 +140,7 @@ while True:
 		ly2 =239
 		drawGrid()
 	(ID, info, data) = LCD.wstack(LIFO)
-	LCD.wstack(CLEAR)
+	#LCD.wstack(CLEAR)
 	if ID == 5 and info==1:
 		res +=1
 		drawTime(res)  

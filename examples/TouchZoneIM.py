@@ -6,10 +6,18 @@ import sys
 sys.path.append('..\module') 
 from ezLCD3xx import *
 
-#check what OS we are on
-#Windows
+LCD = ezLCD(None) 
+
+# @returns comport device firmware string59
+comPort = LCD.findezLCD()
+
+# check what OS we are on
+# Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com4') 
+	for ez in range(0,len(comPort)):
+		if comPort[ez][3] == 'Unit1':
+			LCD = ezLCD(comPort[ez][0])
+			break
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -27,7 +35,7 @@ tzData = ( 1, 0, 33,  2, 46, 33, 3, 92, 33, 4, 138, 33, 5, 184, 33, 6, 230, 33, 
 		  15, 0, 125, 16, 46, 125, 17, 92, 125, 18, 138, 125, 19, 184, 125, 20, 230, 125, 21, 276, 125) 
 
 # Turn verbose off 
-LCD.verbose('off')
+LCD.verbose(OFF)
 # Turn off button press info from ezLCD
 LCD.wquiet(ON)
 # CLear screen
@@ -53,7 +61,7 @@ for count in range(0, 63, 3):
 
 while True:
 	(ID, Info, Data) = LCD.wstack(FIFO)
-	if ID > 0 and Info ==4:
+	if ID > 0 and Info == 4:
 		ID -=1
 		LCD.color(BLACK)
 		LCD.xy(tzData[(ID*3)+1],tzData[(ID*3)+2] )

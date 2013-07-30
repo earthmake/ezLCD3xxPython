@@ -1,0 +1,330 @@
+.TH "module.ezLCD3xx" 3 "Tue Jul 30 2013" "Version 1.02" "ezLCD Python Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+module.ezLCD3xx \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBezLCD\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.RI "\fI\fBezLCD\fP object \fP"
+.ti -1c
+.RI "def \fBfindezLCD\fP"
+.br
+.RI "\fIfindezLCD will scan comports 1 to 100 looking for exLCD's \fP"
+.ti -1c
+.RI "def \fBopenSerial\fP"
+.br
+.RI "\fIopenSerial port \fP"
+.ti -1c
+.RI "def \fBcloseSerial\fP"
+.br
+.RI "\fIcloseSerial \fP"
+.ti -1c
+.RI "def \fBWaitForCR\fP"
+.br
+.RI "\fIThis is a internal use function\&. \fP"
+.ti -1c
+.RI "def \fBgetInt\fP"
+.br
+.RI "\fIgetInt will return a int from \fBezLCD\fP \fP"
+.ti -1c
+.RI "def \fBdirect\fP"
+.br
+.RI "\fIThe direct command will send a string direct to the GPU\&. \fP"
+.ti -1c
+.RI "def \fBverbose\fP"
+.br
+.RI "\fIThe Verbose command will turn on or off more verbose errors\&. \fP"
+.ti -1c
+.RI "def \fBxmax\fP"
+.br
+.RI "\fIThe xmax command will return the max x of current display\&. \fP"
+.ti -1c
+.RI "def \fBymax\fP"
+.br
+.RI "\fIThe ymax command will return the max y of current display\&. \fP"
+.ti -1c
+.RI "def \fBping\fP"
+.br
+.RI "\fIthe ping command \fP"
+.ti -1c
+.RI "def \fBbackLight\fP"
+.br
+.RI "\fIThe backlight command will set backlight brightness and timeout\&. \fP"
+.ti -1c
+.RI "def \fBwquiet\fP"
+.br
+.RI "\fIThe wquiet command disables the touch event data being sent to the console port\&. \fP"
+.ti -1c
+.RI "def \fBcfgio\fP"
+.br
+.RI "\fIThe cfgio command will configure io pins\&. \fP"
+.ti -1c
+.RI "def \fBio\fP"
+.br
+.RI "\fIThe io command use to set and clear io pins\&. \fP"
+.ti -1c
+.RI "def \fBplay\fP"
+.br
+.RI "\fIThe play command will play a macro stored on the drive of the \fBezLCD\fP\&. \fP"
+.ti -1c
+.RI "def \fBrun\fP"
+.br
+.RI "\fIThe run command will run a macro stored on the drive of the \fBezLCD\fP\&. \fP"
+.ti -1c
+.RI "def \fBreset\fP"
+.br
+.RI "\fIThe reset command will reset the \fBezLCD\fP and run startup\&.ezm same as power up\&. \fP"
+.ti -1c
+.RI "def \fBsnapshot\fP"
+.br
+.RI "\fIThe snapshot command will write a copy of the current display to the flash drive as a bmp\&. \fP"
+.ti -1c
+.RI "def \fBcalibrate\fP"
+.br
+.RI "\fIThe calibrate command will re calibrate the touch screen\&. \fP"
+.ti -1c
+.RI "def \fBtouchX\fP"
+.br
+.RI "\fItouchX return last press x \fP"
+.ti -1c
+.RI "def \fBtouchY\fP"
+.br
+.RI "\fItouchY return last press x \fP"
+.ti -1c
+.RI "def \fBtouchS\fP"
+.br
+.RI "\fItouchS return last press x \fP"
+.ti -1c
+.RI "def \fBgetPixel\fP"
+.br
+.RI "\fIgetPixel return last press x \fP"
+.ti -1c
+.RI "def \fBcls\fP"
+.br
+.RI "\fIThe cls command will clear the screen to black it no color is given\&. \fP"
+.ti -1c
+.RI "def \fBcolor\fP"
+.br
+.RI "\fIThe color command see \fBezLCD3xx\fP manual for colors\&. \fP"
+.ti -1c
+.RI "def \fBcolorID\fP"
+.br
+.RI "\fIThe colorId command\&. \fP"
+.ti -1c
+.RI "def \fBxy\fP"
+.br
+.RI "\fIThe xy command will set or return the x y coordinates\&. \fP"
+.ti -1c
+.RI "def \fBplot\fP"
+.br
+.RI "\fIThe plot command will set a pixel to current color and if used x y\&. \fP"
+.ti -1c
+.RI "def \fBlineType\fP"
+.br
+.RI "\fIThe lineType Command will set the line type for the line command\&. \fP"
+.ti -1c
+.RI "def \fBlineWidth\fP"
+.br
+.RI "\fIThe lineWidth Command will set the line width for the line command\&. \fP"
+.ti -1c
+.RI "def \fBline\fP"
+.br
+.RI "\fIThe line command will draw a line from current xy to line(x,y) \fP"
+.ti -1c
+.RI "def \fBbox\fP"
+.br
+.RI "\fIThe box command will draw a box starting from the current xy in width and height with option for filled\&. \fP"
+.ti -1c
+.RI "def \fBcircle\fP"
+.br
+.RI "\fIThe circle command will draw a circle in the current xy with radius and optional filled\&. \fP"
+.ti -1c
+.RI "def \fBpie\fP"
+.br
+.RI "\fIThe pie command will draw a pie slice at current xy\&. \fP"
+.ti -1c
+.RI "def \fBarc\fP"
+.br
+.RI "\fIThe arc command will draw a arc i the current xy optional filled\&. \fP"
+.ti -1c
+.RI "def \fBclipArea\fP"
+.br
+.RI "\fIThe cliparea command allows you to designate a rectangular/box area that you can draw in\&. \fP"
+.ti -1c
+.RI "def \fBclipEnable\fP"
+.br
+.RI "\fIThe clipenable command enables or disables cliparea\&. \fP"
+.ti -1c
+.RI "def \fBameter\fP"
+.br
+.RI "\fIThe ameter widget\&. \fP"
+.ti -1c
+.RI "def \fBameter_color\fP"
+.br
+.RI "\fIThe ameter_color command\&. \fP"
+.ti -1c
+.RI "def \fBdmeter\fP"
+.br
+.RI "\fIThe dmeter widget\&. \fP"
+.ti -1c
+.RI "def \fBbutton\fP"
+.br
+.RI "\fIThe button widget\&. \fP"
+.ti -1c
+.RI "def \fBchoice\fP"
+.br
+.RI "\fIThe choice widget allows you to print a string and display buttons for the user to choose a response\&. \fP"
+.ti -1c
+.RI "def \fBgroupBox\fP"
+.br
+.RI "\fIThe groupBox widget\&. \fP"
+.ti -1c
+.RI "def \fBradioButton\fP"
+.br
+.RI "\fIThe radioButton widget\&. \fP"
+.ti -1c
+.RI "def \fBstaticText\fP"
+.br
+.RI "\fIThe staticText widget\&. \fP"
+.ti -1c
+.RI "def \fBslider\fP"
+.br
+.RI "\fIThe slider widget\&. \fP"
+.ti -1c
+.RI "def \fBprogressBar\fP"
+.br
+.RI "\fIThe progressBar widget\&. \fP"
+.ti -1c
+.RI "def \fBgauge\fP"
+.br
+.RI "\fIThe gauge widget\&. \fP"
+.ti -1c
+.RI "def \fBtouchZone\fP"
+.br
+.RI "\fIThe touchZone command\&. \fP"
+.ti -1c
+.RI "def \fBdial\fP"
+.br
+.RI "\fIThe dial widget\&. \fP"
+.ti -1c
+.RI "def \fBtheme\fP"
+.br
+.RI "\fIThe theme command sets the colors for widgets\&. \fP"
+.ti -1c
+.RI "def \fBfontw\fP"
+.br
+.RI "\fIThe fontW command will set the font for widget\&. \fP"
+.ti -1c
+.RI "def \fBstring\fP"
+.br
+.RI "\fIThe string command will set or return a internal string\&. \fP"
+.ti -1c
+.RI "def \fBwstack\fP"
+.br
+.RI "\fIThe wstack command will return the stack of widgets pressed 32 levels\&. \fP"
+.ti -1c
+.RI "def \fBwvalue\fP"
+.br
+.RI "\fIThe wvalue command will set or return a value to or from a widget\&. \fP"
+.ti -1c
+.RI "def \fBwstate\fP"
+.br
+.RI "\fIThe wstate command\&. \fP"
+.ti -1c
+.RI "def \fBpicture\fP"
+.br
+.RI "\fIThe picture command will display a bitmap in bmp, jpg, gif formats with optional coordinates\&. \fP"
+.ti -1c
+.RI "def \fBfont\fP"
+.br
+.RI "\fIThe font command will set current font to use for printString fonts are located in the /EZSYS/FONTS and /EZUSER/FONTS 
+.br
+ use the ezLCD-3xx Font Converter from earthlcd\&.com 
+.br
+ to convert truetype fonts to \fBezLCD\fP format 
+.br
+ internal fonts will display faster than external fonts\&. \fP"
+.ti -1c
+.RI "def \fBfonto\fP"
+.br
+.RI "\fIThe FONTO command will change the orientation or direction the text prints\&. \fP"
+.ti -1c
+.RI "def \fBprintString\fP"
+.br
+.RI "\fIprint string in current color and font and optional coordinates \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBinterface\fP"
+.br
+.ti -1c
+.RI "\fBser\fP"
+.br
+.ti -1c
+.RI "\fBsio\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.PP
+.nf
+Python Module for earthlcd.com ezLCD 3xx line of displays
+http://earthlcd.com
+
+(c)2013 ken segler
+ken@earthlcd.com 
+requires pySerial http://pyserial.sourceforge.net/
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def module\&.ezLCD3xx\&.__init__ (self, interface)"
+
+.PP
+\fBezLCD\fP object 
+.SS "def module\&.ezLCD3xx\&.closeSerial (self)"
+
+.PP
+closeSerial 
+.SS "def module\&.ezLCD3xx\&.findezLCD (self)"
+
+.PP
+findezLCD will scan comports 1 to 100 looking for exLCD's \fBReturns:\fP
+.RS 4
+: comPorts list of ports 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.getInt (self)"
+
+.PP
+getInt will return a int from \fBezLCD\fP \fBReturns:\fP
+.RS 4
+: var 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.WaitForCR (self)"
+
+.PP
+This is a internal use function\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ezLCD Python Module from the source code\&.

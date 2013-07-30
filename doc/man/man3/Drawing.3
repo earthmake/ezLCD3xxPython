@@ -1,0 +1,262 @@
+.TH "Primitve Drawing Commands" 3 "Tue Jul 30 2013" "Version 1.02" "ezLCD Python Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Primitve Drawing Commands \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.cls\fP"
+.br
+.RI "\fIThe cls command will clear the screen to black it no color is given\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.color\fP"
+.br
+.RI "\fIThe color command see \fBezLCD3xx\fP manual for colors\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.colorID\fP"
+.br
+.RI "\fIThe colorId command\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.xy\fP"
+.br
+.RI "\fIThe xy command will set or return the x y coordinates\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.plot\fP"
+.br
+.RI "\fIThe plot command will set a pixel to current color and if used x y\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.lineType\fP"
+.br
+.RI "\fIThe lineType Command will set the line type for the line command\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.lineWidth\fP"
+.br
+.RI "\fIThe lineWidth Command will set the line width for the line command\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.line\fP"
+.br
+.RI "\fIThe line command will draw a line from current xy to line(x,y) \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.box\fP"
+.br
+.RI "\fIThe box command will draw a box starting from the current xy in width and height with option for filled\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.circle\fP"
+.br
+.RI "\fIThe circle command will draw a circle in the current xy with radius and optional filled\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.pie\fP"
+.br
+.RI "\fIThe pie command will draw a pie slice at current xy\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.arc\fP"
+.br
+.RI "\fIThe arc command will draw a arc i the current xy optional filled\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.clipArea\fP"
+.br
+.RI "\fIThe cliparea command allows you to designate a rectangular/box area that you can draw in\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.clipEnable\fP"
+.br
+.RI "\fIThe clipenable command enables or disables cliparea\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "def module\&.ezLCD3xx\&.arc (self, radius, start, end, fill = \fC0\fP)"
+
+.PP
+The arc command will draw a arc i the current xy optional filled\&. \fBParameters:\fP
+.RS 4
+\fIradius\fP radius of arc 
+.br
+\fIstart\fP start angle 
+.br
+\fIend\fP end angle 
+.br
+\fIfill\fP 1=filled arc 0=outline only *optional defaults to outline 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.box (self, width, height, fill = \fC0\fP)"
+
+.PP
+The box command will draw a box starting from the current xy in width and height with option for filled\&. \fBParameters:\fP
+.RS 4
+\fIwidth\fP width of box in pixels 
+.br
+\fIheight\fP height of box in pixels 
+.br
+\fIfill\fP 1=filled box 0=outline only *optional defaults to outline 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.circle (self, radius, fill = \fC0\fP)"
+
+.PP
+The circle command will draw a circle in the current xy with radius and optional filled\&. \fBParameters:\fP
+.RS 4
+\fIradius\fP radius of circle 
+.br
+\fIfill\fP 1=filled circle 0=outline only *optional defaults to outline 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.clipArea (self, left, top, right, bottom)"
+
+.PP
+The cliparea command allows you to designate a rectangular/box area that you can draw in\&. 
+.br
+ Any surrounding area will be protected and no changes can be made to it 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIleft\fP 
+.br
+\fItop\fP 
+.br
+\fIright\fP 
+.br
+\fIbottom\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.clipEnable (self, enable)"
+
+.PP
+The clipenable command enables or disables cliparea\&. \fBParameters:\fP
+.RS 4
+\fIenable\fP 0=off 1=on 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.cls (self, Color = \fCNone\fP)"
+
+.PP
+The cls command will clear the screen to black it no color is given\&. \fBParameters:\fP
+.RS 4
+\fIColor\fP color to clear screen to 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.color (self, color = \fCNone\fP)"
+
+.PP
+The color command see \fBezLCD3xx\fP manual for colors\&. \fBParameters:\fP
+.RS 4
+\fIcolor\fP number 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+color as a tuple 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.colorID (self, ID, R = \fCNone\fP, G = \fCNone\fP, B = \fCNone\fP)"
+
+.PP
+The colorId command\&. \fBParameters:\fP
+.RS 4
+\fIID\fP color ID number 
+.br
+\fIR\fP Red Value 
+.br
+\fIG\fP Green Value 
+.br
+\fIB\fP Blue Value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+color as a tuple if r g b is None 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.line (self, x, y)"
+
+.PP
+The line command will draw a line from current xy to line(x,y) \fBParameters:\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.lineType (self, option)"
+
+.PP
+The lineType Command will set the line type for the line command\&. \fBParameters:\fP
+.RS 4
+\fIoption\fP 0 = solid, 1= dotted (1 pixel spacing between dots), 2 = dashed (2 pixel spacing between dashes) 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.lineWidth (self, width)"
+
+.PP
+The lineWidth Command will set the line width for the line command\&. \fBParameters:\fP
+.RS 4
+\fIwidth\fP thin line (width = 1) or a thick line (width =3)\&. Only [width] = 1 or 3 are available\&. 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.pie (self, radius, start, end)"
+
+.PP
+The pie command will draw a pie slice at current xy\&. \fBParameters:\fP
+.RS 4
+\fIradius\fP radius of pie 
+.br
+\fIstart\fP start angle 
+.br
+\fIend\fP end angle 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.plot (self, x = \fCNone\fP, y = \fCNone\fP)"
+
+.PP
+The plot command will set a pixel to current color and if used x y\&. \fBParameters:\fP
+.RS 4
+\fIx\fP optional 
+.br
+\fIy\fP optional 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.xy (self, x = \fCNone\fP, y = \fCNone\fP)"
+
+.PP
+The xy command will set or return the x y coordinates\&. \fBParameters:\fP
+.RS 4
+\fIx\fP x position 
+.br
+\fIy\fP y position 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+x y if x and y not supplied 
+.PP
+.nf
+# Set x y to 100 100
+LCD\&.xy(100,100)
+# Get Current x y
+(x,y)=LCD\&.xy()
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ezLCD Python Module from the source code\&.

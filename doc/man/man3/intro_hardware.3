@@ -1,0 +1,71 @@
+.TH "intro_hardware" 3 "Tue Jul 30 2013" "Version 1.02" "ezLCD Python Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+intro_hardware \- Introduction To The Hardware 
+The ezLCD modules contains a GPU an related circutry to drive a LCD display, USB interface 
+.br
+ Internal 4mb MSD flash drive for storage of fonts, bitmaps and macros\&.
+.br
+ Display can be controlled through USB CDC Serial or TTL 3\&.3v Serial \&.
+.br
+ 
+.br
+ Once power is applied to the display it starts up and executes startup\&.ezm, it will look in /EZUSER/MACROS and if not found will look in /EZSYS/USERS \&.
+.br
+ What this file does in set all defaults for the Display and communcations port\&.
+.br
+ Including some default widget fonts and themes\&. 
+.br
+ Its best to have a minimal one in the /EZUSER/MACROS directory with only the relevent settings in it \&. 
+.br
+ 
+.br
+ Sample minimal startup\&.ezm\&. 
+.PP
+.nf
+'minimal startup\&.ezm
+
+'Turn off verbose echo of commands
+verbose off
+
+'Set command port to USB CDC
+cmd cdc
+
+'set some fonts for widgets
+fontw 0 0
+fontw 1 0
+fontw 2 0
+fontw 3 serif24
+fontw 4 serif24
+fontw 5 serif24
+fontw 6 serif24
+fontw 7 serif24
+
+'Set some themes for widgets
+theme 0   1   2 0 0 0  3  3   1 0 0
+theme 1 155 152 3 3 3  24  4   5 0 1
+theme 2   5  20 3 3 3  4  4   5 0 2
+theme 3   9   3 0 0 0  8  8   9 0 3
+theme 4   7   3 0 0 0  6  6   6 6 4
+theme 5 126 118 3 3 3 35 35  36 0 5
+theme 6 111 106 3 3 3 12 12 101 0 6
+theme 7  58  48 3 3 3 14 14  54 0 7
+
+color white
+print 'Python CDC Mode 115200 Baud  '
+'print device model
+print 65
+print '  '
+'print firmware version
+print 66
+
+.fi
+.PP
+ The ezLCD by default will load startup\&.ezm but you can have startup1\&.ezm through startup5\&.ezm 
+.br
+ So if you press the touch screen at power up in any of the areas show below you can execute the other startup macros\&.
+.br
+ 
+.PP
+  

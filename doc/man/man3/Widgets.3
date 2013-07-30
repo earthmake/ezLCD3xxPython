@@ -1,0 +1,596 @@
+.TH "Widgets" 3 "Tue Jul 30 2013" "Version 1.02" "ezLCD Python Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Widgets \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.ameter\fP"
+.br
+.RI "\fIThe ameter widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.ameter_color\fP"
+.br
+.RI "\fIThe ameter_color command\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.dmeter\fP"
+.br
+.RI "\fIThe dmeter widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.button\fP"
+.br
+.RI "\fIThe button widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.choice\fP"
+.br
+.RI "\fIThe choice widget allows you to print a string and display buttons for the user to choose a response\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.groupBox\fP"
+.br
+.RI "\fIThe groupBox widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.radioButton\fP"
+.br
+.RI "\fIThe radioButton widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.staticText\fP"
+.br
+.RI "\fIThe staticText widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.slider\fP"
+.br
+.RI "\fIThe slider widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.progressBar\fP"
+.br
+.RI "\fIThe progressBar widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.gauge\fP"
+.br
+.RI "\fIThe gauge widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.touchZone\fP"
+.br
+.RI "\fIThe touchZone command\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.dial\fP"
+.br
+.RI "\fIThe dial widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.theme\fP"
+.br
+.RI "\fIThe theme command sets the colors for widgets\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.fontw\fP"
+.br
+.RI "\fIThe fontW command will set the font for widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.string\fP"
+.br
+.RI "\fIThe string command will set or return a internal string\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.wstack\fP"
+.br
+.RI "\fIThe wstack command will return the stack of widgets pressed 32 levels\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.wvalue\fP"
+.br
+.RI "\fIThe wvalue command will set or return a value to or from a widget\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.wstate\fP"
+.br
+.RI "\fIThe wstate command\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "def module\&.ezLCD3xx\&.ameter (self, ID, x, y, width, height, options, value, minV, maxV, theme, stringID, meterType = \fC0\fP, text = \fCNone\fP)"
+
+.PP
+The ameter widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.br
+\fIvalue\fP 
+.br
+\fIminV\fP 
+.br
+\fImaxV\fP 
+.br
+\fItheme\fP 
+.br
+\fIstringID\fP 
+.br
+\fImeterType\fP 
+.br
+\fItext\fP optional text 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.ameter_color (self, ID, color1, color2, color3, color4, color5, color6)"
+
+.PP
+The ameter_color command\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIcolor1\fP 
+.br
+\fIcolor2\fP 
+.br
+\fIcolor3\fP 
+.br
+\fIcolor4\fP 
+.br
+\fIcolor5\fP 
+.br
+\fIcolor6\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.button (self, ID, x, y, width, height, options, align, radius, theme, stringID, text = \fCNone\fP)"
+
+.PP
+The button widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.br
+\fIalign\fP 
+.br
+\fIradius\fP 
+.br
+\fItheme\fP 
+.br
+\fIstringID\fP 
+.br
+\fItext\fP optional text for button 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.choice (self, string, theme, string1 = \fCNone\fP, string2 = \fCNone\fP, string3 = \fCNone\fP)"
+
+.PP
+The choice widget allows you to print a string and display buttons for the user to choose a response\&. \fBParameters:\fP
+.RS 4
+\fIstring\fP the text about the buttons 
+.br
+\fItheme\fP the theme ID 
+.br
+\fIstring1\fP string for left button *optional defaults to YES 
+.br
+\fIstring2\fP string for center button *optional defaults to NO 
+.br
+\fIstring3\fP string for right button *optional defaults to CANCEL 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1=left button 
+.PP
+0=center button 
+.PP
+-1=right button 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.dial (self, ID, x, y, radius, option, resolution, value, maxx, theme)"
+
+.PP
+The dial widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIradius\fP 
+.br
+\fIoption\fP 
+.br
+\fIresolution\fP 
+.br
+\fIvalue\fP 
+.br
+\fImaxx\fP 
+.br
+\fItheme\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.dmeter (self, ID, x, y, width, height, options, value, digits, dp, theme)"
+
+.PP
+The dmeter widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.br
+\fIvalue\fP 
+.br
+\fIdigits\fP 
+.br
+\fIdp\fP 
+.br
+\fItheme\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.fontw (self, fontnumber, name)"
+
+.PP
+The fontW command will set the font for widget\&. \fBParameters:\fP
+.RS 4
+\fIfontnumber\fP number of the font 
+.br
+\fIname\fP filename of font 
+.br
+ '0' and '1' are internal fonts 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.gauge (self, ID, x, y, width, height, options, initial, mmin, mmax, theme, stringID = \fCNone\fP, text = \fCNone\fP)"
+
+.PP
+The gauge widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.br
+\fIinitial\fP 
+.br
+\fImmin\fP 
+.br
+\fImmax\fP 
+.br
+\fItheme\fP 
+.br
+\fIstringID\fP 
+.br
+\fItext\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.groupBox (self, ID, x, y, width, height, options, theme, stringID)"
+
+.PP
+The groupBox widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.br
+\fItheme\fP 
+.br
+\fIstringID\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.progressBar (self, ID, x, y, width, height, options, value, mmax, theme, stringID, text = \fCNone\fP)"
+
+.PP
+The progressBar widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.br
+\fIvalue\fP 
+.br
+\fImmax\fP 
+.br
+\fItheme\fP 
+.br
+\fIstringID\fP 
+.br
+\fItext\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.radioButton (self, ID, x, y, width, height, options, theme, stringID)"
+
+.PP
+The radioButton widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP Options: 1=draw , 2=disabled, 3=checked, 4=first, 5=first and checked\&. 
+.br
+\fItheme\fP 
+.br
+\fIstringID\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.slider (self, ID, x, y, width, height, options, rrange, resolution, value, theme)"
+
+.PP
+The slider widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.br
+\fIrrange\fP 
+.br
+\fIresolution\fP 
+.br
+\fIvalue\fP 
+.br
+\fItheme\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.staticText (self, ID, x, y, width, height, options, theme, stringID, text = \fCNone\fP)"
+
+.PP
+The staticText widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP Options: 1=left, 2=disabled , 3=right , 4=center, 5=left framed, 6=disabled framed, 7=right framed, 8=center framed , 9=redraw text\&. 
+.br
+\fItheme\fP theme 
+.br
+\fIstringID\fP stringID number 
+.br
+\fItext\fP text to display *optional 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.string (self, stringID, string = \fCNone\fP)"
+
+.PP
+The string command will set or return a internal string\&. \fBParameters:\fP
+.RS 4
+\fIstringID\fP number of string to set or return 
+.br
+\fIstring\fP string to set optional 
+.br
+ internal strings are used for text on buttons and other widgets 
+.br
+ Strings are defined as 128 characters\&. There are 64 strings (0 to 63)\&. 
+.br
+ String 61-63 are used by the CHOICE command\&. 
+.br
+ String 64 is temp location\&. 
+.br
+ String 65 is the product string 
+.br
+ String 66 is the firmware string string cmd = 16 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.theme (self, ID, EmbossDkColor, EmbossLtColor, TextColor0, TextColor1, TextColorDisabled, Color0, Color1, ColorDisabled, CommonBkColor, Fontw)"
+
+.PP
+The theme command sets the colors for widgets\&. \fBParameters:\fP
+.RS 4
+\fIID\fP Theme ID 
+.br
+\fIEmbossDkColor\fP Dark color for 3d effect 
+.br
+\fIEmbossLtColor\fP Light color for 3d effect 
+.br
+\fITextColor0\fP 
+.br
+\fITextColor1\fP 
+.br
+\fITextColorDisabled\fP 
+.br
+\fIColor0\fP 
+.br
+\fIColor1\fP 
+.br
+\fIColorDisabled\fP 
+.br
+\fICommonBkColor\fP 
+.br
+\fIFontw\fP widget font for theme 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.touchZone (self, ID, x, y, width, height, options)"
+
+.PP
+The touchZone command\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIoptions\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.wstack (self, option)"
+
+.PP
+The wstack command will return the stack of widgets pressed 32 levels\&. \fBParameters:\fP
+.RS 4
+\fIoption\fP 0=FIFO 1=LIFO 2=CLEAR 
+.br
+ FIFO Fist in Fist out 
+.br
+ LIFO Last in First out 
+.br
+ CLEAR Clear the stack 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+truple of ID, Info, Data 
+.br
+
+.br
+\fB Button Widget Values \fP 
+.br
+ - ID = widgetID of widget pressed 
+.br
+ - Info 1=Pressed and released 2=Cancel 4=Pressed 
+.br
+ - Data button state 
+.br
+
+.br
+\fB TouchZone Widget Vaules \fP 
+.br
+ - ID = widgetID of widget pressed 
+.br
+ - Info 1=Pressed and released 2=Cancel 4=Pressed 
+.br
+ - Data button state 
+.br
+
+.br
+\fB Slider Widget Values \fP 
+.br
+ - ID = widgetID of widget pressed 
+.br
+ - Info 1 = value incremented 2 = value decremented 
+.br
+ - Data slider value 
+.br
+
+.br
+\fB CheckBox Widget Vaules \fP 
+.br
+ - ID = widgetID of widget pressed 
+.br
+ - Info 4 = checked 1 = unchecked 
+.br
+ - Data state 
+.br
+
+.br
+\fB Dial Widget Vaules \fP 
+.br
+ - ID = widgetID of widget pressed 
+.br
+ - Info 1 = turned clockwise 2 = turned counter-clockwise 
+.br
+ - Data dial value 
+.PP
+.nf
+# check wstack for button presses
+(ID, Info, Data) = LCD\&.wstack(LIFO)
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.wstate (self, ID, option)"
+
+.PP
+The wstate command\&. \fBParameters:\fP
+.RS 4
+\fIID\fP widget ID 
+.br
+\fIoption\fP 0 = delete, 1 = enable, 2 = disable, 3 = redraw 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.wvalue (self, ID, value = \fCNone\fP)"
+
+.PP
+The wvalue command will set or return a value to or from a widget\&. \fBParameters:\fP
+.RS 4
+\fIID\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ezLCD Python Module from the source code\&.

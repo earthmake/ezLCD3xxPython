@@ -12,6 +12,10 @@ import inspect
 import traceback
 import sys
 
+## \cond
+# 
+#
+
 BLACK = 0
 GRAY  = 1
 SILVER= 2
@@ -43,7 +47,9 @@ ENABLE = 1
 DISABLE = 2
 REDRAW = 3 
 
-
+## \endcond
+#
+#
 class ezLCD(object):
 ## ezLCD object
 #
@@ -54,7 +60,9 @@ class ezLCD(object):
 	def __init__(self, interface):
 		self.interface = interface
 		self.ser = None
-
+	## findezLCD will scan comports 1 to 100 looking for exLCD's
+	#
+	# @return: comPorts list of ports
 	def findezLCD(self):
 		comPorts = []
 		for interface in range(1,100):
@@ -69,11 +77,10 @@ class ezLCD(object):
 				self.ser.write('ping\r')
 				cr = self.ser.read(1) 
 				if cr == '0':
-					t=str(self.interface),self.string(65)[+1:-1] , self.string(66)[:-1]
+					t=str(self.interface),self.string(65)[+1:-1] , self.string(66)[:-1], self.string(59)[:-1] 
 					comPorts.append(t) 
-					print 'Found it %s %s %s' %  (str(self.interface),self.string(65)[:-1] , self.string(66)[:-1])
+					print 'Found it %s %s %s %s' %  (str(self.interface),self.string(65)[:-1] , self.string(66)[:-1], self.string(59)[:-1]) 
 				self.ser.close()
-#				return self.interface
 			except :
 				self.ser.close()
 #				return False
@@ -81,10 +88,7 @@ class ezLCD(object):
 		return comPorts		
 	
 	
-	## open serial port
-	# @var self.interface 123
-	# @var self.ser 123
-	# @var self.sio 123
+	## openSerial port
 	def openSerial(self):
 		self.ser = serial.Serial()
 		self.ser.baudrate = 115200 
@@ -98,7 +102,9 @@ class ezLCD(object):
 		except :
 			print "ezLCD3xx "+ str(self.interface) +" failed"
 			return False
-
+	## closeSerial 
+	#
+	#
 	def closeSerial(self):
 		self.ser.close()
 		print "ezLCD3xx "+ str(self.interface) +" close"
@@ -107,17 +113,27 @@ class ezLCD(object):
 	# 
 	#
 	def WaitForCR(self):
-		cr = self.ser.read(1) #self.ser.readline() #  
-		if cr != '\r':
+		cr = self.ser.read(1) #
+		if  cr != '\r':
+			print self.ser.readline()
 			print 'Command Returned Error', cr, len(cr)
 			frame = inspect.currentframe()
 			stack_trace = traceback.format_stack(frame)
 			print ''.join(stack_trace[:-2])
 			self.ser.flushInput()
 			self.ser.flushOutput()
-			cr = 0
 #			sys.exit()
-		
+	## getInt will return a int from ezLCD
+	#
+	# @return:  var
+	def getInt(self):
+		data = 0
+		var = ''
+		while data != '\r' and data != ' ':
+			data = self.ser.read(1)
+			var += data
+		return int(var)
+			
 # General --------------------------------------------------------------------
 
 	##
@@ -149,28 +165,28 @@ class ezLCD(object):
 	#
 	def xmax(self):
 		self.ser.write('xmax\r')
-		return self.ser.readline()
+		return self.getInt() #self.ser.readline()
 
 	## The ymax command will return the max y of current display
 	# @return y-vertical resolution in pixels starting from 0
 	#
 	def ymax(self):
 		self.ser.write('ymax\r')
-		return self.ser.readline()
+		return self.getInt() #self.ser.readline()
 
 	## the ping command
 	# @return 0 
 	#
 	def ping(self):
 		self.ser.write('ping\r')
-		return self.ser.readline()
+		return self.getInt() #self.ser.readline()
 	
 	## The backlight command will set backlight brightness and timeout
 	# @param brightness 1
 	# @param timeout 2
 	# @param level 3
 	#
-	def backlight(self, brightness, timeout = None, level = None ):
+	def backLight(self, brightness, timeout = None, level = None ):
 		if timeout == None and level == None:
 			self.ser.write('light %d\r' % (brightness))
 			self.WaitForCR()
@@ -235,9 +251,9 @@ class ezLCD(object):
 	# @param filename filename.bmp
 	# Make sure you have space on the internal flash drive !		
 	def snapshot(self, x, y, w, h, filename):
-		self.ser.timeout = 25		
+		self.ser.timeout = 30		
 		self.ser.write('snapshot %d %d %d %d "%s"\r' % (x, y, w, h, filename))
-		self.WaitForCR()
+		print self.ser.readline()
 		self.ser.timeout = .2		
 		
 	## The calibrate command will re calibrate the touch screen
@@ -246,30 +262,27 @@ class ezLCD(object):
 		self.WaitForCR()			
 	
 	## touchX return last press x
-	#
+	# @return x x coor of last press
 	#
 	def touchX(self):
-		self.ser.flushInput()
 		self.ser.write('touchx\r')
-		return int(self.ser.readline())
+		return self.getInt() # int(self.ser.readline())
 	
 	## touchY return last press x
-	#
+	# @return y y coor of last press
 	#
 	def touchY(self):
-		self.ser.flushInput()		
 		self.ser.write('touchy\r')
-		return int(self.ser.readline())
+		return self.getInt() # int(self.ser.readline())
 
 	## touchS return last press x
 	#
 	#
 	def touchS(self):
-		self.ser.flushInput()		
 		self.ser.write('touchs\r')
-		return int(self.ser.readline())
+		return self.getInt() # int(self.ser.readline())
 			
-	## touchS return last press x
+	## getPixel return last press x
 	#
 	#
 	def getPixel(self, x, y):
@@ -447,6 +460,7 @@ class ezLCD(object):
 	# @param theme
 	# @param stringID
 	# @param meterType
+	# @param text optional text
 	#												
 	def ameter(self, ID, x, y, width, height, options, value, minV, maxV, theme, stringID, meterType = 0, text = None):
 		if text != None:
@@ -608,11 +622,13 @@ class ezLCD(object):
 	# @param width
 	# @param height
 	# @param options
-	# @param value
-	# @param mmax
+	# @param initial
+	# @param mmin
+	# @param mmax	
 	# @param theme
 	# @param stringID
-	# @param text												
+	# @param text
+	#												
 	def gauge(self, ID, x, y, width, height, options, initial, mmin, mmax, theme, stringID = None, text = None ):
 		if text != None:
 			self.string(stringID, text)
@@ -722,23 +738,25 @@ class ezLCD(object):
 	# @code
 	# # check wstack for button presses
 	# (ID, Info, Data) = LCD.wstack(LIFO)
-	# @endcode
+	# @endcode 
 	def wstack(self, option):
+			if option == CLEAR:
+				print '*** wstack clear is broken' ## @attention: need to fix this in the firmware
 			self.ser.write('wstack %d\r' % (option))		
-			test = self.ser.readline().split()
-			if len(test) != 1 and len(test) == 3:
-				return int(test[0]),int(test[1]),int(test[2])
-			else:
-				return 0,0,0
+			ID = self.getInt()
+			Info = self.getInt()
+			Data = self.getInt()						
+			return ID, Info, Data
+
+
 	## The wvalue command will set or return a value to or from a widget
 	# @param ID
 	# @param value
 	#
 	def wvalue(self, ID, value = None):
 		if value == None:
-			self.ser.flushInput()
 			self.ser.write('wvalue %d\r' % (ID))
-			return self.ser.read(3)
+			return self.getInt() # self.ser.read(3)
 		else:
 			self.ser.write('wvalue %d %d\r' % (ID, value))
 			self.WaitForCR()
@@ -767,13 +785,14 @@ class ezLCD(object):
 	# \n x y  are optional and if not supplied will display image at current xy
 	# @code 
 	# # display python.gif at 10 10
-	# LCD.picture('python.gif',10,10)	
+	# LCD.picture('python.gif',10,10)
+	#	
 	# # display python.gif at current x y
 	# LCD.picture('python.gif')
 	# @endcode	 
 	# image cmd = 24
 	def picture(self, image, x=None, y=None):
-		self.ser.timeout = 5	# make serial timeout longer form image draws
+		self.ser.timeout = 5	# make serial timeout longer for image draws
 		if x!=None:
 			self.ser.write('24 %d %d "%s"\r' % (x, y, image))
 		else:
@@ -822,7 +841,7 @@ class ezLCD(object):
 	def fonto(self, orientation = None):
 		if orientation == None:
 			self.ser.write('fonto\r')
-			return self.ser.readline()					
+			return self.getInt() #self.ser.readline()					
 		if orientation == 90:
 			orientation = 1
 		elif orientation == 180:

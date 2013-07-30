@@ -61,15 +61,6 @@ some widgets take a bit of time (in the millsecond range) to complete so after s
 \image html minimal.png
 \image latex minimal.png
 \include minimal.py
-	Button example will display a button widget then poll for button presses and update screen <br>
-\image html button.png
-\image latex button.png
-\include button.py
-	Load example will display the cpu load as a graph  <br>
- \image html load.png
- \image latex load.png
- \include load.py
-
 */
 
 /*! \page introThemes Introduction To Themes
@@ -120,15 +111,17 @@ picture supports gif, jpg and bmp
 	</p>	
 	\section buttons Buttons
 	<p>
-	text text<br>
+	Buttons Buttons everywhere<br>
 	</p>
 	\image html buttons.png
+	\image latex buttons.eps
 	\section touchZone TouchZone
 	<p>
 	TouchZones work like buttons but do not display any graphics on their own<br>
 	You have to supply the image.<br>
 	So we can take the image below and can make 21 TouchZones one for each Emoticon<br>
 	\image html TouchZone.png
+	\image latex TouchZone.eps	
 	</p>
 	\section slider Slider
 	<p>
@@ -140,11 +133,13 @@ picture supports gif, jpg and bmp
 	</p>
 	\section gauge Gauge
 	\image html gauge.png
+	\image latex gauge.eps	
 	<p>
 	text text<br>
 	</p>
 	\section analogMeter AnalogMeter
 	\image html AnalogMeterFull.png
+	\image latex AnalogMeterFull.png	
 	<p>
 	text text<br>
 	</p>
@@ -179,6 +174,15 @@ picture supports gif, jpg and bmp
 */
 
 /*! \page examples Examples
+	Button example will display a button widget then poll for button presses and update screen <br>
+\image html button.png
+\image latex button.png
+\include button.py
+	Load example will display the cpu load as a graph  <br>
+ \image html load.png
+ \image latex load.png
+ \include load.py
+ 
 	\example ButtonOptions.py
 	\example ButtonAlign.py
 	\example ButtonRadius.py

@@ -6,10 +6,18 @@ import sys
 sys.path.append('..\module') 
 from ezLCD3xx import *
 
-#check what OS we are on
-#Windows
+LCD = ezLCD(None) 
+
+# @returns comport device firmware string59
+comPort = LCD.findezLCD()
+
+# check what OS we are on
+# Windows
 if platform.system() == 'Windows':
-	LCD = ezLCD('com58') 
+	for ez in range(0,len(comPort)):
+		if comPort[ez][3] == 'Unit1':
+			LCD = ezLCD(comPort[ez][0])
+			break
 #Mac
 elif platform.system() == 'Dawrwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -23,7 +31,7 @@ if LCD.openSerial()==False:
 	raise SystemExit
 
 # Turn verbose off 
-LCD.verbose('off')
+LCD.verbose(OFF)
 # Turn off button press info from ezLCD
 LCD.wquiet(ON)
 # CLear screen
@@ -51,3 +59,9 @@ LCD.printString("Option = 5", 20, 140)
 LCD.slider(4, 10, 190, 300, 40, 6, 100, 5, 50, 6)
 LCD.printString("Option = 6", 20, 190)
 #LCD.snapshot(0,0,320,240,'SliderH.bmp')
+LCD.wstack(CLEAR)
+while True:
+	(ID, press, value) = LCD.wstack(LIFO)
+	if ID ==1 and value !=0:
+		LCD.backLight(value)
+#		(ID, press, value) = LCD.wstack(CLEAR)

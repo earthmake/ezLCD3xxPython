@@ -1,0 +1,62 @@
+.TH "intro_software" 3 "Tue Jul 30 2013" "Version 1.02" "ezLCD Python Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+intro_software \- Introduction To The Software 
+Commands are sent to the ezLCD though the serial interface, Commands are text based and end with a carrage return \fBcr\fP\&.
+.br
+ So if you send \fBcls\fP ending with a \fBcr\fP the device will clear the screen and return a \fBcr\fP when the command is complete,
+.br
+ some widgets take a bit of time (in the millsecond range) to complete so after sending a command allways wait for a \fBcr\fP to comeback before sending another command\&.
+.br
+ 
+.PP
+
+.br
+ Minimal example will open the ezLCD port clear the screen and print 'Hello From Python' in red 
+.br
+   
+.PP
+.nf
+1 # Minimal ezLCD Python demo
+2 #
+3 
+4 import platform
+5 import sys
+6 
+7 
+8 sys\&.path\&.append('module') 
+9 from ezLCD3xx import *
+10 
+11 LCD = ezLCD(None) 
+12 comPort =  LCD\&.findezLCD()
+13 
+14 #check what OS we are on
+15 #Windows
+16 if platform\&.system() == 'Windows':
+17     LCD = ezLCD(comPort[0][0])
+18 #Mac
+19 elif platform\&.system() == 'Darwin':
+20     LCD = ezLCD('/dev/tty\&.usbsomething')
+21 # Bail out if comport error
+22 if LCD\&.openSerial()==False:
+23     print 'Error Opening Port'
+24     raise SystemExit
+25 
+26 # Turn verbose off 
+27 LCD\&.verbose(OFF)
+28 # Turn off button press info from ezLCD
+29 LCD\&.wquiet(ON)
+30 # CLear screen
+31 LCD\&.cls()
+32 # Set draw color to red
+33 LCD\&.color(BLUE)
+34 # Print string at coordinates x=80 and y=100
+35 LCD\&.printString('Hello From Python',80,100)
+36 # Close serial port
+37 LCD\&.closeSerial()
+38 
+
+.fi
+.PP
+ 

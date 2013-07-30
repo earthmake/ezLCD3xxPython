@@ -1,0 +1,157 @@
+.TH "Bitmaps and Fonts" 3 "Tue Jul 30 2013" "Version 1.02" "ezLCD Python Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bitmaps and Fonts \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.picture\fP"
+.br
+.RI "\fIThe picture command will display a bitmap in bmp, jpg, gif formats with optional coordinates\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.font\fP"
+.br
+.RI "\fIThe font command will set current font to use for printString fonts are located in the /EZSYS/FONTS and /EZUSER/FONTS 
+.br
+ use the ezLCD-3xx Font Converter from earthlcd\&.com 
+.br
+ to convert truetype fonts to \fBezLCD\fP format 
+.br
+ internal fonts will display faster than external fonts\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.fonto\fP"
+.br
+.RI "\fIThe FONTO command will change the orientation or direction the text prints\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.printString\fP"
+.br
+.RI "\fIprint string in current color and font and optional coordinates \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "def module\&.ezLCD3xx\&.font (self, font)"
+
+.PP
+The font command will set current font to use for printString fonts are located in the /EZSYS/FONTS and /EZUSER/FONTS 
+.br
+ use the ezLCD-3xx Font Converter from earthlcd\&.com 
+.br
+ to convert truetype fonts to \fBezLCD\fP format 
+.br
+ internal fonts will display faster than external fonts\&. \fBParameters:\fP
+.RS 4
+\fIfont\fP font name 
+.br
+ '0' and '1' are internal fonts '0' is medium and '1' is small 
+.PP
+.nf
+# Set font to internal medium font
+LCD\&.font('0')
+# Set font to LCD24
+LCD\&.font('LCD24')
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.fonto (self, orientation = \fCNone\fP)"
+
+.PP
+The FONTO command will change the orientation or direction the text prints\&. \fBParameters:\fP
+.RS 4
+\fIorientation\fP 0 90 180 270 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+orientation current orientation if orientation is not suppled  
+.PP
+.nf
+LCD\&.fonto(0)
+LCD\&.color(YELLOW)
+LCD\&.printString('Hello',100,100)
+LCD\&.fonto(90)
+LCD\&.color(RED)
+LCD\&.printString('Hello',100,100)
+LCD\&.fonto(180)
+LCD\&.color(BLUE)
+LCD\&.printString('Hello',100,100)
+LCD\&.fonto(270)
+LCD\&.color(GREEN)
+LCD\&.printString('Hello',100,100)
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.picture (self, image, x = \fCNone\fP, y = \fCNone\fP)"
+
+.PP
+The picture command will display a bitmap in bmp, jpg, gif formats with optional coordinates\&. \fBParameters:\fP
+.RS 4
+\fIimage\fP filename of image 'logo\&.gif' 
+.br
+\fIx\fP x coordinates 
+.br
+\fIy\fP y coordinates 
+.br
+ x y are optional and if not supplied will display image at current xy 
+.PP
+.nf
+# display python\&.gif at 10 10
+LCD\&.picture('python\&.gif',10,10)
+   
+# display python\&.gif at current x y
+LCD\&.picture('python\&.gif')
+
+.fi
+.PP
+ image cmd = 24 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.printString (self, string, x = \fCNone\fP, y = \fCNone\fP, orientation = \fCNone\fP)"
+
+.PP
+print string in current color and font and optional coordinates \fBParameters:\fP
+.RS 4
+\fIstring\fP string to print 
+.br
+\fIx\fP x coordinates 
+.br
+\fIy\fP y coordinates 
+.br
+\fIorientation\fP rotate text direction 
+.br
+ x y are optional and if not supplied will print string at current xy 
+.br
+ orientation is optional but if used x y must be supplied 
+.br
+ ** orientation will be restored to previous orientation after printing string ** 
+.PP
+.nf
+# display string 'Hello World' at 10 10
+LCD\&.printString('Hello World',10,10)   
+# display string 'Hello World' at current x y
+LCD\&.printString('Hello World')
+# diplay string 'Hello World' at 10 10 rotated 90
+LCD\&.printString('Hello World',10,10,90)
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ezLCD Python Module from the source code\&.

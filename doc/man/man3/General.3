@@ -1,0 +1,248 @@
+.TH "Commands" 3 "Tue Jul 30 2013" "Version 1.02" "ezLCD Python Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Commands \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.direct\fP"
+.br
+.RI "\fIThe direct command will send a string direct to the GPU\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.verbose\fP"
+.br
+.RI "\fIThe Verbose command will turn on or off more verbose errors\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.xmax\fP"
+.br
+.RI "\fIThe xmax command will return the max x of current display\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.ymax\fP"
+.br
+.RI "\fIThe ymax command will return the max y of current display\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.ping\fP"
+.br
+.RI "\fIthe ping command \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.backLight\fP"
+.br
+.RI "\fIThe backlight command will set backlight brightness and timeout\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.wquiet\fP"
+.br
+.RI "\fIThe wquiet command disables the touch event data being sent to the console port\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.cfgio\fP"
+.br
+.RI "\fIThe cfgio command will configure io pins\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.io\fP"
+.br
+.RI "\fIThe io command use to set and clear io pins\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.play\fP"
+.br
+.RI "\fIThe play command will play a macro stored on the drive of the \fBezLCD\fP\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.run\fP"
+.br
+.RI "\fIThe run command will run a macro stored on the drive of the \fBezLCD\fP\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.reset\fP"
+.br
+.RI "\fIThe reset command will reset the \fBezLCD\fP and run startup\&.ezm same as power up\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.snapshot\fP"
+.br
+.RI "\fIThe snapshot command will write a copy of the current display to the flash drive as a bmp\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.calibrate\fP"
+.br
+.RI "\fIThe calibrate command will re calibrate the touch screen\&. \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.touchX\fP"
+.br
+.RI "\fItouchX return last press x \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.touchY\fP"
+.br
+.RI "\fItouchY return last press x \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.touchS\fP"
+.br
+.RI "\fItouchS return last press x \fP"
+.ti -1c
+.RI "def \fBmodule\&.ezLCD3xx\&.getPixel\fP"
+.br
+.RI "\fIgetPixel return last press x \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "def module\&.ezLCD3xx\&.backLight (self, brightness, timeout = \fCNone\fP, level = \fCNone\fP)"
+
+.PP
+The backlight command will set backlight brightness and timeout\&. \fBParameters:\fP
+.RS 4
+\fIbrightness\fP 1 
+.br
+\fItimeout\fP 2 
+.br
+\fIlevel\fP 3 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.cfgio (self, pin, function)"
+
+.PP
+The cfgio command will configure io pins\&. \fBParameters:\fP
+.RS 4
+\fIpin\fP 
+.br
+\fIfunction\fP 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.direct (self, string)"
+
+.PP
+The direct command will send a string direct to the GPU\&. \fBParameters:\fP
+.RS 4
+\fIstring\fP string to send 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.getPixel (self, x, y)"
+
+.PP
+getPixel return last press x 
+.SS "def module\&.ezLCD3xx\&.io (self, pin, level = \fCNone\fP)"
+
+.PP
+The io command use to set and clear io pins\&. \fBParameters:\fP
+.RS 4
+\fIpin\fP 
+.br
+\fIlevel\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+io level 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.ping (self)"
+
+.PP
+the ping command \fBReturns:\fP
+.RS 4
+0 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.play (self, filename)"
+
+.PP
+The play command will play a macro stored on the drive of the \fBezLCD\fP\&. \fBParameters:\fP
+.RS 4
+\fIfilename\fP macro filename 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.reset (self)"
+
+.PP
+The reset command will reset the \fBezLCD\fP and run startup\&.ezm same as power up\&. 
+.SS "def module\&.ezLCD3xx\&.run (self, filename)"
+
+.PP
+The run command will run a macro stored on the drive of the \fBezLCD\fP\&. \fBParameters:\fP
+.RS 4
+\fIfilename\fP macro filename 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.snapshot (self, x, y, w, h, filename)"
+
+.PP
+The snapshot command will write a copy of the current display to the flash drive as a bmp\&. \fBParameters:\fP
+.RS 4
+\fIx\fP starting x position 
+.br
+\fIy\fP starting y position 
+.br
+\fIw\fP width 
+.br
+\fIh\fP height 
+.br
+\fIfilename\fP filename\&.bmp Make sure you have space on the internal flash drive ! 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.touchS (self)"
+
+.PP
+touchS return last press x 
+.SS "def module\&.ezLCD3xx\&.touchX (self)"
+
+.PP
+touchX return last press x \fBReturns:\fP
+.RS 4
+x x coor of last press 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.touchY (self)"
+
+.PP
+touchY return last press x \fBReturns:\fP
+.RS 4
+y y coor of last press 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.verbose (self, state)"
+
+.PP
+The Verbose command will turn on or off more verbose errors\&. \fBParameters:\fP
+.RS 4
+\fIstate\fP 0=off 1=on 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.wquiet (self, state)"
+
+.PP
+The wquiet command disables the touch event data being sent to the console port\&. \fBParameters:\fP
+.RS 4
+\fIstate\fP 0=off 1=on 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.xmax (self)"
+
+.PP
+The xmax command will return the max x of current display\&. \fBReturns:\fP
+.RS 4
+x-horizontal resolution in pixels starting from 0 
+.RE
+.PP
+
+.SS "def module\&.ezLCD3xx\&.ymax (self)"
+
+.PP
+The ymax command will return the max y of current display\&. \fBReturns:\fP
+.RS 4
+y-vertical resolution in pixels starting from 0 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ezLCD Python Module from the source code\&.
