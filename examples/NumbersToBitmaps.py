@@ -16,9 +16,9 @@ comPort = LCD.findezLCD()
 # Windows
 if platform.system() == 'Windows':
 	for ez in range(0,len(comPort)):
-		if comPort[ez][3] == 'Unit1':
+		if comPort[ez][3] == 'Unit2':
 			LCD = ezLCD(comPort[ez][0])
-			break
+#		break
 # Mac
 elif platform.system() == 'Darwin':
 	LCD = ezLCD('/dev/tty.usbsomething')
@@ -33,6 +33,7 @@ if LCD.openSerial() == False:
 
 filenames = ['b0.gif', 'b1.gif', 'b2.gif', 'b3.gif', 'b4.gif', 'b5.gif', 'b6.gif', 'b7.gif', 'b8.gif', 'b9.gif', 'bb.gif', 'bs.gif']
 #filenames = ['g0.gif', 'g1.gif', 'g2.gif', 'g3.gif', 'g4.gif', 'g5.gif', 'g6.gif', 'g7.gif', 'g8.gif', 'g9.gif', 'gb.gif', 'gs.gif']
+skullFileName = ['skull.gif','skull-90.gif','skull-18.gif','skull-27.gif']
 # Turn verbose off 
 LCD.verbose(OFF)
 # Turn off button press info from ezLCD
@@ -63,10 +64,11 @@ oldDigit3 = 0
 oldDigit4 = 0	
 startx = 70
 second = True
+skull = 0
 while True:
-	x=LCD.touchX()
-	y=LCD.touchY()
-	s=LCD.touchS()
+#	x=LCD.touchX()
+#	y=LCD.touchY()
+#	s=LCD.touchS()
 	time.sleep(1)
 	clock = time.localtime()
 	hour = clock[3]
@@ -85,8 +87,13 @@ while True:
 		LCD.picture(filenames[digit1], startx, 40)		
 #	if digit2 != oldDigit2:
 	LCD.picture(filenames[digit2], startx + 34, 40)
+
 	if second == True:
 		LCD.picture(filenames[11], startx + 34 * 2, 40)
+		LCD.picture(skullFileName[skull],120,120)
+		skull +=1
+		if skull > 3:
+			skull =0
 		second = False
 	else:
 		LCD.picture(filenames[10], startx + 34 * 2, 40)

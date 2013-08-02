@@ -74,7 +74,7 @@ datetime.timedelta(hours=-7)
 drawGrid()
 while True:
 	city = "huntingtonbeach" 
-	url = "http://openweathermap.org/data/2.5/weather?id=5339840" #5339840 #5358705"
+	url = "http://openweathermap.org/data/2.5/weather?id=5358705" #5339840 #5358705"
 	try :
 		request = urllib2.Request(url)
 		response = urllib2.urlopen(request)

@@ -102,6 +102,7 @@ class ezLCD(object):
 		except :
 			print "ezLCD3xx "+ str(self.interface) +" failed"
 			return False
+
 	## closeSerial 
 	#
 	#
@@ -115,8 +116,8 @@ class ezLCD(object):
 	def WaitForCR(self):
 		cr = self.ser.read(1) #
 		if  cr != '\r':
-			print self.ser.readline()
-			print 'Command Returned Error', cr, len(cr)
+			crLine = self.ser.readline()
+			print 'Command Returned Error -> ', cr + crLine
 			frame = inspect.currentframe()
 			stack_trace = traceback.format_stack(frame)
 			print ''.join(stack_trace[:-2])
@@ -151,14 +152,13 @@ class ezLCD(object):
 	# @param state 0=off 1=on
 	#
 	def verbose(self, state ):
-		print '*** ezLCD3xx Module Verbose Need to Fix this command in the firmware'
 		if state == 0:
 			self.ser.write('verbose off\r')
 		else:
 			self.ser.write('verbose on\r' )
 		#self.ser.write('verbose %d\r' % state )
-		
-		self.WaitForCR()
+		print self.ser.readline()
+		#self.WaitForCR()
 
 	## The xmax command will return the max x of current display
 	# @return x-horizontal resolution in pixels starting from 0
@@ -740,8 +740,6 @@ class ezLCD(object):
 	# (ID, Info, Data) = LCD.wstack(LIFO)
 	# @endcode 
 	def wstack(self, option):
-			if option == CLEAR:
-				print '*** wstack clear is broken' ## @attention: need to fix this in the firmware
 			self.ser.write('wstack %d\r' % (option))		
 			ID = self.getInt()
 			Info = self.getInt()

@@ -15,7 +15,7 @@ comPort = LCD.findezLCD()
 # Windows
 if platform.system() == 'Windows':
 	for ez in range(0,len(comPort)):
-		if comPort[ez][3] == 'Unit1':
+		if comPort[ez][3] == 'Unit2':
 			LCD = ezLCD(comPort[ez][0])
 			break
 #Mac
